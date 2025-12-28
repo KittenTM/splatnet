@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SplatNet | Stages</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("assets/stage.png");
+        background-repeat: repeat;
+        background-size: 800px 800px;
+    }
+
+    .header {
+        position: relative;
+        height: 150px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        /* Wavy bottom using polygon */
+        clip-path: polygon(
+            0% 0%, 100% 0%, 100% 80%, 
+            90% 85%, 80% 75%, 70% 85%, 
+            60% 75%, 50% 85%, 40% 75%, 
+            30% 85%, 20% 75%, 10% 85%, 
+            0% 80%
+        );
+    }
+
+    .logo {
+        max-height: 120px;
+        margin-top: 0px;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <img src="assets/SplatNetLogo.png" class="logo" alt="SplatNet Logo">
+</div>
+
+</body>
+</html>
