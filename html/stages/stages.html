@@ -15,6 +15,7 @@
         background-size: 800px 800px;
     }
 
+    /* HEADER */
     .header {
         position: relative;
         height: 150px;
@@ -32,17 +33,44 @@
         );
     }
 
+    .hamburger {
+        position: absolute;
+        left: 40px;
+        top: 40%;
+        transform: translateY(-50%);
+        height: 50px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
     .logo {
         max-height: 120px;
-        margin-top: 0px;
         z-index: 2;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+        display: flex;
+        justify-content: center;
+        padding-top: 24px;
+    }
+
+    .stage-info {
+        width: 65%;
+        max-width: 600px;
+        height: auto;
     }
 </style>
 </head>
 <body>
 
 <div class="header">
+    <img src="assets/hamburgerbar.png" class="hamburger" alt="Menu">
     <img src="assets/SplatNetLogo.png" class="logo" alt="SplatNet Logo">
+</div>
+
+<div class="content">
+    <img src="assets/stageinfo.png" class="stage-info" alt="Stage Info">
 </div>
 
 </body>
