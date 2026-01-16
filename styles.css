@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Splatoon1";
+    src: url("./splatoon1.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/assets/stage.png");
+    background-repeat: repeat;
+    background-size: 800px 800px;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 80%, 
+        90% 85%, 80% 75%, 70% 85%, 
+        60% 75%, 50% 85%, 40% 75%, 
+        30% 85%, 20% 75%, 10% 85%, 
+        0% 80%
+    );
+}
+
+.logo {
+    max-height: 120px;
+    z-index: 2;
+}
+
+/* MAIN CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.stage-info {
+    width: 65%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* STAGES */
+.stages-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 40px;
+}
+
+.stages-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.stages-section h2 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: "Splatoon1", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.stages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.stages img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
