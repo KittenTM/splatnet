@@ -63,7 +63,7 @@ function animateLoadingCanvas() {
 
     let currentFrame = 0;
     let lastUpdateTime = 0;
-    const frameDuration = 50; // ms per frame
+    const frameDuration = 50;
 
     let animationId;
 
@@ -116,7 +116,7 @@ async function renderStages() {
             <h2 class="error-message">
                 Something went wrong! Try reloading the page. If this problem persists you may be ratelimited.
             </h2>
-`;
+        `;
 
         return;
     }
@@ -144,4 +144,5 @@ async function renderStages() {
     }
 }
 
+animateLoadingCanvas();
 renderStages();
