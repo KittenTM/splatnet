@@ -1,6 +1,0 @@
-.content {
-    display: flex;
-    justify-content: center;
-    padding-top: 24px;
-    padding-bottom: 300px; /* forces scroll */
-}
