@@ -10,7 +10,7 @@ function stageImagePath(stageName) {
         .toLowerCase()
         .replace(/['.]/g, "");
 
-    return `/assets/stages/${firstWord}.jpg`;
+    return `/assets/stages/${firstWord}.png`;
 }
 
 async function fetchRotations() {
