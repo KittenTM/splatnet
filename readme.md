@@ -3,7 +3,7 @@
 ### Current Progress:
 
 <p align="center">
-  <progress value="0" max="100" style="width: 400px;"></progress>
+  <progress value="10" max="100" style="width: 400px;"></progress>
   <br>
   <strong>Basically 0% lol</strong>
 </p>
