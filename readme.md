@@ -17,11 +17,11 @@
 - [ ] Friends List
 - [ ] Rank
 - [ ] Equipment
-- [ ] Stage Info
+- [x] Stage Info (FULLY COMPLETE!)
     - [x] Basic Stage Fetching (using pretendo)
     - [x] Show stage pngs
-    - [ ] Show all stage times
-    - [ ] Show Ranked Mode
+    - [x] Show all stage times
+    - [x] Show Ranked Mode
 
 ---
 
