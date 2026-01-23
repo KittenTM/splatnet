@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Regular";
+    src: url("./regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -57,7 +64,7 @@ body {
 /* STAGES */
 .stages-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -71,13 +78,10 @@ body {
     width: 100%;
 }
 
-.stages-section h2 {
-    margin: 0;
-    color: white;
-    text-align: center;
-    font-family: "Splatoon1", sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
+.stages-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 14px;
+    padding: 16px 18px 20px;
 }
 
 .stages {
@@ -87,11 +91,59 @@ body {
     width: 100%;
 }
 
+.stage-info-text {
+    margin-top: 6px;
+    margin-bottom: 24px;
+    max-width: 600px;
+    text-align: left;
+    color: white;
+    font-family: "Regular", sans-serif;
+    font-size: 40px;
+    line-height: 1.4;
+}
+
+.stage-title {
+    font-family: "regular";
+    text-align: center;
+    margin-top: 6px;
+    font-size: 28px;
+    color: white;
+    margin-top: 6px;
+}
+
 .stages img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ranked-mode-labels {
+    text-align: center;
+    margin-bottom: 12px;
+}
+.battle-mode-text {
+    font-family: "Splatoon1", sans-serif;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.ranked-mode-text {
+    font-family: "Regular", sans-serif;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 0.8px;
+}
+
+.rotation-time {
+    text-align: center;
+    color: white;
+    font-family: "Regular", sans-serif;
+    font-size: 33px;
+    margin: 36px 0 12px 0;
+    letter-spacing: 0.8px;
 }
 
 .error-message {
@@ -100,6 +152,26 @@ body {
     text-align: center;
     margin-top: 40px;
 }
+
+.mode-title {
+    display: block;
+    margin: 4px auto 4px;
+    max-width: 166px;
+    width: 80%;
+    height: auto;
+}
+
+.mode-text {
+    margin-top: 0px;
+    margin-bottom: 28px;
+    text-align: center;
+    color: white;
+    font-family: "Splatoon1", sans-serif;
+    font-size: 44px;
+    letter-spacing: 1.2px;
+    user-select: none;
+}
+
 
 .loading-overlay {
   position: fixed;
