@@ -29,4 +29,4 @@
 
 - [x] Title Bar
 - [ ] Page switching (hamburger menu)
-- [ ] Squid swimming background
+- [x] Squid swimming background
