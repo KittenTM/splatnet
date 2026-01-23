@@ -76,9 +76,6 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-}
-
-.stages-section {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 14px;
     padding: 16px 18px 20px;
@@ -103,26 +100,25 @@ body {
 }
 
 .stage-title {
-    font-family: "regular";
+    font-family: "Regular", sans-serif;
     text-align: center;
     margin-top: 6px;
     font-size: 28px;
     color: white;
-    margin-top: 6px;
 }
 
 .stages img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .ranked-mode-labels {
     text-align: center;
     margin-bottom: 12px;
 }
+
 .battle-mode-text {
     font-family: "Splatoon1", sans-serif;
     color: white;
@@ -130,6 +126,7 @@ body {
     letter-spacing: 1px;
     margin-bottom: 4px;
 }
+
 .ranked-mode-text {
     font-family: "Regular", sans-serif;
     color: white;
@@ -155,15 +152,14 @@ body {
 
 .mode-title {
     display: block;
-    margin: 4px auto 4px;
+    margin: 4px auto;
     max-width: 166px;
     width: 80%;
     height: auto;
 }
 
 .mode-text {
-    margin-top: 0px;
-    margin-bottom: 28px;
+    margin: 0 0 28px;
     text-align: center;
     color: white;
     font-family: "Splatoon1", sans-serif;
@@ -171,7 +167,6 @@ body {
     letter-spacing: 1.2px;
     user-select: none;
 }
-
 
 .loading-overlay {
   position: fixed;
@@ -192,6 +187,31 @@ body {
   user-select: none;
   pointer-events: none;
   box-sizing: border-box;
+}
+
+#squid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#squid-canvas {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 1080px;
+  will-change: transform;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  display: block;
 }
 
 #loading-canvas {
