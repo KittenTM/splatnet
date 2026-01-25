@@ -18,7 +18,6 @@ html, body {
 }
 
 body {
-    background-image: url("/assets/stage.png");
     background-repeat: repeat;
     background-size: 800px 800px;
 }
