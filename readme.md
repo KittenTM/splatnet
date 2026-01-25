@@ -14,6 +14,7 @@
 
 ### Pages HTML recreated:
 
+- [x] Site Policy
 - [ ] Friends List
 - [ ] Rank
 - [ ] Equipment
