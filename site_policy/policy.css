@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Regular";
+    src: url("../regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../assets/friendlist.png");
+    background-repeat: repeat;
+    background-size: 800px 800px;
+    font-family: "Regular", sans-serif;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+}
+
+.policy-container {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.policy-section {
+    line-height: 1.5;
+}
+
+.policy-section h2 {
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.policy-section h3 {
+    font-size: 28px;
+    margin: 20px 0 8px;
+}
+
+.policy-section h4 {
+    font-size: 24px;
+    margin: 16px 0 6px;
+}
+
+.policy-section p,
+.policy-section li {
+    font-size: 20px;
+    margin: 6px 0;
+}
+
+.policy-section ul {
+    padding-left: 20px;
+    margin: 8px 0;
+}
+
+#squid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#squid-canvas {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 1080px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#header-container .logo,
+#header-container .icon-header-logo {
+    display: block;
+    margin: 0 auto;
+    max-height: 120px;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus,
+.text-link:active {
+    text-decoration: underline;
+}
+
+.text-link::selection {
+    text-decoration: underline;
+}
