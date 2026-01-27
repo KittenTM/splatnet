@@ -2,31 +2,4 @@
 
 ---
 
-### Current Progress:
-
-<p align="center">
-  <img src="https://progress-bar.xyz/10?title=&height=20" width="100%">
-  <br>
-  <strong>Basically 0% lol</strong>
-</p>
-
----
-
-### Pages HTML recreated:
-
-- [ ] Friends List
-- [ ] Rank
-- [ ] Equipment
-- [x] Stage Info (FULLY COMPLETE!)
-    - [x] Basic Stage Fetching (using pretendo)
-    - [x] Show stage pngs
-    - [x] Show all stage times
-    - [x] Show Ranked Mode
-
----
-
-### Basic ToDos:
-
-- [x] Title Bar
-- [ ] Page switching (hamburger menu)
-- [x] Squid swimming background
+This is a seperate branch from the main branch. The purpose of this one is to act on its own. This version includes exclusively just the stages page, which can be accessed without a backend & thus can be served without a database or setup. This is for if you just want a recreation of oatmealdomes page, but more faithful.
