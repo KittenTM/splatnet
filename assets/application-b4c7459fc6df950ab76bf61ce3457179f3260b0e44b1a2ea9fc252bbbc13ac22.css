@@ -47,3 +47,55 @@
     background-size: 100%;
   }
 }
+.nnid-login-btn {
+  display: block;
+
+  height: 40px;
+  width: fit-content;
+
+  padding: 0 25px 0 14px;
+  margin: 16px auto 20px auto;
+
+  background-color: #e97200;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none;
+
+  border-radius: 4px;
+}
+
+.nnid-login-btn:hover {
+  background-color: #de6b00;
+}
+
+.nnid-icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+
+  position: relative;
+
+  background-image: url("nnlogo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.nnid-icon::after {
+  content: "";
+  position: absolute;
+
+  right: -6px;
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background-color: #dd6c00;
+}
