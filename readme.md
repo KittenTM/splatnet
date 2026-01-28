@@ -31,5 +31,3 @@
 - [x] Title Bar
 - [ ] Page switching (hamburger menu)
 - [x] Squid swimming background
-
-v1.17.1
