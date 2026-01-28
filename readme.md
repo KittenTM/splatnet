@@ -2,7 +2,7 @@
 
 ---
 
-### Current Progress:
+![Current Progress:](/currentprogress.png "currentprogress.png")
 
 <p align="center">
   <img src="https://progress-bar.xyz/10?title=&height=20" width="100%">
@@ -23,7 +23,7 @@
     - [x] Show stage pngs
     - [x] Show all stage times
     - [x] Show Ranked Mode
-
+- [x] Main Page
 ---
 
 ### Basic ToDos:
@@ -31,3 +31,5 @@
 - [x] Title Bar
 - [ ] Page switching (hamburger menu)
 - [x] Squid swimming background
+
+v1.17.1
