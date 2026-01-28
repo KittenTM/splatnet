@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="no-js lt-ie9" data-id="8a7cdef9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" data-id="8a7cdef9"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="" name="description"/>
+<meta content="width=device-width,minimum-scale=1, maximum-scale=1" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="max-age=0" http-equiv="cache-control"/>
+<meta content="no-cache" http-equiv="cache-control"/>
+<meta content="0" http-equiv="expires"/>
+<meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires"/>
+<meta content="no-cache" http-equiv="pragma"/>
+<title>Sign In to Pretendo Network</title>
+<link href="../pretendo/css/style-auth.css" rel="stylesheet"/>
+<script src="../pretendo/js/base_e42dadd1.js"></script>
+<script src="../pretendo/353f197638abe79a7d2dc7a7fd522d075d11521d/satelliteLib-df3d4f52ec08e860f63e4ce57be273a0ed391ab8.js"></script>
+</head>
+<body>
+<div class="hb-wrapper hb-l-fixed">
+<header class="hb-header">
+<div class="hb-header-wrapper">
+<h1>NINTENDO NETWORK</h1>
+</div>
+</header>
+
+<noscript>
+<div class="hb-noscript">
+<div class="hb-contents-wrapper">
+<div class="hb-page">
+<div class="hb-container">
+<h2 class="mg-btm-2x">Please Check Your Settings</h2>
+<p>There is a possibility that JavaScript is currently disabled on your browser.<br/>You will not be able to use this service if JavaScript is disabled.</p>
+</div>
+</div>
+</div>
+</div>
+</noscript>
+
+<div class="hb-contents">
+<div class="hb-contents-wrapper">
+<div class="hb-page">
+<form action="/users/auth/pretendo/" method="post">
+<input name="lang" type="hidden" value="en-US"/>
+<div class="hb-container hb-l-inside">
+<h2>Sign In</h2>
+<p>Please sign in with a Pretendo Network ID to proceed.</p>
+</div>
+
+<!-- ERROR CONTAINER -->
+<div class="hb-container hb-l-inside">
+<p id="auth-error" class="auth-error" style="display:none;color:red;"></p>
+</div>
+
+<div class="hb-container hb-l-inside-half hb-mg-top-none">
+<div class="auth-input-double">
+<label>
+<input maxlength="16" name="username" placeholder="Pretendo Network ID" title="Pretendo Network ID" type="text" value=""/>
+</label>
+<label>
+<input maxlength="16" name="password" placeholder="Password" title="Password" type="password"/>
+</label>
+</div>
+
+<div class="hb-checkbox">
+<input id="remember_box" name="rememberMe" type="checkbox"/>
+<label for="remember_box">Remember Me</label>
+</div>
+
+<div class="hb-checkbox-ex" tabindex="0">
+<input id="remember_box_ex" name="rememberMe" tabindex="-1" type="checkbox"/>
+<label for="remember_box_ex">Remember Me</label>
+</div>
+
+<input class="hb-btn hb-is-decide" id="btn_text" type="submit" value="Sign In"/>
+<p><a class="hb-icon-external" href="https://pretendo.network/account/forgot-password" target="_blank">Forgot your password?</a><br/>
+</form>
+</div>
+</div>
+</div>
+
+<footer class="hb-footer">
+<div class="hb-footer-wrapper">
+<div class="hb-footer-link">
+<a class="hb-icon-external" href="/help/terms">Terms &amp; Privacy Policy</a>
+<a class="hb-icon-external" href="/help/contact">Contact/Help</a>
+</div>
+<p class="hb-footer-copyright">©Nintendo</p>
+</div>
+</footer>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("form").submit(function() {
+        var self = this;
+        $(":submit", self).prop("disabled", true);
+        setTimeout(function() {
+            $(":submit", self).prop("disabled", false);
+        }, 10000);
+    });
+});
+</script>
+<!--[if lte IE 9]><script src="https://id.nintendo.net/js/placeholders_hb.js"></script><![endif]-->
+<script>
+var globalLocale = 'en-US';
+$(document).ready(function () {
+    $('#language-select').val(globalLocale);
+    $('#language-select').change(function () {
+        var selectedLang = $(this).val();
+        redirect(location.href, {lang: selectedLang});
+    });
+});
+</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>
