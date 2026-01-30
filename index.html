@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width,minimum-scale=1, maximum-scale=1" name="viewport"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="SplatNet" name="apple-mobile-web-app-title"/>
+<meta content="SplatNet - Splatoon's multiplayer service hub" property="og:site_name"/>
+<meta content="SplatNet - Splatoon's multiplayer service hub" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="SplatNet is an online service enabling interaction between players of Splatoon. Players can recruit others to play with them and check the play information and ranking of their friends." property="og:description"/>
+<meta content="/index.html" property="og:url"/>
+<meta content="https://splatoon.nintendo.net/assets/en/facebook_image-f7cbb3f4687a632cf0a44be1e68a7676dbb52eaf2ebc4b207522418825078203.png" property="og:image"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="A hub for player interaction for the Nintendo Wii U game Splatoon." name="description"/>
+<meta content="Nintendo, Wii U, Splatoon, Squid, SplatNet" name="keywords"/>
+<title>SplatNet - Splatoon's multiplayer service hub</title>
+<link href="assets/application-b4c7459fc6df950ab76bf61ce3457179f3260b0e44b1a2ea9fc252bbbc13ac22.css" media="all" rel="stylesheet"/>
+<script data-turbolinks-track="true" src="assets/application-e247a417be83a666f78bb66e010996d13c08ed54ebc5174448e80be44628c6fd.js"></script>
+<link href="" rel="shortcut icon" type="image/x-icon"/>
+<link href="assets/icon180-0b3a037d2076625a5b4ac81a4f0f25c64d96f6411b83832d57758b3dacb50a01.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<link href="assets/icon120-e5e74a5f2c5717640bf4ff6513efc8868adde252b545a5f907b8d7d7b4123e06.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+<link href="assets/icon152-bcdfb07220030eb4e0cd75242960ca5093c41b58a7acbea17d9fbdc7dfa562b7.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+<link href="assets/icon76-74a21989a04683fa2b4f1747854f676f054b0ae1286659ad5103fa7ee1b829b8.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+  </head>
+  <body>
+    <div class="ika-wrapper welcome">
+      <div class="geso-public">
+        <header>
+          <div class="icon-header-logo"></div>
+        </header>
+        <div class="tour">
+          <div style="overflow: hidden">
+            <div class="tour-screen m-scooch-inner">
+              <div class="tour-1 m-item"></div>
+              <div class="tour-2 m-item"></div>
+              <div class="tour-3 m-item"></div>
+            </div>
+          </div>
+          <a class="tour-prev hidden image-link" data-m-slide="prev" href="#">prev</a>
+          <a class="tour-next image-link" data-m-slide="next" href="#">next</a>
+          <div class="tour-bullet-wrapper">
+            <div class="tour-bullet">
+              <a class="active" data-m-slide="1" href="">1</a>
+              <a data-m-slide="2" href="">2</a>
+              <a data-m-slide="3" href="">3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="do-public">
+        <div class="contents">
+          <div class="login">
+            <a class="nnid-login-btn" href="users/auth/splatfestival/">
+              <span class="nnid-login-bg">Log in</span>
+            </a>
+            <span class="nnid-description">To use SplatNet, you need to log in with your Nintendo Network ID.</span>
+            <span class="security-announcement">Note: We have confirmed the existence of smartphone apps that utilize information from this website, but none of them are affiliated with Nintendo in any way. Please be aware that Nintendo will not be held responsible for any problems or damages that may arise from the use of such apps.</span>
+          </div>
+        </div>
+      </div>
+      <footer class="enpera">
+        <div class="site-policy">
+          <a href="http://www.esrb.org/ratings/ratings_guide.jsp">
+            <span class="esrb-bg"></span>
+          </a>
+          <a href="http://www.esrb.org/confirm/nintendo-confirmation.jsp">
+            <span class="privacy-certified-bg"></span>
+          </a>
+          <a class="text-link site-policy-url" href="site_policy">Site Policy</a>
+        </div>
+        <small>©Nintendo</small>
+      </footer>
+    </div>
+    <script>
+      $(function() {
+        $('.tour').scooch({
+          classPrefix: '',
+          classNames: {
+            inner: 'tour-screen',
+            active: 'active'
+          }
+        }).on('beforeSlide', function(e, previousIndex, newIndex) {
+          if (newIndex == 1) {
+            $("a.tour-prev").addClass('hidden');
+          } else {
+            $("a.tour-prev").removeClass('hidden');
+          }
+          if (newIndex == 3) {
+            $("a.tour-next").addClass('hidden');
+          } else {
+            $("a.tour-next").removeClass('hidden');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

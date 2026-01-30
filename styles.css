@@ -1,0 +1,231 @@
+@font-face {
+    font-family: "Splatoon1";
+    src: url("./splatoon1.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url("./regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-repeat: repeat;
+    background-size: 800px 800px;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 80%, 
+        90% 85%, 80% 75%, 70% 85%, 
+        60% 75%, 50% 85%, 40% 75%, 
+        30% 85%, 20% 75%, 10% 85%, 
+        0% 80%
+    );
+}
+
+.logo {
+    max-height: 120px;
+    z-index: 2;
+}
+
+/* MAIN CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.stage-info {
+    width: 65%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* STAGES */
+.stages-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 40px;
+}
+
+.stages-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 14px;
+    padding: 16px 18px 20px;
+}
+
+.stages {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.stage-info-text {
+    margin-top: 6px;
+    margin-bottom: 24px;
+    max-width: 600px;
+    text-align: left;
+    color: white;
+    font-family: "Regular", sans-serif;
+    font-size: 40px;
+    line-height: 1.4;
+}
+
+.stage-title {
+    font-family: "Regular", sans-serif;
+    text-align: center;
+    margin-top: 6px;
+    font-size: 28px;
+    color: white;
+}
+
+.stages img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+.ranked-mode-labels {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.battle-mode-text {
+    font-family: "Splatoon1", sans-serif;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.ranked-mode-text {
+    font-family: "Regular", sans-serif;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 0.8px;
+}
+
+.rotation-time {
+    text-align: center;
+    color: white;
+    font-family: "Regular", sans-serif;
+    font-size: 33px;
+    margin: 36px 0 12px 0;
+    letter-spacing: 0.8px;
+}
+
+.error-message {
+    color: white;
+    font-family: "Splatoon1", sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.mode-title {
+    display: block;
+    margin: 4px auto;
+    max-width: 166px;
+    width: 80%;
+    height: auto;
+}
+
+.mode-text {
+    margin: 0 0 28px;
+    text-align: center;
+    color: white;
+    font-family: "Splatoon1", sans-serif;
+    font-size: 44px;
+    letter-spacing: 1.2px;
+    user-select: none;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 250px;
+  background-color: rgba(0,0,0,0.8);
+  border: 3px solid white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  user-select: none;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+#squid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#squid-canvas {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 1080px;
+  will-change: transform;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  display: block;
+}
+
+#loading-canvas {
+  image-rendering: pixelated;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#loading-text {
+  margin-top: 12px;
+  color: white;
+  font-family: "Splatoon1", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
