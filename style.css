@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: black;
+}
+
+.splatnet-sidebar {
+  width: 400px;
+  padding: 30px 20px;
+}
+
+.menu-item {
+  position: relative;
+  height: 72px; 
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding-left: 36px; 
+}
+
+.menu-item .bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  object-position: center;
+  z-index: 0;
+}
+
+.menu-item .icon {
+  width: 42px;
+  height: 42px;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.menu-item .label {
+  height: 32px; 
+  z-index: 1;
+}
+
+/* this text renders smaller for some reason, hardcode fix!!!*/
+.menu-item.equipment .label {
+  height: 70px;
+  margin-top: 0px;
+}
+
+.menu-item.friend .label { margin-top: 1px; }
+.menu-item.rank { margin-top: 3px; }
+.menu-item.stage .label { margin-top: 3px; }
