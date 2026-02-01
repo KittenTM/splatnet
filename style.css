@@ -1,27 +1,77 @@
+@font-face {
+  font-family: 'Splatoon1';
+  src: url('Splatoon1.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'RegularFont';
+  src: url('regular.otf') format('opentype');
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: black;
+.splatnet-sidebar {
+  width: 330px;
+  background-color: black;
+  display: inline-block;
+  padding: 0 24px 32px;
+  position: relative;
+  border-radius: 0;
 }
 
-.splatnet-sidebar {
-  width: 400px;
-  padding: 30px 20px;
+.splatnet-sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 100%;
+  background-image: url('assets/en/svg/ui/bg_menu_right_wave-c8ca7628fe4a702b3985b66f59c365748d266db743ec3a7a7e68211c81c74ec1.svg');
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 0;
+}
+
+.splatnet-sidebar::before {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 340px;
+  height: 30px;
+  background-image: url('assets/en/svg/ui/bg_menu_bottom_wave-03056ad08bac76d5bf1d0bc2895f30cda65a731d9d69789719da70a084be31cb.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.splatnet-logo, .menu-item, .twitterbgbox {
+  position: relative;
+  z-index: 2;
+}
+
+.splatnet-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.splatnet-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .menu-item {
   position: relative;
-  height: 72px; 
-  margin-bottom: 20px;
-
+  height: 84px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 18px;
-
-  padding-left: 36px; 
+  gap: 10px;
+  padding-left: 24px;
+  cursor: pointer;
 }
 
 .menu-item .bg {
@@ -29,29 +79,138 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   object-position: center;
   z-index: 0;
 }
 
+.menu-item .hover-state {
+  display: none; 
+}
+
+.menu-item:hover .default {
+  display: none; 
+}
+
+.menu-item:hover .hover-state {
+  display: block; 
+}
+
 .menu-item .icon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
   object-fit: contain;
 }
 
 .menu-item .label {
-  height: 32px; 
+  height: 28px;
   z-index: 1;
 }
 
-/* this text renders smaller for some reason, hardcode fix!!!*/
 .menu-item.equipment .label {
-  height: 70px;
-  margin-top: 0px;
+  height: 55px;
 }
 
-.menu-item.friend .label { margin-top: 1px; }
-.menu-item.rank { margin-top: 3px; }
-.menu-item.stage .label { margin-top: 3px; }
+.twitterbgbox {
+  width: 280px;
+  height: 170px;
+  background-color: #333333;
+  border-radius: 40px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.twitterbgbox::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -20px;
+  left: -20px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.twitterbgbox::after {
+  content: "WWWWWWWWWWWW";
+  position: absolute;
+  top: 12px;
+  left: 48px;
+  color: white;
+  font-family: 'RegularFont', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-btn {
+  width: 85%;
+  background-color: #919191;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 15px;
+  font-family: 'Splatoon1', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.box-btn.twitter-btn {
+  background-color: #00a0f3;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.box-btn:hover {
+  opacity: 0.8;
+}
+
+.btn-label-img {
+  height: 18px; 
+  width: auto;
+  display: block;
+  pointer-events: none;
+  filter: brightness(0) invert(1); 
+}
+
+.box-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  padding: 12px 0;
+}
+
+.box-btn .btn-label-img {
+  max-width: 80%; 
+}
+
+.menu-item.active .hover-state {
+    display: block !important;
+}
+
+.menu-item.active .default {
+    display: none !important;
+}

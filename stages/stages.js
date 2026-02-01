@@ -1,5 +1,22 @@
 const API_URL = "https://api.splatcord.ink/prod/s1rotations";
 
+function loadHeader() {
+  fetch("../../../header.html")
+    .then(res => res.text())
+    .then(html => {
+      const headerContainer = document.getElementById("header-container");
+      if (headerContainer) {
+        headerContainer.innerHTML = html;
+
+        const stageButton = headerContainer.querySelector('.menu-item.stage');
+        if (stageButton) {
+          stageButton.classList.add('active');
+        }
+      }
+    })
+    .catch(err => console.error("Failed to load header:", err));
+}
+
 function stageNames(stages, lang = "en-US") {
   return stages.map(s => s.translatedNames[lang]);
 }
@@ -237,5 +254,6 @@ async function renderStages() {
   container.innerHTML = html;
 }
 
+loadHeader();
 animateLoadingCanvas();
 renderStages();

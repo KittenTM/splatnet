@@ -18,11 +18,28 @@ body {
     color: white;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: block;
+    max-width: 280px;
+    height: auto;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .policy-container {
@@ -83,13 +100,6 @@ body {
   height: 1080px;
   pointer-events: none;
   z-index: 0;
-}
-
-#header-container .logo,
-#header-container .icon-header-logo {
-    display: block;
-    margin: 0 auto;
-    max-height: 120px;
 }
 
 .text-link {
