@@ -29,5 +29,5 @@
 ### Basic ToDos:
 
 - [x] Title Bar
-- [ ] Page switching (hamburger menu)
+- [x] Page switching (hamburger menu)
 - [x] Squid swimming background
