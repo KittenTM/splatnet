@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: flex-start;
     min-height: 100vh;
-    background-image: url("/assets/stage.png"); 
+    background-image: url("/assets/en/bg/bg_stage-e8559cd1808f36e1ead7594ce89cada8d8fb4267892f4771368e384612cf3df8.png"); 
     background-repeat: repeat;
     background-size: 800px 800px;
     background-attachment: fixed;

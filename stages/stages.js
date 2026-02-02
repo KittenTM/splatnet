@@ -69,7 +69,7 @@ function animateLoadingCanvas() {
   if (!canvas || !loadingOverlay) return;
   const ctx = canvas.getContext("2d");
   const image = new Image();
-  image.src = "/assets/loading.png";
+  image.src = "/assets/en/loading/@2x-se6335ab797-cb27d69f23a4d1112bc2a0d272538f39dd3017be20e5f2e3f4a460bd0071b68d.png";
   const frameWidth = 100;
   const frameHeight = 100;
   const totalFrames = 17;
@@ -212,7 +212,7 @@ async function renderStages() {
       <div class="rotation-time">${formattedTime}</div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/regular.svg" alt="Regular Battle">
+          <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
           <div class="mode-text">Regular Battle</div>
           <div class="stages">
               ${rotation.turf
@@ -229,7 +229,7 @@ async function renderStages() {
       </div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/ranked.svg" alt="Ranked Battle">
+          <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
           <div class="mode-text">Ranked Battle</div>
           <div class="ranked-mode-labels">
               <div class="battle-mode-text">Battle Mode</div>
