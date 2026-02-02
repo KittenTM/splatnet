@@ -135,7 +135,7 @@ for (let i = 0; i < squidCount; i++) {
 let lastTimestamp = 0;
 
 const image = new Image();
-image.src = "/assets/squids.png";
+image.src = "/assets/ika-8e075a29ff487983044303f98958fb8c852bc3e9ab07ee7597724b6c0aa4a5d7.png";
 
 image.onload = () => {
   function animate(timestamp = 0) {

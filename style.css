@@ -214,3 +214,9 @@
 .menu-item.active .default {
     display: none !important;
 }
+
+.menu-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
