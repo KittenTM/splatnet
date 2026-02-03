@@ -189,8 +189,9 @@ async function renderStages() {
   } finally {
     loadingOverlay.style.display = "none";
   }
+
   if (!rotations.length) {
-    container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page. If this problem persists you may be ratelimited.</h2>`;
+    container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
     return;
   }
 
@@ -200,52 +201,45 @@ async function renderStages() {
     const optionsDate = { day: "2-digit", month: "2-digit" };
     const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
     const timeZone = "Europe/Paris";
-    const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", {
-      ...optionsDate,
-      timeZone,
-    })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", {
-      ...optionsDate,
-      timeZone,
-    })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
+    const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
 
     html += `
       <div class="rotation-time">${formattedTime}</div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
-          <div class="mode-text">Regular Battle</div>
+          <div class="mode-header">
+              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
+              <div class="mode-text">Regular Battle</div>
+          </div>
+          
           <div class="stages">
-              ${rotation.turf
-                .map(
-                  (name) => `
-                  <div class="stage-tile">
+              ${rotation.turf.map(name => `
+                  <div class="stage-item">
                       <img src="${stageImagePath(name)}" alt="${name}">
                       <div class="stage-title">${name}</div>
                   </div>
-              `
-                )
-                .join("")}
+              `).join("")}
           </div>
       </div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
-          <div class="mode-text">Ranked Battle</div>
+          <div class="mode-header">
+              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
+              <div class="mode-text">Ranked Battle</div>
+          </div>
+
           <div class="ranked-mode-labels">
               <div class="battle-mode-text">Battle Mode</div>
               <div class="ranked-mode-text">${rotation.ranked_mode}</div>
           </div>
+
           <div class="stages">
-              ${rotation.ranked
-                .map(
-                  (name) => `
-                  <div class="stage-tile">
+              ${rotation.ranked.map(name => `
+                  <div class="stage-item">
                       <img src="${stageImagePath(name)}" alt="${name}">
                       <div class="stage-title">${name}</div>
                   </div>
-              `
-                )
-                .join("")}
+              `).join("")}
           </div>
       </div>
     `;
