@@ -101,13 +101,15 @@ body {
 
 .mode-text {
     margin: 0;
-    text-align: left;
-    color: white;
-    font-family: "Splatoon1", sans-serif;
-    font-size: 44px;
-    letter-spacing: 1.2px;
-    user-select: none;
     margin-left: -60px;
+    display: flex;
+    align-items: center;
+}
+
+.mode-text img {
+    height: 88px;
+    width: auto;
+    display: block;
 }
 
 .stages {
@@ -149,11 +151,15 @@ body {
 }
 
 .battle-mode-text {
-    font-family: "Splatoon1", sans-serif;
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
     margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.battle-mode-text img {
+    height: 70px;
+    width: auto;
+    display: block;
 }
 
 .ranked-mode-text {
@@ -235,9 +241,15 @@ body {
 
 #loading-text {
     margin-top: 12px;
-    color: white;
-    font-family: "Splatoon1", sans-serif;
-    font-size: 20px;
-    letter-spacing: 1.2px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-text img {
+    height: 35px;
+    width: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
 }

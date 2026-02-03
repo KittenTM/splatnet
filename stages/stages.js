@@ -106,7 +106,6 @@ function animateLoadingCanvas() {
   };
 }
 
-//pain in the ass to implement. im proud of ts
 const canvas = document.getElementById("squid-canvas");
 const ctx = canvas.getContext("2d");
 const frameWidth = 64;
@@ -209,7 +208,7 @@ async function renderStages() {
       <div class="stages-section">
           <div class="mode-header">
               <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
-              <div class="mode-text">Regular Battle</div>
+              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_regularmatch-2cee60cbe41a1594b8d5ef867138f99d843cfce6efe0c490a41632b2e99ec685.svg" alt="Regular Battle"></div>
           </div>
           
           <div class="stages">
@@ -225,11 +224,11 @@ async function renderStages() {
       <div class="stages-section">
           <div class="mode-header">
               <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
-              <div class="mode-text">Ranked Battle</div>
+              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_gachimatch-08a066c73d4dcf466c435be611b996ffd7930d19d9a6a865b712cd5dd802534f.svg" alt="Ranked Battle"></div>
           </div>
 
           <div class="ranked-mode-labels">
-              <div class="battle-mode-text">Battle Mode</div>
+              <div class="battle-mode-text"><img src="/assets/en/svg/text/scene/stage/tx_rule-76cf0777fb715a9478f8b579512541f3f14ed834566e0b6e153834a57d726021.svg" alt="Battle Mode"></div>
               <div class="ranked-mode-text">${rotation.ranked_mode}</div>
           </div>
 
