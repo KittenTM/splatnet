@@ -104,3 +104,9 @@ body {
     z-index: 0;
     display: block;
 }
+
+#loading-text img {
+    height: 35px;
+    width: auto;
+    display: block;
+}
