@@ -25,6 +25,9 @@
     - [x] Show all stage times
     - [x] Show Ranked Mode
 - [x] Main Page
+- [ ] Login Page
+      - [x] HTML
+      - [ ] Actual logging in support
 ---
 
 ### Basic ToDos:
