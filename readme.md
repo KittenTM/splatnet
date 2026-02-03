@@ -26,8 +26,8 @@
     - [x] Show Ranked Mode
 - [x] Main Page
 - [ ] Login Page
-      - [x] HTML
-      - [ ] Actual logging in support
+    - [x] HTML
+    - [ ] Actual logging in support
 ---
 
 ### Basic ToDos:
