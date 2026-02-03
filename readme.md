@@ -20,6 +20,7 @@
 - [ ] Equipment
 - [x] Stage Info (FULLY COMPLETE!)
     - [x] Basic Stage Fetching (using pretendo)
+      - [ ] Ditch Splatcord API to allow use for other networks other than pretendo
     - [x] Show stage pngs
     - [x] Show all stage times
     - [x] Show Ranked Mode
@@ -31,3 +32,5 @@
 - [x] Title Bar
 - [x] Page switching (hamburger menu)
 - [x] Squid swimming background
+- [ ] Proper mobile support
+- [ ] WiiU browser support
