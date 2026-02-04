@@ -131,3 +131,19 @@ image.onload = () => {
 };
 
 animateLoadingCanvas();
+
+//todo: actually make it useful..
+function friendsbox() {
+    const infoBox = document.createElement('div');
+    infoBox.className = 'splat-info-box';
+    
+    infoBox.innerHTML = `
+        <p>In Splatoon, you can join online matches that your friends are participating in. Here will show your friends that are online. Register your friends on Wii U and play Splatoon!</p>
+    `;
+    const contentArea = document.querySelector('.content');
+    if (contentArea) {
+        contentArea.appendChild(infoBox);
+    }
+}
+
+friendsbox();
