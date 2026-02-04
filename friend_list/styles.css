@@ -110,3 +110,46 @@ body {
     width: auto;
     display: block;
 }
+
+.logo-left-align {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    margin-left: 40px;
+}
+
+#stage-header-logo {
+    position: relative;
+    width: 400px; 
+    height: 80px; 
+    cursor: default;
+    pointer-events: none;
+}
+
+#stage-header-logo .bg-layer {
+    width: 400px;
+    height: auto;
+    position: relative;
+    display: block;
+}
+
+#stage-header-logo .icon-layer {
+    position: absolute;
+    width: 65px; 
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    margin-left: 10px;
+}
+
+#stage-header-logo .label-layer {
+    position: absolute;
+    width: 200px; 
+    left: 110px;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
