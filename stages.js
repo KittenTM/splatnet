@@ -1,5 +1,22 @@
 const API_URL = "https://api.splatcord.ink/prod/s1rotations";
 
+function loadHeader() {
+  fetch("../../../header.html")
+    .then(res => res.text())
+    .then(html => {
+      const headerContainer = document.getElementById("header-container");
+      if (headerContainer) {
+        headerContainer.innerHTML = html;
+
+        const stageButton = headerContainer.querySelector('.menu-item.stage');
+        if (stageButton) {
+          stageButton.classList.add('active');
+        }
+      }
+    })
+    .catch(err => console.error("Failed to load header:", err));
+}
+
 function stageNames(stages, lang = "en-US") {
   return stages.map(s => s.translatedNames[lang]);
 }
@@ -52,7 +69,7 @@ function animateLoadingCanvas() {
   if (!canvas || !loadingOverlay) return;
   const ctx = canvas.getContext("2d");
   const image = new Image();
-  image.src = "/assets/loading.png";
+  image.src = "/assets/en/loading/@2x-se6335ab797-cb27d69f23a4d1112bc2a0d272538f39dd3017be20e5f2e3f4a460bd0071b68d.png";
   const frameWidth = 100;
   const frameHeight = 100;
   const totalFrames = 17;
@@ -89,7 +106,6 @@ function animateLoadingCanvas() {
   };
 }
 
-//pain in the ass to implement. im proud of ts
 const canvas = document.getElementById("squid-canvas");
 const ctx = canvas.getContext("2d");
 const frameWidth = 64;
@@ -118,7 +134,7 @@ for (let i = 0; i < squidCount; i++) {
 let lastTimestamp = 0;
 
 const image = new Image();
-image.src = "/assets/squids.png";
+image.src = "/assets/ika-8e075a29ff487983044303f98958fb8c852bc3e9ab07ee7597724b6c0aa4a5d7.png";
 
 image.onload = () => {
   function animate(timestamp = 0) {
@@ -173,7 +189,7 @@ async function renderStages() {
     loadingOverlay.style.display = "none";
   }
   if (!rotations.length) {
-    container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page. If this problem persists you may be ratelimited.</h2>`;
+    container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
     return;
   }
 
@@ -183,52 +199,45 @@ async function renderStages() {
     const optionsDate = { day: "2-digit", month: "2-digit" };
     const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
     const timeZone = "Europe/Paris";
-    const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", {
-      ...optionsDate,
-      timeZone,
-    })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", {
-      ...optionsDate,
-      timeZone,
-    })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
+    const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
 
     html += `
       <div class="rotation-time">${formattedTime}</div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/regular.svg" alt="Regular Battle">
-          <div class="mode-text">Regular Battle</div>
+          <div class="mode-header">
+              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
+              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_regularmatch-2cee60cbe41a1594b8d5ef867138f99d843cfce6efe0c490a41632b2e99ec685.svg" alt="Regular Battle"></div>
+          </div>
+          
           <div class="stages">
-              ${rotation.turf
-                .map(
-                  (name) => `
-                  <div class="stage-tile">
+              ${rotation.turf.map(name => `
+                  <div class="stage-item">
                       <img src="${stageImagePath(name)}" alt="${name}">
                       <div class="stage-title">${name}</div>
                   </div>
-              `
-                )
-                .join("")}
+              `).join("")}
           </div>
       </div>
 
       <div class="stages-section">
-          <img class="mode-title" src="/assets/ranked.svg" alt="Ranked Battle">
-          <div class="mode-text">Ranked Battle</div>
+          <div class="mode-header">
+              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
+              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_gachimatch-08a066c73d4dcf466c435be611b996ffd7930d19d9a6a865b712cd5dd802534f.svg" alt="Ranked Battle"></div>
+          </div>
+
           <div class="ranked-mode-labels">
-              <div class="battle-mode-text">Battle Mode</div>
+              <div class="battle-mode-text"><img src="/assets/en/svg/text/scene/stage/tx_rule-76cf0777fb715a9478f8b579512541f3f14ed834566e0b6e153834a57d726021.svg" alt="Battle Mode"></div>
               <div class="ranked-mode-text">${rotation.ranked_mode}</div>
           </div>
+
           <div class="stages">
-              ${rotation.ranked
-                .map(
-                  (name) => `
-                  <div class="stage-tile">
+              ${rotation.ranked.map(name => `
+                  <div class="stage-item">
                       <img src="${stageImagePath(name)}" alt="${name}">
                       <div class="stage-title">${name}</div>
                   </div>
-              `
-                )
-                .join("")}
+              `).join("")}
           </div>
       </div>
     `;
@@ -237,5 +246,6 @@ async function renderStages() {
   container.innerHTML = html;
 }
 
+loadHeader();
 animateLoadingCanvas();
 renderStages();
