@@ -113,6 +113,8 @@ body {
 
 .logo-left-align {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     margin-top: 20px;
@@ -126,6 +128,7 @@ body {
     height: 80px; 
     cursor: default;
     pointer-events: none;
+    margin-bottom: 10px;
 }
 
 #stage-header-logo .bg-layer {
@@ -152,4 +155,15 @@ body {
     top: 45%;
     transform: translateY(-50%);
     z-index: 2;
+}
+
+.friendsubtitle-text {
+    margin: 0;
+    padding-top: 20px;
+    max-width: 1200px;
+    text-align: left;
+    color: white;
+    font-family: "Regular", sans-serif;
+    font-size: 24px;
+    line-height: 1.3;
 }

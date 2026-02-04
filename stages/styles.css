@@ -21,6 +21,7 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
     background-image: url("/assets/en/bg/@2x/bg_stage-e8fe89423bce5899a3edea3884841d9eed10a3099b29482277d0dbd4a25d8b9e.png"); 
@@ -46,22 +47,62 @@ body {
     max-width: 100vw;
 }
 
-.stage-info {
+.logo-left-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    max-width: 600px;
+    margin-bottom: 20px; 
+    margin-left: 40px;
+    gap: 20px;
+}
+
+#stage-header-logo {
+    position: relative;
+    width: 400px; 
+    height: 80px; 
+    cursor: default;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+#stage-header-logo .bg-layer {
+    width: 400px;
     height: auto;
-    margin: 0 auto 20px auto;
+    position: relative;
     display: block;
 }
 
+#stage-header-logo .icon-layer {
+    position: absolute;
+    width: 65px; 
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    margin-left: 10px;
+}
+
+#stage-header-logo .label-layer {
+    position: absolute;
+    width: 200px; 
+    left: 110px;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
 .stage-info-text {
-    margin: 6px auto 24px auto;
-    max-width: 600px;
-    text-align: center;
+    margin: 0;
+    padding-top: 0px;
+    max-width: 1200px;
+    text-align: left;
     color: white;
     font-family: "Regular", sans-serif;
-    font-size: 34px;
+    font-size: 24px;
     line-height: 1.3;
+    margin-right: 270px;
 }
 
 .stages-container {
@@ -250,46 +291,4 @@ body {
     height: 35px;
     width: auto;
     display: block;
-}
-
-.logo-left-align {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 20px; 
-    margin-left: 40px;
-}
-
-#stage-header-logo {
-    position: relative;
-    width: 400px; 
-    height: 80px; 
-    cursor: default;
-    pointer-events: none;
-}
-
-#stage-header-logo .bg-layer {
-    width: 400px;
-    height: auto;
-    position: relative;
-    display: block;
-}
-
-#stage-header-logo .icon-layer {
-    position: absolute;
-    width: 65px; 
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    margin-left: 10px;
-}
-
-#stage-header-logo .label-layer {
-    position: absolute;
-    width: 200px; 
-    left: 110px;
-    top: 45%;
-    transform: translateY(-50%);
-    z-index: 2;
 }
