@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 8]><html class="no-js lt-ie9" data-id="8a7cdef9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" data-id="8a7cdef9"> <!--<![endif]-->
-<head>
+<html class="no-js" data-id="8a7cdef9"> <head>
 <meta charset="utf-8"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 <meta content="" name="description"/>
@@ -14,7 +12,9 @@
 <meta content="no-cache" http-equiv="pragma"/>
 <title>Sign In to Splatfestival Network</title>
 <link href="../splatfestival/css/style-auth.css" rel="stylesheet"/>
+<script src="/config.js"></script>
 <script src="../splatfestival/js/base_e42dadd1.js"></script>
+<script src="splatfestivalyay.js"></script>
 <script src="../splatfestival/353f197638abe79a7d2dc7a7fd522d075d11521d/satelliteLib-df3d4f52ec08e860f63e4ce57be273a0ed391ab8.js"></script>
 </head>
 <body>
@@ -24,7 +24,6 @@
 <h1>NINTENDO NETWORK</h1>
 </div>
 </header>
-
 <noscript>
 <div class="hb-noscript">
 <div class="hb-contents-wrapper">
@@ -37,22 +36,18 @@
 </div>
 </div>
 </noscript>
-
 <div class="hb-contents">
 <div class="hb-contents-wrapper">
 <div class="hb-page">
-<form action="/users/auth/splatfestival/" method="post">
+<form id="auth-form" action="/api/v2/oauth2/generate_token" method="post">
 <input name="lang" type="hidden" value="en-US"/>
 <div class="hb-container hb-l-inside">
 <h2>Sign In</h2>
 <p>Please sign in with a Splatfestival Network ID to proceed.</p>
 </div>
-
-<!-- ERROR CONTAINER -->
 <div class="hb-container hb-l-inside">
 <p id="auth-error" class="auth-error" style="display:none;color:red;"></p>
 </div>
-
 <div class="hb-container hb-l-inside-half hb-mg-top-none">
 <div class="auth-input-double">
 <label>
@@ -62,24 +57,16 @@
 <input maxlength="16" name="password" placeholder="Password" title="Password" type="password"/>
 </label>
 </div>
-
 <div class="hb-checkbox">
 <input id="remember_box" name="rememberMe" type="checkbox"/>
 <label for="remember_box">Remember Me</label>
 </div>
-
-<div class="hb-checkbox-ex" tabindex="0">
-<input id="remember_box_ex" name="rememberMe" tabindex="-1" type="checkbox"/>
-<label for="remember_box_ex">Remember Me</label>
-</div>
-
 <input class="hb-btn hb-is-decide" id="btn_text" type="submit" value="Sign In"/>
 <p><a class="hb-icon-external" href="https://discord.gg/grMSxZf" target="_blank">Forgot your password?</a><br/>
 </form>
 </div>
 </div>
 </div>
-
 <footer class="hb-footer">
 <div class="hb-footer-wrapper">
 <div class="hb-footer-link">
@@ -90,9 +77,11 @@
 </div>
 </footer>
 </div>
-
 <script>
 $(document).ready(function () {
+    var form = $("#auth-form");
+    var path = form.attr("action");
+    form.attr("action", CONFIG.API_BASE_URL + path);
     $("form").submit(function() {
         var self = this;
         $(":submit", self).prop("disabled", true);
@@ -102,7 +91,6 @@ $(document).ready(function () {
     });
 });
 </script>
-<!--[if lte IE 9]><script src="https://id.nintendo.net/js/placeholders_hb.js"></script><![endif]-->
 <script>
 var globalLocale = 'en-US';
 $(document).ready(function () {
