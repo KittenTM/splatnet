@@ -59,7 +59,7 @@
 </label>
 </div>
 <div class="hb-checkbox">
-<input id="remember_box" name="rememberMe" type="checkbox"/>
+<input id="remember_box" name="rememberMe" type="checkbox" value="true"/>
 <label for="remember_box">Remember Me</label>
 </div>
 <input class="hb-btn hb-is-decide" id="btn_text" type="submit" value="Sign In"/>
@@ -71,39 +71,13 @@
 <footer class="hb-footer">
 <div class="hb-footer-wrapper">
 <div class="hb-footer-link">
-<a class="hb-icon-external" href="../../../site_policy/">Terms &amp; Privacy Policy</a>
+<a class="hb-icon-external" href="/site_policy/">Terms &amp; Privacy Policy</a>
 <a class="hb-icon-external" href="https://git.crafterpika.cc/kittentm/splatnet/issues">Contact/Help</a>
 </div>
 <p class="hb-footer-copyright">©Nintendo</p>
 </div>
 </footer>
 </div>
-<script>
-$(document).ready(function () {
-    var form = $("#auth-form");
-    //hotfix cuz fastapi is strict
-    $("#frontend_origin").val(window.location.origin);
-    var path = form.attr("action");
-    form.attr("action", CONFIG.API_BASE_URL + path);
-    $("form").submit(function() {
-        var self = this;
-        $(":submit", self).prop("disabled", true);
-        setTimeout(function() {
-            $(":submit", self).prop("disabled", false);
-        }, 10000);
-    });
-});
-</script>
-<script>
-var globalLocale = 'en-US';
-$(document).ready(function () {
-    $('#language-select').val(globalLocale);
-    $('#language-select').change(function () {
-        var selectedLang = $(this).val();
-        redirect(location.href, {lang: selectedLang});
-    });
-});
-</script>
 <script type="text/javascript">_satellite.pageBottom();</script>
 </body>
 </html>
