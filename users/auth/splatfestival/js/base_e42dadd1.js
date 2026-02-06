@@ -1,3 +1,5 @@
+//TODO: Migrate to jQuery 4.0, currently left unchanged as of now to avoid breaking changes
+
 /*! jQuery v1.9.1 | (c) 2005, 2012 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery.min.map
 */
