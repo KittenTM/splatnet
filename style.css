@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+body {
+    margin-left: -5px;
+}
+
 .splatnet-sidebar {
   width: 330px;
   background-color: black;

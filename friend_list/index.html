@@ -5,6 +5,7 @@
   <title>SplatNet - Splatoon's multiplayer service hub</title>
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="/assets/general.js"></script>
 </head>
 <body>
   <div id="header-container"></div>
@@ -36,25 +37,7 @@
       </div>
       <div class="stages-container" id="stages-container"></div>
     </div>
-  <script>
-    //TODO: migrate into accompanying JS, just put it in here for now to allow for copy paste,
-    //however ie screams abt you doing this afaik
-    fetch("../header.html")
-  .then(res => res.text())
-  .then(html => {
-    const headerContainer = document.getElementById("header-container");
-    headerContainer.innerHTML = html;
-
-    const friendButton = headerContainer.querySelector('.menu-item.friend');
-    if (friendButton) {
-      friendButton.classList.add('active');
-    }
-    
-    // temporaily force hide lol
-    document.getElementById("loading-overlay").style.display = "none";
-  });
-  </script>
-
+  </div>
   <script src="friendlist.js"></script>
 </body>
 </html>
