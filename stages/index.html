@@ -25,7 +25,6 @@
     <div id="header-container"></div>
 
     <div class="content">
-      
       <div class="logo-left-align">
         <div id="stage-header-logo">
           <img class="bg-layer" src="../assets/en/svg/ui/bg_h1-62e768f2a1ca52f993b5953c78d46bc53b35b70df7f8e13619a982f8f10ab750.svg">
@@ -42,10 +41,15 @@
 
   </div>
   <script>
+    const headerBox = document.getElementById("header-container");
     fetch("../header.html")
       .then(res => res.text())
       .then(html => {
-        document.getElementById("header-container").innerHTML = html;
+        headerBox.innerHTML = html;
+        const friendButton = headerBox.querySelector('.menu-item.stage');
+        if (friendButton) {
+          friendButton.classList.add('active');
+        }
       })
       .catch(err => console.error("Failed to load header:", err));
   </script>
