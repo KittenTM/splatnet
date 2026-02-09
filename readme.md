@@ -12,6 +12,11 @@
 
 ---
 
+### Dependencies
+This project operates on a frontend - backend basis. The backend is not optional, it is required. As for hosting this front end, you can use anything you would like. The production server uses [Caddy](https://caddyserver.com/) if you need an example.
+
+🔗 [Backend Repo](https://git.crafterpika.cc/kittentm/splatnet-backend)
+
 ### Pages HTML recreated:
 
 - [x] Site Policy
@@ -25,9 +30,9 @@
     - [x] Show all stage times
     - [x] Show Ranked Mode
 - [x] Main Page
-- [ ] Login Page
+- [x] Login Page
     - [x] HTML
-    - [ ] Actual logging in support
+    - [x] Actual logging in support
 ---
 
 ### Basic ToDos:
