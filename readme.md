@@ -40,9 +40,8 @@ This project operates on a frontend - backend basis. The backend is not optional
 - [x] Login Page
     - [x] HTML
     - [x] Log in support via SPFN
----
 
-### Basic ToDos:
+### Across all pages:
 
 - [x] Title Bar
 - [x] Page switching (hamburger menu)
@@ -52,4 +51,5 @@ This project operates on a frontend - backend basis. The backend is not optional
   - [x] Port to use canvas
 - [ ] Proper mobile support
   - [ ] Mobile formatting
-- [ ] WiiU browser support
+- [ ] WiiU browser support (DO NOT PRIORITIZE)
+- [ ] Japanese localization (maybe?)
