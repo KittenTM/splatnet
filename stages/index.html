@@ -6,6 +6,7 @@
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
   <script src="/assets/general.js"></script>
+  <script src="/config.js"></script>
 </head>
 <body>
 
@@ -40,12 +41,24 @@
     </div>
 
   </div>
-  <script>
+ <script>
     const headerBox = document.getElementById("header-container");
     fetch("../header.html")
       .then(res => res.text())
       .then(html => {
         headerBox.innerHTML = html;
+
+        const logoutForm = document.getElementById("logout-form");
+        if (logoutForm && typeof CONFIG !== 'undefined') {
+          const apiBase = CONFIG.API_BASE_URL.replace(/\/$/, "");
+          logoutForm.action = apiBase + "/api/v1/spfn/logout";
+
+          const originInput = document.getElementById("logout_frontend_origin");
+          if (originInput) {
+            originInput.value = window.location.origin;
+          }
+        }
+
         const friendButton = headerBox.querySelector('.menu-item.stage');
         if (friendButton) {
           friendButton.classList.add('active');
