@@ -13,7 +13,7 @@
 }
 
 body {
-    margin-left: -5px;
+  margin-left: -5px;
 }
 
 .splatnet-sidebar {
@@ -51,69 +51,78 @@ body {
   z-index: 1;
 }
 
-.splatnet-logo, .menu-item, .twitterbgbox {
-  position: relative;
-  z-index: 2;
-}
-
-.splatnet-logo {
+.icon-header-logo {
   width: 300px;
-  margin: 0 auto;
-}
-
-.splatnet-logo img {
+  height: 138px;
+  margin: 0 auto 10px;
+  background-image: url('assets/en/ui-scf41f55f26-b7d4baf19342db013cc20bb9d1dd2bfddc4817ace5a1c86f5e14705cd514311f.png');
+  background-position: 0 -1134px;
+  background-repeat: no-repeat;
+  position: relative;
   display: block;
-  width: 100%;
-  height: auto;
+  z-index: 2;
 }
 
 .menu-item {
   position: relative;
-  height: 84px;
-  margin-bottom: 8px;
+  width: 266px; 
+  height: 56px; 
+  margin: 0 auto 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-left: 24px;
+  padding-left: 22px; 
   cursor: pointer;
+  z-index: 2;
+  text-decoration: none;
+  background-image: url('assets/en/ui-scf41f55f26-b7d4baf19342db013cc20bb9d1dd2bfddc4817ace5a1c86f5e14705cd514311f.png');
+  background-repeat: no-repeat;
+  background-position: 0 -1564px;
 }
 
-.menu-item .bg {
+.icon-navi-friend:hover, .icon-navi-friend.active, .friend:hover, .friend.active { background-position: 0 -1508px; }
+.icon-navi-ranking:hover, .icon-navi-ranking.active, .rank:hover, .rank.active { background-position: 0 -1620px; }
+.icon-navi-equipment:hover, .icon-navi-equipment.active, .equipment:hover, .equipment.active { background-position: 0 -1452px; }
+.icon-navi-stage:hover, .icon-navi-stage.active, .stage:hover, .stage.active { background-position: 0 -1676px; }
+
+.menu-item img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  z-index: 0;
-}
-
-.menu-item .hover-state {
-  display: none; 
-}
-
-.menu-item:hover .default {
-  display: none; 
-}
-
-.menu-item:hover .hover-state {
-  display: block; 
+  pointer-events: none;
+  z-index: 1;
 }
 
 .menu-item .icon {
+  left: 20px;
   width: 32px;
   height: 32px;
-  z-index: 1;
-  object-fit: contain;
 }
 
 .menu-item .label {
+  position: absolute;
+  left: 62px;
   height: 28px;
+  top: 14px; 
+  pointer-events: none;
   z-index: 1;
 }
 
-.menu-item.equipment .label {
-  height: 55px;
+.equipment .label {
+  height: 62px; 
+  left: 60px;
+  top: -3px;
+}
+
+.menu-item .hover-state {
+  display: none !important;
+}
+
+.menu-item:hover .default,
+.menu-item.active .default {
+  display: none !important;
+}
+
+.menu-item:hover .hover-state,
+.menu-item.active .hover-state {
+  display: block !important;
 }
 
 .twitterbgbox {
@@ -123,6 +132,7 @@ body {
   border-radius: 40px;
   margin: 60px auto 0;
   position: relative;
+  z-index: 2;
 }
 
 .twitterbgbox::before {
@@ -170,57 +180,15 @@ body {
   font-family: 'Splatoon1', sans-serif;
   font-size: 16px;
   cursor: pointer;
-  transition: opacity 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 }
 
-.box-btn.twitter-btn {
-  background-color: #00a0f3;
-}
+.box-btn.twitter-btn { background-color: #00a0f3; }
 
-.btn-icon {
-  width: 18px;
+.btn-icon, .btn-label-img {
   height: 18px;
   filter: brightness(0) invert(1);
-}
-
-.box-btn:hover {
-  opacity: 0.8;
-}
-
-.btn-label-img {
-  height: 18px; 
-  width: auto;
-  display: block;
-  pointer-events: none;
-  filter: brightness(0) invert(1); 
-}
-
-.box-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; 
-  padding: 12px 0;
-}
-
-.box-btn .btn-label-img {
-  max-width: 80%; 
-}
-
-.menu-item.active .hover-state {
-    display: block !important;
-}
-
-.menu-item.active .default {
-    display: none !important;
-}
-
-.menu-link {
-  text-decoration: none;
-  display: block;
-  color: inherit;
 }
