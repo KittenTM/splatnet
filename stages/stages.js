@@ -1,4 +1,4 @@
-const API_URL = "https://api.splatcord.ink/prod/s1rotations";
+const API_URL = `${CONFIG.API_BASE_URL}/api/v1/boss`;
 
 function stageNames(stages, lang = "en-US") {
   return stages.map(s => s.translatedNames[lang]);
