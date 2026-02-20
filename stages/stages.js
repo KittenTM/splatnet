@@ -4,12 +4,27 @@ function stageNames(stages, lang = "en-US") {
   return stages.map(s => s.translatedNames[lang]);
 }
 
-function stageImagePath(stageName) {
-  const firstWord = stageName
-    .split(" ")[0]
-    .toLowerCase()
-    .replace(/['.]/g, "");
-  return `/assets/stages/${firstWord}.png`;
+function getStageClass(stageName) {
+  const name = stageName.toLowerCase();
+  
+  if (name.includes("ancho-v")) return "sprite-ancho-v";
+  if (name.includes("arowana")) return "sprite-arowana";
+  if (name.includes("blackbelly")) return "sprite-blackbelly";
+  if (name.includes("bluefin")) return "sprite-bluefin";
+  if (name.includes("camp")) return "sprite-camp";
+  if (name.includes("flounder")) return "sprite-flounder";
+  if (name.includes("hammerhead")) return "sprite-hammerhead";
+  if (name.includes("kelp")) return "sprite-kelp";
+  if (name.includes("mahi-mahi")) return "sprite-mahi-mahi";
+  if (name.includes("moray")) return "sprite-moray";
+  if (name.includes("museum")) return "sprite-museum";
+  if (name.includes("piranha")) return "sprite-piranha";
+  if (name.includes("port")) return "sprite-port";
+  if (name.includes("saltspray")) return "sprite-saltspray";
+  if (name.includes("urchin")) return "sprite-urchin";
+  if (name.includes("walleye")) return "sprite-walleye";
+  
+  return "sprite"; // fallback
 }
 
 async function fetchRotations() {
@@ -83,7 +98,7 @@ async function renderStages() {
           <div class="stages">
               ${rotation.turf.map(name => `
                   <div class="stage-item">
-                      <img src="${stageImagePath(name)}" alt="${name}">
+                      <div class="sprite ${getStageClass(name)}"></div>
                       <div class="stage-title">${name}</div>
                   </div>
               `).join("")}
@@ -104,7 +119,7 @@ async function renderStages() {
           <div class="stages">
               ${rotation.ranked.map(name => `
                   <div class="stage-item">
-                      <img src="${stageImagePath(name)}" alt="${name}">
+                      <div class="sprite ${getStageClass(name)}"></div>
                       <div class="stage-title">${name}</div>
                   </div>
               `).join("")}

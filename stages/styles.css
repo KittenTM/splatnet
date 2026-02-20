@@ -170,13 +170,6 @@ body {
     max-width: 400px;
 }
 
-.stages img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-
 .stage-title {
     font-family: "Regular", sans-serif;
     text-align: center;
@@ -292,3 +285,42 @@ body {
     width: auto;
     display: block;
 }
+
+.sprite {
+    background-image: url("/assets/stages/stages.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    background-size: 406.25% auto;
+    margin-bottom: 10px;
+}
+
+.sprite-ancho-v { background-position: 0.255% 0.336%; }
+.sprite-arowana { background-position: 33.418% 0.336%; }
+.sprite-blackbelly { background-position: 66.582% 0.336%; }
+.sprite-urchin { background-position: 99.745% 0.336%; }
+
+.sprite-bluefin { background-position: 0.255% 25.168%; }
+.sprite-camp { background-position: 33.418% 25.168%; }
+.sprite-flounder { background-position: 66.582% 25.168%; }
+.sprite-walleye { background-position: 99.745% 25.168%; }
+
+.sprite-hammerhead { background-position: 4.337% 50%; }
+.sprite-kelp { background-position: 37.5% 50%; }
+
+.sprite-mahi-mahi { background-position: 0.255% 74.832%; }
+.sprite-moray { background-position: 33.418% 74.832%; }
+.sprite-museum { background-position: 66.582% 74.832%; }
+
+.sprite-piranha { background-position: 0.255% 99.664%; }
+.sprite-port { background-position: 33.418% 99.664%; }
+.sprite-saltspray { background-position: 66.582% 99.664%; }
+
+.sprite-github { width: 30px; height: 30px; background-position: -5px -745px; background-size: initial; aspect-ratio: 1/1; }
+.sprite-gmail { width: 30px; height: 30px; background-position: -45px -745px; background-size: initial; aspect-ratio: 1/1; }
+.sprite-linkedin { width: 30px; height: 30px; background-position: -1385px -745px; background-size: initial; aspect-ratio: 1/1; }
+.sprite-stackoverflow { width: 30px; height: 30px; background-position: -1425px -745px; background-size: initial; aspect-ratio: 1/1; }
+.sprite-tumblr { width: 30px; height: 30px; background-position: -1465px -745px; background-size: initial; aspect-ratio: 1/1; }
+.sprite-twitter { width: 30px; height: 30px; background-position: -1505px -745px; background-size: initial; aspect-ratio: 1/1; }
