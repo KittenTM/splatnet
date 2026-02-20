@@ -30,7 +30,7 @@ This project operates on a frontend - backend basis. The backend is not optional
   - [ ] Support for fetching friends [Push this!](https://discord.com/channels/460820022777085983/835181904880730142/1470216180030771433)
 - [ ] Stage Info
     - [x] Basic Stage Fetching (using pretendo)
-      - [ ] Ditch Splatcord API to allow use for other networks other than pretendo
+      - [x] Ditch Splatcord API to allow use for other networks other than pretendo
     - [x] Show stage pngs
     - [x] Show all stage times
     - [x] Show Ranked Mode
