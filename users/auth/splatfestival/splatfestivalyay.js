@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     async function checkExistingSession() {
         try {
-            const response = await fetch(apiBase + "/api/v1/users/me", {
+            const response = await fetch(apiBase + "/api/v1/session_id/check", {
                 method: 'GET',
                 credentials: 'include'
             });
