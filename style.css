@@ -135,8 +135,7 @@ body {
   z-index: 2;
 }
 
-.twitterbgbox::before {
-  content: "";
+.mii-icon-container {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -144,11 +143,36 @@ body {
   left: -20px;
   background-color: white;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #333333; /* tickles my brain but might remove for original look */
 }
 
-.twitterbgbox::after {
-  content: "WWWWWWWWWWWW";
+#mii-img {
+  width: 110%;
+  height: auto;
+  display: none;
+}
+
+.twitterbgbox::before {
+  display: none;
+}
+
+.profile-name-label {
+  position: absolute;
+  top: 14px;
+  left: 55px;
+  color: white;
+  font-family: 'RegularFont', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.profile-name-label {
   position: absolute;
   top: 12px;
   left: 48px;
