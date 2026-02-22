@@ -4635,11 +4635,11 @@ header .header-logo{
     display:table;
     height:38px;
     margin:0 auto;
-    background:#ff7d00;
+    background:#a00b0b;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border-radius:4px;
-    border-bottom:2px solid #ff7d00;
+    border-bottom:2px solid #660606;
     -moz-box-shadow:0 2px 0 rgba(0,0,0,0.05);
     -webkit-box-shadow:0 2px 0 rgba(0,0,0,0.05);
     box-shadow:0 2px 0 rgba(0,0,0,0.05)
@@ -4656,7 +4656,7 @@ header .header-logo{
     color:white;
     font-size:18px;
     font-size:1.8rem;
-    border-left:2px #f27700 solid
+    border-left:2px #920a0a solid
 }
 .nnid-login-btn .nnid-login-bg:before{
     content:'';
@@ -4666,22 +4666,22 @@ header .header-logo{
     left:-34px;
     width:26px;
     height:28px;
-    background:transparent url('../assets/en/svg/ui/ico_nnid_login-a01be5411ee8044ca26b66ce5b3af77da71f34ae2e51c9f1b3a3c0d9f1aaa1b2.svg') 0 0 no-repeat;
+    background:transparent url('../assets/en/svg/ui/ico_sfid_login-a01be5411ee8044ca26b66ce5b3af77da71f34ae2e51c9f1b3a3c0d9f1aaa1b2.svg') 0 0 no-repeat;
     -moz-background-size:26px 28px;
     -o-background-size:26px 28px;
     -webkit-background-size:26px 28px;
     background-size:26px 28px
 }
 .nnid-login-btn:hover{
-    background:#e97200;
-    border-bottom:2px #ba5b00 solid
+    background:#c50f0f;
+    border-bottom:2px #790707 solid
 }
 .nnid-login-btn:hover .nnid-login-bg{
-    background:#e97200;
-    border-left:2px #dd6c00 solid
+    background:#c50f0f;
+    border-left:2px #af0c0c solid
 }
 .nnid-login-btn:active{
-    border-top:2px #ba5b00 solid;
+    border-top:2px #790707 solid;
     border-bottom:none
 }
 .nnid-description{
