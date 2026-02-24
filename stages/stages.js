@@ -1,3 +1,62 @@
+window.loadHeader(function(headerContainer) {
+    const stageButton = headerContainer.querySelector('.menu-item.stage');
+    if (stageButton) {
+        stageButton.classList.add('active');
+    }
+
+    if (typeof CONFIG !== 'undefined') {
+        const apiBase = CONFIG.API_BASE_URL.replace(/\/$/, "");
+        const logoutForm = document.getElementById("logout-form");
+        
+        if (logoutForm) {
+            logoutForm.action = apiBase + "/api/v1/spfn/logout";
+            const originInput = document.getElementById("logout_frontend_origin");
+            if (originInput) originInput.value = window.location.origin;
+            
+            logoutForm.addEventListener('submit', () => {
+                sessionStorage.removeItem('user_cache');
+            });
+        }
+
+        const renderData = (data) => {
+            if (typeof data === 'string') {
+                try { data = JSON.parse(data); } catch (e) { console.error(e); }
+            }
+            const nameEl = document.getElementById('mii-name');
+            const imgEl = document.getElementById('mii-img');
+            if (nameEl) {
+                nameEl.textContent = (data.mii && data.mii.name) || data.nickname || data.user_id || data.username || "User";
+            }
+            if (imgEl) {
+                const miiBlob = (data.mii && data.mii.data) || data.mii_data;
+                if (miiBlob) {
+                    imgEl.src = `https://mii-unsecure.ariankordi.net/miis/image.png?erri=s6u7r-rsp&data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
+                    imgEl.style.display = 'block';
+                }
+            }
+        };
+
+        const cached = sessionStorage.getItem('user_cache');
+        if (cached) renderData(JSON.parse(cached));
+
+        fetch(apiBase + "/api/v1/me", { credentials: 'include' })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(data => {
+                sessionStorage.setItem('user_cache', JSON.stringify(data));
+                renderData(data);
+            })
+            .catch(err => {
+                if (!cached) {
+                    const nameEl = document.getElementById('mii-name');
+                    if (nameEl) nameEl.textContent = "Guest";
+                }
+                console.error(err);
+            });
+    }
+
+    renderStages();
+});
+
 const API_URL = `${CONFIG.API_BASE_URL}/api/v1/boss`;
 
 function stageNames(stages, lang = "en-US") {
@@ -6,7 +65,6 @@ function stageNames(stages, lang = "en-US") {
 
 function getStageClass(stageName) {
   const name = stageName.toLowerCase();
-  
   if (name.includes("ancho-v")) return "sprite-ancho-v";
   if (name.includes("arowana")) return "sprite-arowana";
   if (name.includes("blackbelly")) return "sprite-blackbelly";
@@ -23,8 +81,7 @@ function getStageClass(stageName) {
   if (name.includes("saltspray")) return "sprite-saltspray";
   if (name.includes("urchin")) return "sprite-urchin";
   if (name.includes("walleye")) return "sprite-walleye";
-  
-  return "sprite"; // fallback
+  return "sprite";
 }
 
 async function fetchRotations() {
@@ -35,16 +92,12 @@ async function fetchRotations() {
     const rotations = data?.pretendo?.rotations ?? {};
     const now = new Date();
     const timestamps = Object.keys(rotations).sort((a, b) => Number(a) - Number(b));
-
     const result = [];
-
     for (const ts of timestamps) {
       const start = new Date(Number(ts));
       const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
       if (end < now) continue;
-
       const r = rotations[ts];
-
       result.push({
         turf: stageNames(r.turfStages),
         ranked: stageNames(r.rankedStages),
@@ -53,10 +106,9 @@ async function fetchRotations() {
         endTime: end,
       });
     }
-
     return result;
   } catch (error) {
-    console.error("Failed to fetch rotations:", error);
+    console.error(error);
     return [];
   }
 }
@@ -68,33 +120,27 @@ async function renderStages() {
   try {
     rotations = await fetchRotations();
   } catch (err) {
-    console.error("Error in renderStages:", err);
+    console.error(err);
   } finally {
-    loadingOverlay.style.display = "none";
+    if (loadingOverlay) loadingOverlay.style.display = "none";
   }
-
   if (!rotations.length) {
     container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
     return;
   }
-
   let html = "";
-
   for (const rotation of rotations) {
     const optionsDate = { day: "2-digit", month: "2-digit" };
     const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
     const timeZone = "Europe/Paris";
     const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
-
     html += `
       <div class="rotation-time">${formattedTime}</div>
-
       <div class="stages-section">
           <div class="mode-header">
               <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
               <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_regularmatch-2cee60cbe41a1594b8d5ef867138f99d843cfce6efe0c490a41632b2e99ec685.svg" alt="Regular Battle"></div>
           </div>
-          
           <div class="stages">
               ${rotation.turf.map(name => `
                   <div class="stage-item">
@@ -104,18 +150,15 @@ async function renderStages() {
               `).join("")}
           </div>
       </div>
-
       <div class="stages-section">
           <div class="mode-header">
               <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
               <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_gachimatch-08a066c73d4dcf466c435be611b996ffd7930d19d9a6a865b712cd5dd802534f.svg" alt="Ranked Battle"></div>
           </div>
-
           <div class="ranked-mode-labels">
               <div class="battle-mode-text"><img src="/assets/en/svg/text/scene/stage/tx_rule-76cf0777fb715a9478f8b579512541f3f14ed834566e0b6e153834a57d726021.svg" alt="Battle Mode"></div>
               <div class="ranked-mode-text">${rotation.ranked_mode}</div>
           </div>
-
           <div class="stages">
               ${rotation.ranked.map(name => `
                   <div class="stage-item">
@@ -127,8 +170,5 @@ async function renderStages() {
       </div>
     `;
   }
-
   container.innerHTML = html;
 }
-
-renderStages();

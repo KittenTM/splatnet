@@ -43,7 +43,7 @@ body {
   position: absolute;
   bottom: -28px;
   left: 0;
-  width: 340px;
+  width: 330px;
   height: 30px;
   background-image: url('assets/en/svg/ui/bg_menu_bottom_wave-03056ad08bac76d5bf1d0bc2895f30cda65a731d9d69789719da70a084be31cb.svg');
   background-repeat: no-repeat;
@@ -79,10 +79,10 @@ body {
   background-position: 0 -1564px;
 }
 
-.icon-navi-friend:hover, .icon-navi-friend.active, .friend:hover, .friend.active { background-position: 0 -1508px; }
-.icon-navi-ranking:hover, .icon-navi-ranking.active, .rank:hover, .rank.active { background-position: 0 -1620px; }
-.icon-navi-equipment:hover, .icon-navi-equipment.active, .equipment:hover, .equipment.active { background-position: 0 -1452px; }
-.icon-navi-stage:hover, .icon-navi-stage.active, .stage:hover, .stage.active { background-position: 0 -1676px; }
+.menu-item.friend:hover, .menu-item.friend.active { background-position: 0 -1508px !important; }
+.menu-item.rank:hover, .menu-item.rank.active { background-position: 0 -1620px !important; }
+.menu-item.equipment:hover, .menu-item.equipment.active { background-position: 0 -1452px !important; }
+.menu-item.stage:hover, .menu-item.stage.active { background-position: 0 -1676px !important; }
 
 .menu-item img {
   position: absolute;
@@ -215,4 +215,74 @@ body {
 .btn-icon, .btn-label-img {
   height: 18px;
   filter: brightness(0) invert(1);
+}
+
+.lang-options {
+  width: 220px;
+  margin: 20px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.image-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  padding: 5px;
+  background: transparent; /* Removes the box */
+}
+
+.image-dropdown-toggle img:first-child {
+  height: 24px; /* Adjust based on your SVG height */
+}
+
+.dropdown-arrow-icon {
+  height: 12px;
+  /* Use filter if you need the arrow to be white/different color */
+}
+
+.image-dropdown-options {
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 100%; /* Opens upwards, or use top: 100% to open down */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  width: max-content;
+}
+
+.image-dropdown-options.show {
+  display: block;
+}
+
+.image-dropdown-options li {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.image-dropdown-options li:hover {
+  opacity: 0.7;
+  background-color: #333;
+}
+
+.image-dropdown-options img {
+  height: 24px;
+  display: block;
+}
+
+.image-dropdown-options.show {
+    display: block !important;
+    z-index: 9999;
+}
+
+.websiteredirect-link-container img {
+    width: 180px;
+    height: auto;
 }

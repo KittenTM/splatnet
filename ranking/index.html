@@ -5,7 +5,7 @@
   <title>SplatNet - Splatoon's multiplayer service hub</title>
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="/assets/general.js"></script>
+  <script src="/assets/jquery-1.9.1.js"></script>
   <script src="/config.js"></script>
 </head>
 <body>
@@ -22,11 +22,7 @@
     </div>
   </div>
   <div class="main-wrapper">
-    
-    <div id="header-container"></div>
-
     <div class="content">
-      
       <div class="logo-left-align">
         <div id="stage-header-logo">
           <img class="bg-layer" src="../assets/en/svg/ui/bg_h1-62e768f2a1ca52f993b5953c78d46bc53b35b70df7f8e13619a982f8f10ab750.svg">
@@ -34,10 +30,14 @@
           <img class="label-layer" src="../assets/en/svg/text/scene/rank/tx_ranking_wht-f79b9c472757006700455a8b74eaa4e50fee7c316373c98d873e0769f9bdb6d9.svg">
         </div>
         <div class="equipmentsubtitle-text">
-        Win battles to raise your weekly rank! Rankings are reset every Sunday at midnight! (Your rank is calculated by multiplying number of wins X win rate.)
+          Win battles to raise your weekly rank! Rankings are reset every Sunday at midnight! (Your rank is calculated by multiplying number of wins X win rate.)
+        </div>
       </div>
       <div class="stages-container" id="stages-container"></div>
     </div>
+  </div>
+
+  <script src="/assets/general.js"></script>
   <script src="rank.js"></script>
 </body>
 </html>
