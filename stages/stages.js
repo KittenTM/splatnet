@@ -95,13 +95,12 @@ async function fetchRotations() {
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const data = await res.json();
     const rotations = data?.pretendo?.rotations ?? {};
-    const now = new Date();
     const timestamps = Object.keys(rotations).sort((a, b) => Number(a) - Number(b));
     const result = [];
+    
     for (const ts of timestamps) {
       const start = new Date(Number(ts));
       const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
-      if (end < now) continue;
       const r = rotations[ts];
       result.push({
         turf: stageNames(r.turfStages),
@@ -134,14 +133,12 @@ async function renderStages() {
         
         const trigger = document.createElement('div');
         trigger.id = 'scroll-trigger';
-        trigger.style.height = '2px';
-        container.after(trigger);
-
-        loadMore(true);
+        trigger.style.height = '10px';
+        container.appendChild(trigger);
 
         observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && currentIndex < allRotations.length) {
-                loadMore(false);
+                loadMore();
             }
         }, { rootMargin: '200px' });
         
@@ -153,8 +150,9 @@ async function renderStages() {
     }
 }
 
-function loadMore(isInitial) {
+function loadMore() {
     const container = document.getElementById("stages-container");
+    const trigger = document.getElementById('scroll-trigger');
     const loadingOverlay = document.getElementById("loading-overlay");
 
     if (loadingOverlay) {
@@ -163,8 +161,6 @@ function loadMore(isInitial) {
             window.animateLoadingCanvas();
         }
     }
-
-    const waitTime = isInitial ? 0 : 800;
 
     setTimeout(() => {
         const nextBatch = allRotations.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
@@ -213,14 +209,18 @@ function loadMore(isInitial) {
             `;
         }
 
-        container.insertAdjacentHTML('beforeend', html);
+        if (trigger) {
+            trigger.insertAdjacentHTML('beforebegin', html);
+        } else {
+            container.insertAdjacentHTML('beforeend', html);
+        }
+
         currentIndex += ITEMS_PER_PAGE;
 
         if (loadingOverlay) loadingOverlay.style.display = 'none';
         if (currentIndex >= allRotations.length) {
             if (observer) observer.disconnect();
-            const trigger = document.getElementById('scroll-trigger');
             if (trigger) trigger.remove();
         }
-    }, waitTime);
+    }, currentIndex === 0 ? 0 : 800);
 }
