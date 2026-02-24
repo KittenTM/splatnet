@@ -1,3 +1,8 @@
+let allRotations = [];
+let currentIndex = 0;
+const ITEMS_PER_PAGE = 5;
+let observer;
+
 window.loadHeader(function(headerContainer) {
     const stageButton = headerContainer.querySelector('.menu-item.stage');
     if (stageButton) {
@@ -60,7 +65,7 @@ window.loadHeader(function(headerContainer) {
 const API_URL = `${CONFIG.API_BASE_URL}/api/v1/boss`;
 
 function stageNames(stages, lang = "en-US") {
-  return stages.map(s => s.translatedNames[lang]);
+    return stages.map(s => s.translatedNames[lang]);
 }
 
 function getStageClass(stageName) {
@@ -114,61 +119,108 @@ async function fetchRotations() {
 }
 
 async function renderStages() {
-  const loadingOverlay = document.getElementById("loading-overlay");
-  const container = document.getElementById("stages-container");
-  let rotations = [];
-  try {
-    rotations = await fetchRotations();
-  } catch (err) {
-    console.error(err);
-  } finally {
-    if (loadingOverlay) loadingOverlay.style.display = "none";
-  }
-  if (!rotations.length) {
-    container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
-    return;
-  }
-  let html = "";
-  for (const rotation of rotations) {
-    const optionsDate = { day: "2-digit", month: "2-digit" };
-    const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
-    const timeZone = "Europe/Paris";
-    const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
-    html += `
-      <div class="rotation-time">${formattedTime}</div>
-      <div class="stages-section">
-          <div class="mode-header">
-              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
-              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_regularmatch-2cee60cbe41a1594b8d5ef867138f99d843cfce6efe0c490a41632b2e99ec685.svg" alt="Regular Battle"></div>
-          </div>
-          <div class="stages">
-              ${rotation.turf.map(name => `
-                  <div class="stage-item">
-                      <div class="sprite ${getStageClass(name)}"></div>
-                      <div class="stage-title">${name}</div>
-                  </div>
-              `).join("")}
-          </div>
-      </div>
-      <div class="stages-section">
-          <div class="mode-header">
-              <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
-              <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_gachimatch-08a066c73d4dcf466c435be611b996ffd7930d19d9a6a865b712cd5dd802534f.svg" alt="Ranked Battle"></div>
-          </div>
-          <div class="ranked-mode-labels">
-              <div class="battle-mode-text"><img src="/assets/en/svg/text/scene/stage/tx_rule-76cf0777fb715a9478f8b579512541f3f14ed834566e0b6e153834a57d726021.svg" alt="Battle Mode"></div>
-              <div class="ranked-mode-text">${rotation.ranked_mode}</div>
-          </div>
-          <div class="stages">
-              ${rotation.ranked.map(name => `
-                  <div class="stage-item">
-                      <div class="sprite ${getStageClass(name)}"></div>
-                      <div class="stage-title">${name}</div>
-                  </div>
-              `).join("")}
-          </div>
-      </div>
-    `;
-  }
-  container.innerHTML = html;
+    const container = document.getElementById("stages-container");
+    const loadingOverlay = document.getElementById("loading-overlay");
+    
+    try {
+        allRotations = await fetchRotations();
+        if (!allRotations.length) {
+            container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
+            if (loadingOverlay) loadingOverlay.style.display = 'none';
+            return;
+        }
+        
+        container.innerHTML = "";
+        
+        const trigger = document.createElement('div');
+        trigger.id = 'scroll-trigger';
+        trigger.style.height = '2px';
+        container.after(trigger);
+
+        loadMore(true);
+
+        observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && currentIndex < allRotations.length) {
+                loadMore(false);
+            }
+        }, { rootMargin: '200px' });
+        
+        observer.observe(trigger);
+
+    } catch (err) {
+        console.error(err);
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+    }
+}
+
+function loadMore(isInitial) {
+    const container = document.getElementById("stages-container");
+    const loadingOverlay = document.getElementById("loading-overlay");
+
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex';
+        if (typeof window.animateLoadingCanvas === 'function') {
+            window.animateLoadingCanvas();
+        }
+    }
+
+    const waitTime = isInitial ? 0 : 800;
+
+    setTimeout(() => {
+        const nextBatch = allRotations.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
+        let html = "";
+        
+        for (const rotation of nextBatch) {
+            const optionsDate = { day: "2-digit", month: "2-digit" };
+            const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
+            const timeZone = "Europe/Paris";
+            const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
+            
+            html += `
+                <div class="rotation-time">${formattedTime}</div>
+                <div class="stages-section">
+                    <div class="mode-header">
+                        <img class="mode-title" src="/assets/en/svg/ui/ico_stage_regular-54557ab86d0cba16cf002e6d299f87dccb41655de8a171d32928bfebda3f3692.svg" alt="Regular Battle">
+                        <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_regularmatch-2cee60cbe41a1594b8d5ef867138f99d843cfce6efe0c490a41632b2e99ec685.svg" alt="Regular Battle"></div>
+                    </div>
+                    <div class="stages">
+                        ${rotation.turf.map(name => `
+                            <div class="stage-item">
+                                <div class="sprite ${getStageClass(name)}"></div>
+                                <div class="stage-title">${name}</div>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+                <div class="stages-section">
+                    <div class="mode-header">
+                        <img class="mode-title" src="/assets/en/svg/ui/ico_stage_gachi-d2041f3d0fc360ad6c7c00dc4f5bfd1aa626a251d35af88c076b5498d8eb991d.svg" alt="Ranked Battle">
+                        <div class="mode-text"><img src="/assets/en/svg/text/scene/stage/tx_gachimatch-08a066c73d4dcf466c435be611b996ffd7930d19d9a6a865b712cd5dd802534f.svg" alt="Ranked Battle"></div>
+                    </div>
+                    <div class="ranked-mode-labels">
+                        <div class="battle-mode-text"><img src="/assets/en/svg/text/scene/stage/tx_rule-76cf0777fb715a9478f8b579512541f3f14ed834566e0b6e153834a57d726021.svg" alt="Battle Mode"></div>
+                        <div class="ranked-mode-text">${rotation.ranked_mode}</div>
+                    </div>
+                    <div class="stages">
+                        ${rotation.ranked.map(name => `
+                            <div class="stage-item">
+                                <div class="sprite ${getStageClass(name)}"></div>
+                                <div class="stage-title">${name}</div>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        container.insertAdjacentHTML('beforeend', html);
+        currentIndex += ITEMS_PER_PAGE;
+
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        if (currentIndex >= allRotations.length) {
+            if (observer) observer.disconnect();
+            const trigger = document.getElementById('scroll-trigger');
+            if (trigger) trigger.remove();
+        }
+    }, waitTime);
 }
