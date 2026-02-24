@@ -231,22 +231,22 @@ body {
   cursor: pointer;
   gap: 10px;
   padding: 5px;
-  background: transparent; /* Removes the box */
+  background: transparent; /* vro fuckass vscode autocomplete adds comments... if anyone knows a better 
+                           code editor that doesnt do this pls dm me i hate having to remove these. */
 }
 
 .image-dropdown-toggle img:first-child {
-  height: 24px; /* Adjust based on your SVG height */
+  height: 24px;
 }
 
 .dropdown-arrow-icon {
   height: 12px;
-  /* Use filter if you need the arrow to be white/different color */
 }
 
 .image-dropdown-options {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
-  bottom: 100%; /* Opens upwards, or use top: 100% to open down */
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.9);
@@ -285,4 +285,38 @@ body {
 .websiteredirect-link-container img {
     width: 180px;
     height: auto;
+}
+
+.websiteredirect-link-container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    z-index: 2;
+}
+
+.websiteredirect-link-container img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.nintylogo-static {
+    margin-top: 10px;
+    width: 90px;      
+    height: 15px;     
+    overflow: hidden; 
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+
+.nintylogo-static img {
+    width: 180px;     
+    height: auto;
+    position: absolute;
+    top: 0;           
+    left: 0;          
 }
