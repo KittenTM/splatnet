@@ -1,3 +1,13 @@
+body {
+  zoom: 0.96;
+  transform: scale(0.96);
+  transform-origin: top left;
+  width: 105%;
+  height: 105%;
+  overflow: visible;
+  margin-left: -5px;
+}
+
 @font-face {
   font-family: 'Splatoon1';
   src: url('Splatoon1.otf') format('opentype');
@@ -10,10 +20,6 @@
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin-left: -5px;
 }
 
 .splatnet-sidebar {
@@ -78,8 +84,8 @@ body {
 .menu-item {
   position: relative;
   width: 266px; 
-  height: 56px; 
-  margin: 0 auto 8px;
+  height: 54px; 
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   padding-left: 22px; 
@@ -112,7 +118,7 @@ body {
   position: absolute;
   left: 62px;
   height: 28px;
-  top: 14px; 
+  top: 13px; 
   pointer-events: none;
   z-index: 1;
 }
