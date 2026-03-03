@@ -1,0 +1,730 @@
+[
+  {
+    "id": 1000,
+    "main_key": "Shot_Short_00",
+    "name": "Shot_Short00",
+    "sub": "Flag",
+    "special": "BigLaser",
+    "image": "Wst_Shooter_Short_00^w.png"
+  },
+  {
+    "id": 1001,
+    "main_key": "Shot_Short_01",
+    "name": "Shot_Short01",
+    "sub": "MarkingBall",
+    "special": "KingSquid",
+    "image": "Wst_Shooter_Short_01^w.png"
+  },
+  {
+    "id": 1002,
+    "main_key": "Shot_Short_02",
+    "name": "Shot_Short02",
+    "sub": "Bomb_Throw",
+    "special": "SuperShot",
+    "image": null
+  },
+  {
+    "id": 1010,
+    "main_key": "Shot_First_00",
+    "name": "Shot_First00",
+    "sub": "Bomb_Throw",
+    "special": "Barrier",
+    "image": "Wst_Shooter_First_00^w.png"
+  },
+  {
+    "id": 1011,
+    "main_key": "Shot_First_01",
+    "name": "Shot_First01",
+    "sub": "DevilBall",
+    "special": "AllMarking",
+    "image": "Wst_Shooter_First_01^w.png"
+  },
+  {
+    "id": 1020,
+    "main_key": "Shot_Precision_00",
+    "name": "Shot_Precision00",
+    "sub": "Bomb_Hold",
+    "special": "FreeBombs",
+    "image": "Wst_Shooter_Precision_00^w.png"
+  },
+  {
+    "id": 1021,
+    "main_key": "Shot_Precision_01",
+    "name": "Shot_Precision01",
+    "sub": "Bomb_Handy",
+    "special": "SuperShot",
+    "image": "Wst_Shooter_Precision_01^w.png"
+  },
+  {
+    "id": 1030,
+    "main_key": "Shot_Blaze_00",
+    "name": "Shot_Blaze00",
+    "sub": "Bomb_Chase",
+    "special": "SuperShot",
+    "image": "Wst_Shooter_Blaze_00^w.png"
+  },
+  {
+    "id": 1031,
+    "main_key": "Shot_Blaze_01",
+    "name": "Shot_Blaze01",
+    "sub": "TimerTrap",
+    "special": "Tornado",
+    "image": "Wst_Shooter_Blaze_01^w.png"
+  },
+  {
+    "id": 1032,
+    "main_key": "Shot_Blaze_02",
+    "name": "Shot_Blaze02",
+    "sub": "Bomb_Handy",
+    "special": "KingSquid",
+    "image": null
+  },
+  {
+    "id": 1040,
+    "main_key": "Shot_Normal_00",
+    "name": "Shot_Normal00",
+    "sub": "Bomb_Handy",
+    "special": "FreeBombs",
+    "image": "Wst_Shooter_Normal_00^w.png"
+  },
+  {
+    "id": 1041,
+    "main_key": "Shot_Normal_01",
+    "name": "Shot_Normal01",
+    "sub": "Bomb_Hold",
+    "special": "SuperShot",
+    "image": "Wst_Shooter_Normal_01^w.png"
+  },
+  {
+    "id": 1042,
+    "main_key": "Shot_Normal_02",
+    "name": "Shot_Normal02",
+    "sub": "Bomb_Throw",
+    "special": "Tornado",
+    "image": "Wst_Shooter_Normal_02^w.png"
+  },
+  {
+    "id": 1045,
+    "main_key": "Shot_Normal_H",
+    "name": "Shot_NormalH",
+    "sub": "Bomb_Handy",
+    "special": "FreeBombs",
+    "image": "Wst_Shooter_Normal_H^w.png"
+  },
+  {
+    "id": 1046,
+    "main_key": "Shot_Normal_Oct",
+    "name": "Shot_NormalOct",
+    "sub": "Bomb_Hold",
+    "special": "SuperShot",
+    "image": "Wst_Shooter_Normal_Oct^w.png"
+  },
+  {
+    "id": 1050,
+    "main_key": "Shot_Gravity_00",
+    "name": "Shot_Gravity00",
+    "sub": "Shield",
+    "special": "BigLaser",
+    "image": "Wst_Shooter_Gravity_00^w.png"
+  },
+  {
+    "id": 1051,
+    "main_key": "Shot_Gravity_01",
+    "name": "Shot_Gravity01",
+    "sub": "Bomb_Chase",
+    "special": "Tornado",
+    "image": "Wst_Shooter_Gravity_01^w.png"
+  },
+  {
+    "id": 1060,
+    "main_key": "Shot_QuickMiddle_00",
+    "name": "Shot_QuickMiddle00",
+    "sub": "Bomb_Throw",
+    "special": "AllMarking",
+    "image": "Wst_Shooter_QuickMiddle_00^w.png"
+  },
+  {
+    "id": 1061,
+    "main_key": "Shot_QuickMiddle_01",
+    "name": "Shot_QuickMiddle01",
+    "sub": "Sprinkler",
+    "special": "Tornado",
+    "image": "Wst_Shooter_QuickMiddle_01^w.png"
+  },
+  {
+    "id": 1062,
+    "main_key": "Shot_QuickMiddle_02",
+    "name": "Shot_QuickMiddle02",
+    "sub": "MarkingBall",
+    "special": "KingSquid",
+    "image": null
+  },
+  {
+    "id": 1070,
+    "main_key": "Shot_Expert_00",
+    "name": "Shot_Expert00",
+    "sub": "Bomb_Throw",
+    "special": "Tornado",
+    "image": null
+  },
+  {
+    "id": 1071,
+    "main_key": "Shot_Expert_01",
+    "name": "Shot_Expert01",
+    "sub": "MarkingBall",
+    "special": "SuperShot",
+    "image": null
+  },
+  {
+    "id": 1072,
+    "main_key": "Shot_Expert_02",
+    "name": "Shot_Expert02",
+    "sub": "Bomb_Hold",
+    "special": "FreeBombs",
+    "image": null
+  },
+  {
+    "id": 1080,
+    "main_key": "Shot_Heavy_00",
+    "name": "Shot_Heavy00",
+    "sub": "Sprinkler",
+    "special": "AllMarking",
+    "image": "Wst_Shooter_Heavy_00^w.png"
+  },
+  {
+    "id": 1081,
+    "main_key": "Shot_Heavy_01",
+    "name": "Shot_Heavy01",
+    "sub": "Shield",
+    "special": "KingSquid",
+    "image": "Wst_Shooter_Heavy_01^w.png"
+  },
+  {
+    "id": 1090,
+    "main_key": "Shot_QuickLong_00",
+    "name": "Shot_QuickLong00",
+    "sub": "Bomb_Throw",
+    "special": "AllMarking",
+    "image": "Wst_Shooter_QuickLong_00^w.png"
+  },
+  {
+    "id": 1091,
+    "main_key": "Shot_QuickLong_01",
+    "name": "Shot_QuickLong01",
+    "sub": "Flag",
+    "special": "BigLaser",
+    "image": "Wst_Shooter_QuickLong_01^w.png"
+  },
+  {
+    "id": 1100,
+    "main_key": "Shot_Long_00",
+    "name": "Shot_Long00",
+    "sub": "Shield",
+    "special": "Tornado",
+    "image": "Wst_Shooter_Long_00^w.png"
+  },
+  {
+    "id": 1101,
+    "main_key": "Shot_Long_01",
+    "name": "Shot_Long01",
+    "sub": "Bomb_Handy",
+    "special": "KingSquid",
+    "image": "Wst_Shooter_Long_01^w.png"
+  },
+  {
+    "id": 1110,
+    "main_key": "Shot_ExplosionShort_00",
+    "name": "Shot_ExpShort00",
+    "sub": "TimerTrap",
+    "special": "SuperShot",
+    "image": null
+  },
+  {
+    "id": 1111,
+    "main_key": "Shot_ExplosionShort_01",
+    "name": "Shot_ExpShort01",
+    "sub": "Bomb_Throw",
+    "special": "FreeBombs",
+    "image": null
+  },
+  {
+    "id": 1120,
+    "main_key": "Shot_ExplosionMiddle_00",
+    "name": "Shot_ExpMiddle00",
+    "sub": "DevilBall",
+    "special": "BigLaser",
+    "image": null
+  },
+  {
+    "id": 1121,
+    "main_key": "Shot_ExplosionMiddle_01",
+    "name": "Shot_ExpMiddle01",
+    "sub": "MarkingBall",
+    "special": "Barrier",
+    "image": null
+  },
+  {
+    "id": 1130,
+    "main_key": "Shot_ExplosionLong_00",
+    "name": "Shot_ExpLong00",
+    "sub": "Shield",
+    "special": "Tornado",
+    "image": null
+  },
+  {
+    "id": 1131,
+    "main_key": "Shot_ExplosionLong_01",
+    "name": "Shot_ExpLong01",
+    "sub": "Bomb_Throw",
+    "special": "KingSquid",
+    "image": null
+  },
+  {
+    "id": 1132,
+    "main_key": "Shot_ExplosionLong_02",
+    "name": "Shot_ExpLong02",
+    "sub": "Bomb_Handy",
+    "special": "BigLaser",
+    "image": null
+  },
+  {
+    "id": 1140,
+    "main_key": "Shot_ExplosionLight_00",
+    "name": "Shot_ExpLight00",
+    "sub": "TimerTrap",
+    "special": "Barrier",
+    "image": null
+  },
+  {
+    "id": 1141,
+    "main_key": "Shot_ExplosionLight_01",
+    "name": "Shot_ExpLight01",
+    "sub": "Bomb_Hold",
+    "special": "FreeBombs",
+    "image": null
+  },
+  {
+    "id": 1150,
+    "main_key": "Shot_ExplosionLightLong_00",
+    "name": "Shot_ExpLightLong00",
+    "sub": "Bomb_Chase",
+    "special": "SuperShot",
+    "image": null
+  },
+  {
+    "id": 1151,
+    "main_key": "Shot_ExplosionLightLong_01",
+    "name": "Shot_ExpLightLong01",
+    "sub": "DevilBall",
+    "special": "BigLaser",
+    "image": null
+  },
+  {
+    "id": 1160,
+    "main_key": "Shot_TripleQuick_00",
+    "name": "Shot_TripleQuick00",
+    "sub": "DevilBall",
+    "special": "BigLaser",
+    "image": "Wst_Shooter_TripleQuick_00^w.png"
+  },
+  {
+    "id": 1161,
+    "main_key": "Shot_TripleQuick_01",
+    "name": "Shot_TripleQuick01",
+    "sub": "Bomb_Handy",
+    "special": "KingSquid",
+    "image": "Wst_Shooter_TripleQuick_01^w.png"
+  },
+  {
+    "id": 1170,
+    "main_key": "Shot_TripleMiddle_00",
+    "name": "Shot_TripleMiddle00",
+    "sub": "Bomb_Hold",
+    "special": "AllMarking",
+    "image": "Wst_Shooter_TripleMiddle_00^w.png"
+  },
+  {
+    "id": 1171,
+    "main_key": "Shot_TripleMiddle_01",
+    "name": "Shot_TripleMiddle01",
+    "sub": "MarkingBall",
+    "special": "SuperShot",
+    "image": "Wst_Shooter_TripleMiddle_01^w.png"
+  },
+  {
+    "id": 1172,
+    "main_key": "Shot_TripleMiddle_02",
+    "name": "Shot_TripleMiddle02",
+    "sub": "Shield",
+    "special": "Barrier",
+    "image": null
+  },
+  {
+    "id": 2000,
+    "main_key": "Roller_Compact_00",
+    "name": "Roller_Compact00",
+    "sub": "Bomb_Handy",
+    "special": "SuperShot",
+    "image": "Wst_Roller_Compact00^w.png"
+  },
+  {
+    "id": 2001,
+    "main_key": "Roller_Compact_01",
+    "name": "Roller_Compact01",
+    "sub": "Bomb_Chase",
+    "special": "FreeBombs",
+    "image": "Wst_Roller_Compact01^w.png"
+  },
+  {
+    "id": 2010,
+    "main_key": "Roller_Normal_00",
+    "name": "Roller_Normal00",
+    "sub": "Bomb_Hold",
+    "special": "BigLaser",
+    "image": "Wst_Roller_Normal_00^w.png"
+  },
+  {
+    "id": 2011,
+    "main_key": "Roller_Normal_01",
+    "name": "Roller_Normal01",
+    "sub": "Flag",
+    "special": "KingSquid",
+    "image": "Wst_Roller_Normal_01^w.png"
+  },
+  {
+    "id": 2012,
+    "main_key": "Roller_Normal_02",
+    "name": "Roller_Normal02",
+    "sub": "Shield",
+    "special": "SuperShot",
+    "image": "Wst_Roller_Normal_02^w.png"
+  },
+  {
+    "id": 2015,
+    "main_key": "Roller_Normal_H",
+    "name": "Roller_NormalH",
+    "sub": "Bomb_Hold",
+    "special": "BigLaser",
+    "image": "Wst_Roller_Normal_H^w.png"
+  },
+  {
+    "id": 2020,
+    "main_key": "Roller_Heavy_00",
+    "name": "Roller_Heavy00",
+    "sub": "Sprinkler",
+    "special": "AllMarking",
+    "image": "Wst_Roller_Heavy_00^w.png"
+  },
+  {
+    "id": 2021,
+    "main_key": "Roller_Heavy_01",
+    "name": "Roller_Heavy01",
+    "sub": "Bomb_Throw",
+    "special": "Tornado",
+    "image": "Wst_Roller_Heavy_01^w.png"
+  },
+  {
+    "id": 2022,
+    "main_key": "Roller_Heavy_02",
+    "name": "Roller_Heavy02",
+    "sub": "Bomb_Chase",
+    "special": "BigLaser",
+    "image": null
+  },
+  {
+    "id": 2030,
+    "main_key": "Roller_BrushMini_00",
+    "name": "Roller_BrushMini00",
+    "sub": "Sprinkler",
+    "special": "Tornado",
+    "image": "Wst_Roller_BrushMini_00^w.png"
+  },
+  {
+    "id": 2031,
+    "main_key": "Roller_BrushMini_01",
+    "name": "Roller_BrushMini01",
+    "sub": "TimerTrap",
+    "special": "Barrier",
+    "image": "Wst_Roller_BrushMini_01^w.png"
+  },
+  {
+    "id": 2032,
+    "main_key": "Roller_BrushMini_02",
+    "name": "Roller_BrushMini02",
+    "sub": "Bomb_Throw",
+    "special": "KingSquid",
+    "image": null
+  },
+  {
+    "id": 2040,
+    "main_key": "Roller_BrushNormal_00",
+    "name": "Roller_BrushNormal00",
+    "sub": "Flag",
+    "special": "KingSquid",
+    "image": "Wst_Roller_BrushNormal_00^w.png"
+  },
+  {
+    "id": 2041,
+    "main_key": "Roller_BrushNormal_01",
+    "name": "Roller_BrushNormal01",
+    "sub": "Bomb_Throw",
+    "special": "SuperShot",
+    "image": "Wst_Roller_BrushNormal_01^w.png"
+  },
+  {
+    "id": 3000,
+    "main_key": "BigBall_Strong_00",
+    "name": "BigBall_Strong00",
+    "sub": "Bomb_Handy",
+    "special": "Tornado",
+    "image": "Wst_Slosher_Strong_00^w.png"
+  },
+  {
+    "id": 3001,
+    "main_key": "BigBall_Strong_01",
+    "name": "BigBall_Strong01",
+    "sub": "Shield",
+    "special": "KingSquid",
+    "image": "Wst_Slosher_Strong_01^w.png"
+  },
+  {
+    "id": 3002,
+    "main_key": "BigBall_Strong_02",
+    "name": "BigBall_Strong02",
+    "sub": "Bomb_Throw",
+    "special": "SuperShot",
+    "image": null
+  },
+  {
+    "id": 3010,
+    "main_key": "BigBall_Diffusion_00",
+    "name": "BigBall_Diffusion00",
+    "sub": "DevilBall",
+    "special": "Barrier",
+    "image": "Wst_Slosher_Diffusion_00^w.png"
+  },
+  {
+    "id": 3011,
+    "main_key": "BigBall_Diffusion_01",
+    "name": "BigBall_Diffusion01",
+    "sub": "Bomb_Chase",
+    "special": "AllMarking",
+    "image": "Wst_Slosher_Diffusion_01^w.png"
+  },
+  {
+    "id": 3020,
+    "main_key": "BigBall_Launcher_00",
+    "name": "BigBall_Launcher00",
+    "sub": "Bomb_Throw",
+    "special": "FreeBombs",
+    "image": "Wst_Slosher_Launcher_00^w.png"
+  },
+  {
+    "id": 3021,
+    "main_key": "BigBall_Launcher_01",
+    "name": "BigBall_Launcher01",
+    "sub": "MarkingBall",
+    "special": "SuperShot",
+    "image": "Wst_Slosher_Launcher_01^w.png"
+  },
+  {
+    "id": 4000,
+    "main_key": "Charge_Quick_00",
+    "name": "Charge_Quick00",
+    "sub": "MarkingBall",
+    "special": "Barrier",
+    "image": "Wst_Charger_Quick_00^w.png"
+  },
+  {
+    "id": 4001,
+    "main_key": "Charge_Quick_01",
+    "name": "Charge_Quick01",
+    "sub": "TimerTrap",
+    "special": "SuperShot",
+    "image": "Wst_Charger_Quick_01^w.png"
+  },
+  {
+    "id": 4002,
+    "main_key": "Charge_Quick_02",
+    "name": "Charge_Quick02",
+    "sub": "Bomb_Hold",
+    "special": "KingSquid",
+    "image": null
+  },
+  {
+    "id": 4010,
+    "main_key": "Charge_Normal_00",
+    "name": "Charge_Normal00",
+    "sub": "Bomb_Throw",
+    "special": "FreeBombs",
+    "image": "Wst_Charger_Normal_00^w.png"
+  },
+  {
+    "id": 4011,
+    "main_key": "Charge_Normal_01",
+    "name": "Charge_Normal01",
+    "sub": "Sprinkler",
+    "special": "BigLaser",
+    "image": "Wst_Charger_Normal_01^w.png"
+  },
+  {
+    "id": 4012,
+    "main_key": "Charge_Normal_02",
+    "name": "Charge_Normal02",
+    "sub": "Shield",
+    "special": "AllMarking",
+    "image": "Wst_Charger_Normal_02^w.png"
+  },
+  {
+    "id": 4015,
+    "main_key": "Charge_Normal_H",
+    "name": "Charge_NormalH",
+    "sub": "Bomb_Throw",
+    "special": "FreeBombs",
+    "image": "Wst_Charger_Normal_H^w.png"
+  },
+  {
+    "id": 4020,
+    "main_key": "Charge_NormalScope_00",
+    "name": "Charge_NormalScp00",
+    "sub": "Bomb_Throw",
+    "special": "FreeBombs",
+    "image": "Wst_Charger_NormalScope_00^w.png"
+  },
+  {
+    "id": 4021,
+    "main_key": "Charge_NormalScope_01",
+    "name": "Charge_NormalScp01",
+    "sub": "Sprinkler",
+    "special": "BigLaser",
+    "image": "Wst_Charger_NormalScope_01^w.png"
+  },
+  {
+    "id": 4022,
+    "main_key": "Charge_NormalScope_02",
+    "name": "Charge_NormalScp02",
+    "sub": "Shield",
+    "special": "AllMarking",
+    "image": "Wst_Charger_NormalScope_02^w.png"
+  },
+  {
+    "id": 4030,
+    "main_key": "Charge_Long_00",
+    "name": "Charge_Long00",
+    "sub": "Bomb_Handy",
+    "special": "AllMarking",
+    "image": "Wst_Charger_Long_00^w.png"
+  },
+  {
+    "id": 4031,
+    "main_key": "Charge_Long_01",
+    "name": "Charge_Long01",
+    "sub": "Flag",
+    "special": "KingSquid",
+    "image": "Wst_Charger_Long_01^w.png"
+  },
+  {
+    "id": 4040,
+    "main_key": "Charge_LongScope_00",
+    "name": "Charge_LongScp00",
+    "sub": "Bomb_Handy",
+    "special": "AllMarking",
+    "image": "Wst_Charger_LongScope_00^w.png"
+  },
+  {
+    "id": 4041,
+    "main_key": "Charge_LongScope_01",
+    "name": "Charge_LongScp01",
+    "sub": "Flag",
+    "special": "KingSquid",
+    "image": "Wst_Charger_LongScope_01^w.png"
+  },
+  {
+    "id": 4050,
+    "main_key": "Charge_Light_00",
+    "name": "Charge_Light00",
+    "sub": "Shield",
+    "special": "BigLaser",
+    "image": "Wst_Charger_Light_00^w.png"
+  },
+  {
+    "id": 4051,
+    "main_key": "Charge_Light_01",
+    "name": "Charge_Light01",
+    "sub": "DevilBall",
+    "special": "AllMarking",
+    "image": "Wst_Charger_Light_01^w.png"
+  },
+  {
+    "id": 4052,
+    "main_key": "Charge_Light_02",
+    "name": "Charge_Light02",
+    "sub": "Bomb_Handy",
+    "special": "Tornado",
+    "image": null
+  },
+  {
+    "id": 5000,
+    "main_key": "Gatling_Quick_00",
+    "name": "Gatling_Quick00",
+    "sub": "Bomb_Hold",
+    "special": "SuperShot",
+    "image": "Wst_Spinner_Quick_00^w.png"
+  },
+  {
+    "id": 5001,
+    "main_key": "Gatling_Quick_01",
+    "name": "Gatling_Quick01",
+    "sub": "DevilBall",
+    "special": "Barrier",
+    "image": "Wst_Spinner_Quick_01^w.png"
+  },
+  {
+    "id": 5002,
+    "main_key": "Gatling_Quick_02",
+    "name": "Gatling_Quick02",
+    "sub": "Bomb_Handy",
+    "special": "FreeBombs",
+    "image": null
+  },
+  {
+    "id": 5010,
+    "main_key": "Gatling_Standard_00",
+    "name": "Gatling_Standard00",
+    "sub": "Shield",
+    "special": "Tornado",
+    "image": "Wst_Spinner_Standard_00^w.png"
+  },
+  {
+    "id": 5011,
+    "main_key": "Gatling_Standard_01",
+    "name": "Gatling_Standard01",
+    "sub": "MarkingBall",
+    "special": "KingSquid",
+    "image": "Wst_Spinner_Standard_01^w.png"
+  },
+  {
+    "id": 5012,
+    "main_key": "Gatling_Standard_02",
+    "name": "Gatling_Standard02",
+    "sub": "Sprinkler",
+    "special": "BigLaser",
+    "image": null
+  },
+  {
+    "id": 5020,
+    "main_key": "Gatling_Hyper_00",
+    "name": "Gatling_Hyper00",
+    "sub": "Bomb_Throw",
+    "special": "AllMarking",
+    "image": "Wst_Spinner_Hyper_00^w.png"
+  },
+  {
+    "id": 5021,
+    "main_key": "Gatling_Hyper_01",
+    "name": "Gatling_Hyper01",
+    "sub": "Sprinkler",
+    "special": "Barrier",
+    "image": "Wst_Spinner_Hyper_01^w.png"
+  }
+]
