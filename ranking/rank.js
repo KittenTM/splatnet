@@ -57,6 +57,21 @@ window.loadHeader(function(headerContainer) {
             });
     }
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const mode = urlParams.get('mode');
+    const images = {
+        regular: "../assets/en/svg/ui/btn_tab_regular_selected-b636e3d21ace9434120061a32658b21a34feb6468553b6d6da30ce890b85ec1f.svg",
+        gachi: "../assets/en/svg/ui/btn_tab_gachi_selected-4796f167399dca12cb274dcb0348cdf709a1f722ddd241210e55a3e04fdb6ff4.svg"
+    };
+
+    if (mode === 'regular') {
+        const regImg = document.getElementById('img-regular');
+        if (regImg) regImg.src = images.regular;
+    } else if (mode === 'gachi') {
+        const gachiImg = document.getElementById('img-gachi');
+        if (gachiImg) gachiImg.src = images.gachi;
+    }
+
     if (typeof loadRankings === 'function') {
         loadRankings();
     }

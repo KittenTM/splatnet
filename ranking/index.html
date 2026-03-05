@@ -11,16 +11,6 @@
 <body>
   <div id="header-container"></div>
   
-  <div id="squid-container">
-    <canvas id="squid-canvas" width="1920" height="1080"></canvas>
-  </div>
-
-  <div id="loading-overlay" class="loading-overlay">
-    <canvas id="loading-canvas" width="100" height="100"></canvas>
-    <div id="loading-text">
-      <img src="/assets/en/svg/text/wait/tx_loading-dccf3fb801ca859f2d17992f5cd7da62995c1fe81a306dd103398ef7c0e25b70.svg" alt="Loading">
-    </div>
-  </div>
   <div class="main-wrapper">
     <div class="content">
       <div class="logo-left-align">
@@ -29,10 +19,20 @@
           <img class="icon-layer" src="../assets/en/svg/ui/ico_ranking-c89e570ab4d08a764d285e453423188b1976895b3feacf031e3f231b1506b441.svg">
           <img class="label-layer" src="../assets/en/svg/text/scene/rank/tx_ranking_wht-f79b9c472757006700455a8b74eaa4e50fee7c316373c98d873e0769f9bdb6d9.svg">
         </div>
-        <div class="equipmentsubtitle-text">
+        <div class="equipmentsubtitle-text" id="mode-subtitle">
           Win battles to raise your weekly rank! Rankings are reset every Sunday at midnight! (Your rank is calculated by multiplying number of wins X win rate.)
         </div>
       </div>
+
+      <div class="mode-selection">
+        <a href="?mode=regular" class="mode-button" id="link-regular">
+          <img id="img-regular" src="../assets/en/svg/ui/btn_tab_regular-40682de5f47922c608c0ddf6eddd44efcf4b0516092041cdb48977f777030487.svg" alt="Turf War">
+        </a>
+        <a href="?mode=gachi" class="mode-button" id="link-gachi">
+          <img id="img-gachi" src="../assets/en/svg/ui/btn_tab_gachi-1ab8351babd76ea6dd8e23eb86293c8ceafaf23b9cae3001166fabf3a01011a7.svg" alt="Ranked Battle">
+        </a>
+      </div>
+
       <div class="stages-container" id="stages-container"></div>
     </div>
   </div>
