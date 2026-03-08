@@ -6,8 +6,8 @@ on:
   pull_request:
 
 jobs:
-  lint-ubuntu:
-    runs-on: ubuntu-latest
+  lint-debian:
+    runs-on: debian-latest
     container:
       image: node:20-bookworm
     steps:
@@ -21,10 +21,10 @@ jobs:
       - name: JS
         run: npx eslint .
 
-  lint-debian:
-    needs: lint-ubuntu
+  lint-ubuntu:
+    needs: lint-debian
     if: failure()
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     container:
       image: node:20-bookworm
     steps:
