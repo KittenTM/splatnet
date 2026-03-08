@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Linters
-        run: npm install -g htmlhint stylelint stylelint-config-standard eslint
+        run: npm install -g htmlhint stylelint stylelint-config-standard eslint globals
       - name: HTML
         run: htmlhint "**/*.html" --ignore "assets/**"
       - name: CSS
@@ -34,4 +34,14 @@ jobs:
           stylelint "**/*.css" --allow-empty-input --fix || stylelint "**/*.css" --allow-empty-input
       - name: JS
         run: |
-          export ESLINT_USE_FLAT_CONFIG=false && npx eslint . --rule 'semi: [2, always]' --rule 'no-console: 0' --env browser
+          echo "import globals from 'globals';
+          export default [
+            {
+              languageOptions: { globals: globals.browser },
+              rules: { 
+                'semi': ['error', 'always'],
+                'no-console': 'off'
+              }
+            }
+          ];" > eslint.config.mjs
+          npx eslint .
