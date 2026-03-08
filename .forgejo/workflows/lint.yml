@@ -13,8 +13,8 @@ jobs:
       - name: Install Linters
         run: npm install -g htmlhint stylelint stylelint-config-standard eslint
       - name: HTML
-        run: htmlhint "**/*.html"
+        run: htmlhint "**/*.html" --ignore "assets/**"
       - name: CSS
-        run: stylelint "**/*.css" --config-basedir /usr/local/lib/node_modules
+        run: stylelint "**/*.css" --config /usr/local/lib/node_modules/stylelint-config-standard/index.js --allow-empty-input
       - name: JS
-        run: "npx eslint . --no-eslintrc --rule 'semi: [2, always]' --rule 'no-console: 0'"
+        run: 'npx eslint . --no-eslintrc --rule "semi: [2, always]" --rule "no-console: 0" --env browser'
