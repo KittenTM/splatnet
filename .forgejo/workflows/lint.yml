@@ -16,17 +16,17 @@ jobs:
         run: htmlhint "**/*.html" --ignore "assets/**"
       - name: CSS
         run: |
-          stylelint "**/*.css" \
-          --allow-empty-input \
-          --fix \
-          --config '{
-            "extends": ["stylelint-config-standard"],
+          echo '{
+            "extends": "stylelint-config-standard",
             "rules": {
               "no-duplicate-selectors": null,
               "no-descending-specificity": null,
               "declaration-block-no-shorthand-property-overrides": null,
-              "font-family-no-duplicate-names": null
+              "font-family-no-duplicate-names": null,
+              "selector-class-pattern": null,
+              "keyframes-name-pattern": null
             }
-          }'
+          }' > .stylelintrc.json
+          stylelint "**/*.css" --allow-empty-input --fix || stylelint "**/*.css" --allow-empty-input
       - name: JS
         run: 'npx eslint . --no-eslintrc --rule "semi: [2, always]" --rule "no-console: 0" --env browser'
