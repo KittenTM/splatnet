@@ -33,4 +33,5 @@ jobs:
           }' > .stylelintrc.json
           stylelint "**/*.css" --allow-empty-input --fix || stylelint "**/*.css" --allow-empty-input
       - name: JS
-        run: 'npx eslint . --no-eslintrc --rule "semi: [2, always]" --rule "no-console: 0" --env browser'
+        run: |
+          export ESLINT_USE_FLAT_CONFIG=false && npx eslint . --rule 'semi: [2, always]' --rule 'no-console: 0' --env browser
