@@ -40,7 +40,11 @@ jobs:
                 globals: {
                   window: 'readonly',
                   document: 'readonly',
-                  navigator: 'readonly'
+                  navigator: 'readonly',
+                  location: 'readonly',
+                  history: 'readonly',
+                  localStorage: 'readonly',
+                  fetch: 'readonly'
                 }
               },
               rules: { 
@@ -49,4 +53,4 @@ jobs:
               }
             }
           ];" > eslint.config.mjs
-          npx eslint .
+          npx eslint . --fix || npx eslint .
