@@ -1,0 +1,39 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-ubuntu:
+    runs-on: ubuntu-latest
+    container:
+      image: node:20-bookworm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: npm install
+      - name: HTML
+        run: npx htmlhint "**/*.html"
+      - name: CSS
+        run: npx stylelint "**/*.css"
+      - name: JS
+        run: npx eslint .
+
+  lint-debian:
+    needs: lint-ubuntu
+    if: failure()
+    runs-on: debian-latest
+    container:
+      image: node:20-bookworm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: npm install
+      - name: HTML
+        run: npx htmlhint "**/*.html"
+      - name: CSS
+        run: npx stylelint "**/*.css"
+      - name: JS
+        run: npx eslint .
