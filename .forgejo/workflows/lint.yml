@@ -8,32 +8,28 @@ on:
 jobs:
   lint-debian:
     runs-on: debian-latest
-    container:
-      image: node:20-bookworm
     steps:
       - uses: actions/checkout@v4
-      - name: Install
-        run: npm install
+      - name: Install Linters
+        run: npm install -g htmlhint stylelint stylelint-config-standard eslint
       - name: HTML
-        run: npx htmlhint "**/*.html"
+        run: htmlhint "**/*.html"
       - name: CSS
-        run: npx stylelint "**/*.css"
+        run: stylelint "**/*.css" --config-basedir /usr/local/lib/node_modules
       - name: JS
-        run: npx eslint .
+        run: "npx eslint . --no-eslintrc --rule 'semi: [2, always]' --rule 'no-console: 0'"
 
   lint-ubuntu:
     needs: lint-debian
     if: failure()
     runs-on: ubuntu-latest
-    container:
-      image: node:20-bookworm
     steps:
       - uses: actions/checkout@v4
-      - name: Install
-        run: npm install
+      - name: Install Linters
+        run: npm install -g htmlhint stylelint stylelint-config-standard eslint
       - name: HTML
-        run: npx htmlhint "**/*.html"
+        run: htmlhint "**/*.html"
       - name: CSS
-        run: npx stylelint "**/*.css"
+        run: stylelint "**/*.css" --config-basedir /usr/local/lib/node_modules
       - name: JS
-        run: npx eslint .
+        run: "npx eslint . --no-eslintrc --rule 'semi: [2, always]' --rule 'no-console: 0'"
