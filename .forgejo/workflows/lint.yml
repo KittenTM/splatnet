@@ -17,12 +17,16 @@ jobs:
       - name: CSS
         run: |
           stylelint "**/*.css" \
-          --config /usr/local/lib/node_modules/stylelint-config-standard/index.js \
           --allow-empty-input \
           --fix \
-          --rule 'no-duplicate-selectors: null' \
-          --rule 'no-descending-specificity: null' \
-          --rule 'declaration-block-no-shorthand-property-overrides: null' \
-          --rule 'font-family-no-duplicate-names: null'
+          --config '{
+            "extends": ["stylelint-config-standard"],
+            "rules": {
+              "no-duplicate-selectors": null,
+              "no-descending-specificity": null,
+              "declaration-block-no-shorthand-property-overrides": null,
+              "font-family-no-duplicate-names": null
+            }
+          }'
       - name: JS
         run: 'npx eslint . --no-eslintrc --rule "semi: [2, always]" --rule "no-console: 0" --env browser'
