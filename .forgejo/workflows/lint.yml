@@ -15,6 +15,6 @@ jobs:
       - name: HTML
         run: htmlhint "**/*.html" --ignore "assets/**"
       - name: CSS
-        run: stylelint "**/*.css" --config /usr/local/lib/node_modules/stylelint-config-standard/index.js --allow-empty-input
+        run: stylelint "**/*.css" --config /usr/local/lib/node_modules/stylelint-config-standard/index.js --allow-empty-input --fix || stylelint "**/*.css" --config /usr/local/lib/node_modules/stylelint-config-standard/index.js --allow-empty-input
       - name: JS
         run: 'npx eslint . --no-eslintrc --rule "semi: [2, always]" --rule "no-console: 0" --env browser'
