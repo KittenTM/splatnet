@@ -96,22 +96,22 @@ async function fetchRotations() {
     const data = await res.json();
     const rotations = data?.pretendo?.rotations ?? {};
     const now = new Date();
-    const timestamps = Object.keys(rotations).sort((a, b) => Number(a) - Number(b));
-    const result = [];
-    for (const ts of timestamps) {
+    let allData = Object.keys(rotations).map(ts => {
       const start = new Date(Number(ts));
       const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
-      if (end < now) continue;
       const r = rotations[ts];
-      result.push({
+      return {
         turf: stageNames(r.turfStages),
         ranked: stageNames(r.rankedStages),
         ranked_mode: r.rankedMode.replace(/([a-z])([A-Z])/g, "$1 $2"),
         startTime: start,
         endTime: end,
-      });
-    }
-    return result;
+        isExpired: end < now
+      };
+    });
+    const active = allData.filter(r => !r.isExpired).sort((a, b) => a.startTime - b.startTime);
+    const past = allData.filter(r => r.isExpired).sort((a, b) => b.startTime - a.startTime);
+    return [...active, ...past];
   } catch (error) {
     console.error(error);
     return [];
@@ -134,16 +134,17 @@ async function renderStages() {
         
         const trigger = document.createElement('div');
         trigger.id = 'scroll-trigger';
-        trigger.style.height = '2px';
+        trigger.style.height = '10px';
+        trigger.style.display = 'none';
         container.after(trigger);
 
         loadMore(true);
 
         observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && currentIndex < allRotations.length) {
+            if (entries[0].isIntersecting && currentIndex > 0 && currentIndex < allRotations.length) {
                 loadMore(false);
             }
-        }, { rootMargin: '200px' });
+        }, { rootMargin: '0px 0px 100px 0px' });
         
         observer.observe(trigger);
 
@@ -156,6 +157,7 @@ async function renderStages() {
 function loadMore(isInitial) {
     const container = document.getElementById("stages-container");
     const loadingOverlay = document.getElementById("loading-overlay");
+    const trigger = document.getElementById('scroll-trigger');
 
     if (loadingOverlay) {
         loadingOverlay.style.display = 'flex';
@@ -168,14 +170,26 @@ function loadMore(isInitial) {
 
     setTimeout(() => {
         const nextBatch = allRotations.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
+        const now = new Date();
         let html = "";
         
-        for (const rotation of nextBatch) {
+        nextBatch.forEach((rotation, index) => {
+            const isFirstItem = isInitial && index === 0;
+            const isAboutToExpire = !rotation.isExpired && (rotation.endTime - now) < (15 * 60 * 1000);
             const optionsDate = { day: "2-digit", month: "2-digit" };
+            if (rotation.isExpired) optionsDate.year = "numeric";
             const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
             const timeZone = "Europe/Paris";
             const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
             
+            if (isFirstItem) {
+                if (isAboutToExpire) {
+                    html += `<div class="expiring-warning" style="background: #ffcc00; color: #000; padding: 12px; text-align: center; font-weight: bold; border-radius: 8px; margin-bottom: 20px;">NOTICE: This rotation is about to expire!</div>`;
+                } else if (rotation.isExpired) {
+                    html += `<div class="expiring-warning" style="background: #ff4444; color: #fff; padding: 12px; text-align: center; font-weight: bold; border-radius: 8px; margin-bottom: 20px;">NOTICE: This rotation has expired!</div>`;
+                }
+            }
+
             html += `
                 <div class="rotation-time">${formattedTime}</div>
                 <div class="stages-section">
@@ -211,15 +225,16 @@ function loadMore(isInitial) {
                     </div>
                 </div>
             `;
-        }
+        });
 
         container.insertAdjacentHTML('beforeend', html);
         currentIndex += ITEMS_PER_PAGE;
 
         if (loadingOverlay) loadingOverlay.style.display = 'none';
+        if (trigger) trigger.style.display = 'block';
+
         if (currentIndex >= allRotations.length) {
             if (observer) observer.disconnect();
-            const trigger = document.getElementById('scroll-trigger');
             if (trigger) trigger.remove();
         }
     }, waitTime);
