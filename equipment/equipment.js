@@ -65,9 +65,9 @@ window.loadHeader(function(headerContainer) {
             ]);
 
             const getImg = (list, id, folder) => {
-                if (!id) return '';
+                if (!id) return "/assets/weapons/NotFound^w.png";
                 const item = list.find(i => i.id == id);
-                return (item && item.image) ? `../assets/${folder}/${item.image}` : '';
+                return (item && item.image) ? `../assets/${folder}/${item.image}` : "/assets/weapons/NotFound^w.png";
             };
 
             const weaponImg = getImg(weapons, equipped.weapon, 'weapons');
@@ -103,18 +103,18 @@ window.loadHeader(function(headerContainer) {
                             <span class="rank-text">${rankGrade}</span>
                             <img src="../assets/en/svg/text/scene/equipment/tx_udemae-3f0e377d89a469c62069c2304dae87dfdf2b98076a0a4662b9190800c2d9da91.svg" class="rank-label" />
                         </div>
-                        <div class="weapon-slot">${weaponImg ? `<img class="weapon" src="${weaponImg}" />` : ''}</div>
+                        <div class="weapon-slot"><img class="weapon" src="${weaponImg}" /></div>
                         <div class="gear-slot-small head-slot">
                             <img class="main-ability" src="../assets/5254acc940ed.svg" />
-                            ${headImg ? `<img class="gear-icon" src="${headImg}" />` : ''}
+                            <img class="gear-icon" src="${headImg}" />
                         </div>
                         <div class="gear-slot-small body-slot">
                             <img class="main-ability" src="../assets/783c945642a1.svg" />
-                            ${clothesImg ? `<img class="gear-icon" src="${clothesImg}" />` : ''}
+                            <img class="gear-icon" src="${clothesImg}" />
                         </div>
                         <div class="gear-slot-small shoes-slot">
                             <img class="main-ability" src="../assets/d24a8ad84d94.svg" />
-                            ${shoesImg ? `<img class="gear-icon" src="${shoesImg}" />` : ''}
+                            <img class="gear-icon" src="${shoesImg}" />
                         </div>
                         <div class="abilities bottom"><img src="../assets/55de981c4381.svg" /><img src="../assets/454c84bf43a2.svg" /><img src="../assets/b2d582c44ba2.svg" /></div>
                         <div class="abilities mid"><img src="../assets/c9c9af9f4a95.svg" /><img src="../assets/cae6942642cb.svg" /><img src="../assets/7422b1b94163.svg" /></div>
@@ -134,7 +134,6 @@ window.loadHeader(function(headerContainer) {
             ]);
             await renderData(profileRes);
             await renderData(equipRes);
-
             sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
         } catch (err) {
             const cached = sessionStorage.getItem('user_cache');
