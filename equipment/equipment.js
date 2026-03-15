@@ -57,23 +57,37 @@ window.loadHeader(function(headerContainer) {
         const infoBox = document.querySelector('.splat-info-box');
         if (infoBox) {
             const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : []);
-            const [clothing, headgear, shoes, weapons] = await Promise.all([
+            const [clothing, headgear, shoes, weapons, abilities] = await Promise.all([
                 fetchJson('/assets/mapping/clothing.json'),
                 fetchJson('/assets/mapping/headgear.json'),
                 fetchJson('/assets/mapping/shoes.json'),
-                fetchJson('/assets/mapping/weapons.json')
+                fetchJson('/assets/mapping/weapons.json'),
+                fetchJson('/assets/mapping/ability.json')
             ]);
 
-            const getImg = (list, id, folder) => {
-                if (!id) return "/assets/weapons/NotFound^w.png";
-                const item = list.find(i => i.id == id);
-                return (item && item.image) ? `../assets/${folder}/${item.image}` : "/assets/weapons/NotFound^w.png";
+            const getImg = (list, id, folder, isAbility = false) => {
+                const fallback = isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png";
+                if (id === undefined || id === null) return fallback;
+                const item = list.find(i => String(i.id) === String(id));
+                return (item && item.image) ? `../assets/${folder}/${item.image}` : fallback;
             };
 
             const weaponImg = getImg(weapons, equipped.weapon, 'weapons');
             const headImg = getImg(headgear, equipped.Gear_Head, 'headgear');
             const clothesImg = getImg(clothing, equipped.Gear_Clothes, 'clothing');
             const shoesImg = getImg(shoes, equipped.Gear_Shoes, 'shoes');
+
+            const headMain = getImg(abilities, equipped.Gear_Head_Skill0, 'ability', true);
+            const headSub1 = getImg(abilities, equipped.Gear_Head_Skill1, 'ability', true);
+            const headSub2 = getImg(abilities, equipped.Gear_Head_Skill2, 'ability', true);
+
+            const clothesMain = getImg(abilities, equipped.Gear_Clothes_Skill0, 'ability', true);
+            const clothesSub1 = getImg(abilities, equipped.Gear_Clothes_Skill1, 'ability', true);
+            const clothesSub2 = getImg(abilities, equipped.Gear_Clothes_Skill2, 'ability', true);
+
+            const shoesMain = getImg(abilities, equipped.Gear_Shoes_Skill0, 'ability', true);
+            const shoesSub1 = getImg(abilities, equipped.Gear_Shoes_Skill1, 'ability', true);
+            const shoesSub2 = getImg(abilities, equipped.Gear_Shoes_Skill2, 'ability', true);
             
             await Promise.all([
                 preloadImage(miiImgUrl),
@@ -104,21 +118,30 @@ window.loadHeader(function(headerContainer) {
                             <img src="../assets/en/svg/text/scene/equipment/tx_udemae-3f0e377d89a469c62069c2304dae87dfdf2b98076a0a4662b9190800c2d9da91.svg" class="rank-label" />
                         </div>
                         <div class="weapon-slot"><img class="weapon" src="${weaponImg}" /></div>
+                        
                         <div class="gear-slot-small head-slot">
-                            <img class="main-ability" src="../assets/5254acc940ed.svg" />
+                            <img class="main-ability" src="${headMain}" />
                             <img class="gear-icon" src="${headImg}" />
                         </div>
+                        <div class="abilities mid">
+                            <img src="${clothesSub1}" /><img src="${clothesSub2}" />" />
+                        </div>
+
                         <div class="gear-slot-small body-slot">
-                            <img class="main-ability" src="../assets/783c945642a1.svg" />
+                            <img class="main-ability" src="${clothesMain}" />
                             <img class="gear-icon" src="${clothesImg}" />
                         </div>
+                        <div class="abilities bottom">
+                            <img src="${headSub1}" /><img src="${headSub2}" />" />
+                        </div>
+
                         <div class="gear-slot-small shoes-slot">
-                            <img class="main-ability" src="../assets/d24a8ad84d94.svg" />
+                            <img class="main-ability" src="${shoesMain}" />
                             <img class="gear-icon" src="${shoesImg}" />
                         </div>
-                        <div class="abilities bottom"><img src="../assets/55de981c4381.svg" /><img src="../assets/454c84bf43a2.svg" /><img src="../assets/b2d582c44ba2.svg" /></div>
-                        <div class="abilities mid"><img src="../assets/c9c9af9f4a95.svg" /><img src="../assets/cae6942642cb.svg" /><img src="../assets/7422b1b94163.svg" /></div>
-                        <div class="abilities bottom-right"><img src="../assets/a9f6b59c43d4.svg" /><img src="../assets/d8fa88484989.svg" /><img src="../assets/a15bb02a4d1c.svg" /></div>
+                        <div class="abilities bottom-right">
+                            <img src="${shoesSub1}" /><img src="${shoesSub2}" />" />
+                        </div>
                     </div>
                 </div>
             `;
