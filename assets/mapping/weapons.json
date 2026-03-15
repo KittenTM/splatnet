@@ -1,6 +1,6 @@
 [
   {
-    "id": 1000,
+    "id": 100,
     "main_key": "Shot_Short_00",
     "name": "Shot_Short00",
     "sub": "Flag",
@@ -8,7 +8,7 @@
     "image": "Wst_Shooter_Short_00^w.png"
   },
   {
-    "id": 1001,
+    "id": 101,
     "main_key": "Shot_Short_01",
     "name": "Shot_Short01",
     "sub": "MarkingBall",
@@ -16,7 +16,7 @@
     "image": "Wst_Shooter_Short_01^w.png"
   },
   {
-    "id": 1002,
+    "id": 140,
     "main_key": "Shot_Short_02",
     "name": "Shot_Short02",
     "sub": "Bomb_Throw",
@@ -24,7 +24,7 @@
     "image": null
   },
   {
-    "id": 1010,
+    "id": 102,
     "main_key": "Shot_First_00",
     "name": "Shot_First00",
     "sub": "Bomb_Throw",
@@ -32,7 +32,7 @@
     "image": "Wst_Shooter_First_00^w.png"
   },
   {
-    "id": 1011,
+    "id": 103,
     "main_key": "Shot_First_01",
     "name": "Shot_First01",
     "sub": "DevilBall",
@@ -40,7 +40,7 @@
     "image": "Wst_Shooter_First_01^w.png"
   },
   {
-    "id": 1020,
+    "id": 104,
     "main_key": "Shot_Precision_00",
     "name": "Shot_Precision00",
     "sub": "Bomb_Hold",
@@ -48,7 +48,7 @@
     "image": "Wst_Shooter_Precision_00^w.png"
   },
   {
-    "id": 1021,
+    "id": 105,
     "main_key": "Shot_Precision_01",
     "name": "Shot_Precision01",
     "sub": "Bomb_Handy",
@@ -56,7 +56,7 @@
     "image": "Wst_Shooter_Precision_01^w.png"
   },
   {
-    "id": 1030,
+    "id": 106,
     "main_key": "Shot_Blaze_00",
     "name": "Shot_Blaze00",
     "sub": "Bomb_Chase",
@@ -64,7 +64,7 @@
     "image": "Wst_Shooter_Blaze_00^w.png"
   },
   {
-    "id": 1031,
+    "id": 107,
     "main_key": "Shot_Blaze_01",
     "name": "Shot_Blaze01",
     "sub": "TimerTrap",
@@ -72,7 +72,7 @@
     "image": "Wst_Shooter_Blaze_01^w.png"
   },
   {
-    "id": 1032,
+    "id": 141,
     "main_key": "Shot_Blaze_02",
     "name": "Shot_Blaze02",
     "sub": "Bomb_Handy",
@@ -80,7 +80,7 @@
     "image": null
   },
   {
-    "id": 1040,
+    "id": 108,
     "main_key": "Shot_Normal_00",
     "name": "Shot_Normal00",
     "sub": "Bomb_Handy",
@@ -88,7 +88,7 @@
     "image": "Wst_Shooter_Normal_00^w.png"
   },
   {
-    "id": 1041,
+    "id": 109,
     "main_key": "Shot_Normal_01",
     "name": "Shot_Normal01",
     "sub": "Bomb_Hold",
@@ -96,7 +96,7 @@
     "image": "Wst_Shooter_Normal_01^w.png"
   },
   {
-    "id": 1042,
+    "id": 138,
     "main_key": "Shot_Normal_02",
     "name": "Shot_Normal02",
     "sub": "Bomb_Throw",
@@ -104,7 +104,7 @@
     "image": "Wst_Shooter_Normal_02^w.png"
   },
   {
-    "id": 1045,
+    "id": 110,
     "main_key": "Shot_Normal_H",
     "name": "Shot_NormalH",
     "sub": "Bomb_Handy",
@@ -112,7 +112,7 @@
     "image": "Wst_Shooter_Normal_H^w.png"
   },
   {
-    "id": 1046,
+    "id": 111,
     "main_key": "Shot_Normal_Oct",
     "name": "Shot_NormalOct",
     "sub": "Bomb_Hold",
@@ -120,7 +120,7 @@
     "image": "Wst_Shooter_Normal_Oct^w.png"
   },
   {
-    "id": 1050,
+    "id": 112,
     "main_key": "Shot_Gravity_00",
     "name": "Shot_Gravity00",
     "sub": "Shield",
@@ -128,7 +128,7 @@
     "image": "Wst_Shooter_Gravity_00^w.png"
   },
   {
-    "id": 1051,
+    "id": 113,
     "main_key": "Shot_Gravity_01",
     "name": "Shot_Gravity01",
     "sub": "Bomb_Chase",
@@ -136,7 +136,7 @@
     "image": "Wst_Shooter_Gravity_01^w.png"
   },
   {
-    "id": 1060,
+    "id": 114,
     "main_key": "Shot_QuickMiddle_00",
     "name": "Shot_QuickMiddle00",
     "sub": "Bomb_Throw",
@@ -144,7 +144,7 @@
     "image": "Wst_Shooter_QuickMiddle_00^w.png"
   },
   {
-    "id": 1061,
+    "id": 115,
     "main_key": "Shot_QuickMiddle_01",
     "name": "Shot_QuickMiddle01",
     "sub": "Sprinkler",
@@ -152,7 +152,7 @@
     "image": "Wst_Shooter_QuickMiddle_01^w.png"
   },
   {
-    "id": 1062,
+    "id": 142,
     "main_key": "Shot_QuickMiddle_02",
     "name": "Shot_QuickMiddle02",
     "sub": "MarkingBall",
@@ -160,7 +160,7 @@
     "image": null
   },
   {
-    "id": 1070,
+    "id": 116,
     "main_key": "Shot_Expert_00",
     "name": "Shot_Expert00",
     "sub": "Bomb_Throw",
@@ -168,7 +168,7 @@
     "image": null
   },
   {
-    "id": 1071,
+    "id": 117,
     "main_key": "Shot_Expert_01",
     "name": "Shot_Expert01",
     "sub": "MarkingBall",
@@ -176,7 +176,7 @@
     "image": null
   },
   {
-    "id": 1072,
+    "id": 139,
     "main_key": "Shot_Expert_02",
     "name": "Shot_Expert02",
     "sub": "Bomb_Hold",
@@ -184,7 +184,7 @@
     "image": null
   },
   {
-    "id": 1080,
+    "id": 118,
     "main_key": "Shot_Heavy_00",
     "name": "Shot_Heavy00",
     "sub": "Sprinkler",
@@ -192,7 +192,7 @@
     "image": "Wst_Shooter_Heavy_00^w.png"
   },
   {
-    "id": 1081,
+    "id": 119,
     "main_key": "Shot_Heavy_01",
     "name": "Shot_Heavy01",
     "sub": "Shield",
@@ -200,7 +200,7 @@
     "image": "Wst_Shooter_Heavy_01^w.png"
   },
   {
-    "id": 1090,
+    "id": 120,
     "main_key": "Shot_QuickLong_00",
     "name": "Shot_QuickLong00",
     "sub": "Bomb_Throw",
@@ -208,7 +208,7 @@
     "image": "Wst_Shooter_QuickLong_00^w.png"
   },
   {
-    "id": 1091,
+    "id": 121,
     "main_key": "Shot_QuickLong_01",
     "name": "Shot_QuickLong01",
     "sub": "Flag",
@@ -216,7 +216,7 @@
     "image": "Wst_Shooter_QuickLong_01^w.png"
   },
   {
-    "id": 1100,
+    "id": 122,
     "main_key": "Shot_Long_00",
     "name": "Shot_Long00",
     "sub": "Shield",
@@ -224,7 +224,7 @@
     "image": "Wst_Shooter_Long_00^w.png"
   },
   {
-    "id": 1101,
+    "id": 123,
     "main_key": "Shot_Long_01",
     "name": "Shot_Long01",
     "sub": "Bomb_Handy",
@@ -232,7 +232,7 @@
     "image": "Wst_Shooter_Long_01^w.png"
   },
   {
-    "id": 1110,
+    "id": 124,
     "main_key": "Shot_ExplosionShort_00",
     "name": "Shot_ExpShort00",
     "sub": "TimerTrap",
@@ -240,7 +240,7 @@
     "image": null
   },
   {
-    "id": 1111,
+    "id": 125,
     "main_key": "Shot_ExplosionShort_01",
     "name": "Shot_ExpShort01",
     "sub": "Bomb_Throw",
@@ -248,7 +248,7 @@
     "image": null
   },
   {
-    "id": 1120,
+    "id": 126,
     "main_key": "Shot_ExplosionMiddle_00",
     "name": "Shot_ExpMiddle00",
     "sub": "DevilBall",
@@ -256,7 +256,7 @@
     "image": null
   },
   {
-    "id": 1121,
+    "id": 127,
     "main_key": "Shot_ExplosionMiddle_01",
     "name": "Shot_ExpMiddle01",
     "sub": "MarkingBall",
@@ -264,7 +264,7 @@
     "image": null
   },
   {
-    "id": 1130,
+    "id": 128,
     "main_key": "Shot_ExplosionLong_00",
     "name": "Shot_ExpLong00",
     "sub": "Shield",
@@ -272,7 +272,7 @@
     "image": null
   },
   {
-    "id": 1131,
+    "id": 129,
     "main_key": "Shot_ExplosionLong_01",
     "name": "Shot_ExpLong01",
     "sub": "Bomb_Throw",
@@ -280,7 +280,7 @@
     "image": null
   },
   {
-    "id": 1132,
+    "id": 143,
     "main_key": "Shot_ExplosionLong_02",
     "name": "Shot_ExpLong02",
     "sub": "Bomb_Handy",
@@ -288,7 +288,7 @@
     "image": null
   },
   {
-    "id": 1140,
+    "id": 130,
     "main_key": "Shot_ExplosionLight_00",
     "name": "Shot_ExpLight00",
     "sub": "TimerTrap",
@@ -296,7 +296,7 @@
     "image": null
   },
   {
-    "id": 1141,
+    "id": 131,
     "main_key": "Shot_ExplosionLight_01",
     "name": "Shot_ExpLight01",
     "sub": "Bomb_Hold",
@@ -304,7 +304,7 @@
     "image": null
   },
   {
-    "id": 1150,
+    "id": 132,
     "main_key": "Shot_ExplosionLightLong_00",
     "name": "Shot_ExpLightLong00",
     "sub": "Bomb_Chase",
@@ -312,7 +312,7 @@
     "image": null
   },
   {
-    "id": 1151,
+    "id": 133,
     "main_key": "Shot_ExplosionLightLong_01",
     "name": "Shot_ExpLightLong01",
     "sub": "DevilBall",
@@ -320,7 +320,7 @@
     "image": null
   },
   {
-    "id": 1160,
+    "id": 134,
     "main_key": "Shot_TripleQuick_00",
     "name": "Shot_TripleQuick00",
     "sub": "DevilBall",
@@ -328,7 +328,7 @@
     "image": "Wst_Shooter_TripleQuick_00^w.png"
   },
   {
-    "id": 1161,
+    "id": 135,
     "main_key": "Shot_TripleQuick_01",
     "name": "Shot_TripleQuick01",
     "sub": "Bomb_Handy",
@@ -336,7 +336,7 @@
     "image": "Wst_Shooter_TripleQuick_01^w.png"
   },
   {
-    "id": 1170,
+    "id": 136,
     "main_key": "Shot_TripleMiddle_00",
     "name": "Shot_TripleMiddle00",
     "sub": "Bomb_Hold",
@@ -344,7 +344,7 @@
     "image": "Wst_Shooter_TripleMiddle_00^w.png"
   },
   {
-    "id": 1171,
+    "id": 137,
     "main_key": "Shot_TripleMiddle_01",
     "name": "Shot_TripleMiddle01",
     "sub": "MarkingBall",
@@ -352,7 +352,7 @@
     "image": "Wst_Shooter_TripleMiddle_01^w.png"
   },
   {
-    "id": 1172,
+    "id": 144,
     "main_key": "Shot_TripleMiddle_02",
     "name": "Shot_TripleMiddle02",
     "sub": "Shield",
@@ -360,7 +360,7 @@
     "image": null
   },
   {
-    "id": 2000,
+    "id": 200,
     "main_key": "Roller_Compact_00",
     "name": "Roller_Compact00",
     "sub": "Bomb_Handy",
@@ -368,7 +368,7 @@
     "image": "Wst_Roller_Compact00^w.png"
   },
   {
-    "id": 2001,
+    "id": 201,
     "main_key": "Roller_Compact_01",
     "name": "Roller_Compact01",
     "sub": "Bomb_Chase",
@@ -376,7 +376,7 @@
     "image": "Wst_Roller_Compact01^w.png"
   },
   {
-    "id": 2010,
+    "id": 202,
     "main_key": "Roller_Normal_00",
     "name": "Roller_Normal00",
     "sub": "Bomb_Hold",
@@ -384,7 +384,7 @@
     "image": "Wst_Roller_Normal_00^w.png"
   },
   {
-    "id": 2011,
+    "id": 203,
     "main_key": "Roller_Normal_01",
     "name": "Roller_Normal01",
     "sub": "Flag",
@@ -392,7 +392,7 @@
     "image": "Wst_Roller_Normal_01^w.png"
   },
   {
-    "id": 2012,
+    "id": 213,
     "main_key": "Roller_Normal_02",
     "name": "Roller_Normal02",
     "sub": "Shield",
@@ -400,7 +400,7 @@
     "image": "Wst_Roller_Normal_02^w.png"
   },
   {
-    "id": 2015,
+    "id": 204,
     "main_key": "Roller_Normal_H",
     "name": "Roller_NormalH",
     "sub": "Bomb_Hold",
@@ -408,7 +408,7 @@
     "image": "Wst_Roller_Normal_H^w.png"
   },
   {
-    "id": 2020,
+    "id": 205,
     "main_key": "Roller_Heavy_00",
     "name": "Roller_Heavy00",
     "sub": "Sprinkler",
@@ -416,7 +416,7 @@
     "image": "Wst_Roller_Heavy_00^w.png"
   },
   {
-    "id": 2021,
+    "id": 206,
     "main_key": "Roller_Heavy_01",
     "name": "Roller_Heavy01",
     "sub": "Bomb_Throw",
@@ -424,7 +424,7 @@
     "image": "Wst_Roller_Heavy_01^w.png"
   },
   {
-    "id": 2022,
+    "id": 211,
     "main_key": "Roller_Heavy_02",
     "name": "Roller_Heavy02",
     "sub": "Bomb_Chase",
@@ -432,7 +432,7 @@
     "image": null
   },
   {
-    "id": 2030,
+    "id": 207,
     "main_key": "Roller_BrushMini_00",
     "name": "Roller_BrushMini00",
     "sub": "Sprinkler",
@@ -440,7 +440,7 @@
     "image": "Wst_Roller_BrushMini_00^w.png"
   },
   {
-    "id": 2031,
+    "id": 208,
     "main_key": "Roller_BrushMini_01",
     "name": "Roller_BrushMini01",
     "sub": "TimerTrap",
@@ -448,7 +448,7 @@
     "image": "Wst_Roller_BrushMini_01^w.png"
   },
   {
-    "id": 2032,
+    "id": 212,
     "main_key": "Roller_BrushMini_02",
     "name": "Roller_BrushMini02",
     "sub": "Bomb_Throw",
@@ -456,7 +456,7 @@
     "image": null
   },
   {
-    "id": 2040,
+    "id": 209,
     "main_key": "Roller_BrushNormal_00",
     "name": "Roller_BrushNormal00",
     "sub": "Flag",
@@ -464,7 +464,7 @@
     "image": "Wst_Roller_BrushNormal_00^w.png"
   },
   {
-    "id": 2041,
+    "id": 210,
     "main_key": "Roller_BrushNormal_01",
     "name": "Roller_BrushNormal01",
     "sub": "Bomb_Throw",
@@ -472,7 +472,7 @@
     "image": "Wst_Roller_BrushNormal_01^w.png"
   },
   {
-    "id": 3000,
+    "id": 400,
     "main_key": "BigBall_Strong_00",
     "name": "BigBall_Strong00",
     "sub": "Bomb_Handy",
@@ -480,7 +480,7 @@
     "image": "Wst_Slosher_Strong_00^w.png"
   },
   {
-    "id": 3001,
+    "id": 401,
     "main_key": "BigBall_Strong_01",
     "name": "BigBall_Strong01",
     "sub": "Shield",
@@ -488,7 +488,7 @@
     "image": "Wst_Slosher_Strong_01^w.png"
   },
   {
-    "id": 3002,
+    "id": 406,
     "main_key": "BigBall_Strong_02",
     "name": "BigBall_Strong02",
     "sub": "Bomb_Throw",
@@ -496,7 +496,7 @@
     "image": null
   },
   {
-    "id": 3010,
+    "id": 402,
     "main_key": "BigBall_Diffusion_00",
     "name": "BigBall_Diffusion00",
     "sub": "DevilBall",
@@ -504,7 +504,7 @@
     "image": "Wst_Slosher_Diffusion_00^w.png"
   },
   {
-    "id": 3011,
+    "id": 403,
     "main_key": "BigBall_Diffusion_01",
     "name": "BigBall_Diffusion01",
     "sub": "Bomb_Chase",
@@ -512,7 +512,7 @@
     "image": "Wst_Slosher_Diffusion_01^w.png"
   },
   {
-    "id": 3020,
+    "id": 404,
     "main_key": "BigBall_Launcher_00",
     "name": "BigBall_Launcher00",
     "sub": "Bomb_Throw",
@@ -520,7 +520,7 @@
     "image": "Wst_Slosher_Launcher_00^w.png"
   },
   {
-    "id": 3021,
+    "id": 405,
     "main_key": "BigBall_Launcher_01",
     "name": "BigBall_Launcher01",
     "sub": "MarkingBall",
@@ -528,7 +528,7 @@
     "image": "Wst_Slosher_Launcher_01^w.png"
   },
   {
-    "id": 4000,
+    "id": 300,
     "main_key": "Charge_Quick_00",
     "name": "Charge_Quick00",
     "sub": "MarkingBall",
@@ -536,7 +536,7 @@
     "image": "Wst_Charger_Quick_00^w.png"
   },
   {
-    "id": 4001,
+    "id": 301,
     "main_key": "Charge_Quick_01",
     "name": "Charge_Quick01",
     "sub": "TimerTrap",
@@ -544,7 +544,7 @@
     "image": "Wst_Charger_Quick_01^w.png"
   },
   {
-    "id": 4002,
+    "id": 313,
     "main_key": "Charge_Quick_02",
     "name": "Charge_Quick02",
     "sub": "Bomb_Hold",
@@ -552,7 +552,7 @@
     "image": null
   },
   {
-    "id": 4010,
+    "id": 302,
     "main_key": "Charge_Normal_00",
     "name": "Charge_Normal00",
     "sub": "Bomb_Throw",
@@ -560,7 +560,7 @@
     "image": "Wst_Charger_Normal_00^w.png"
   },
   {
-    "id": 4011,
+    "id": 303,
     "main_key": "Charge_Normal_01",
     "name": "Charge_Normal01",
     "sub": "Sprinkler",
@@ -568,7 +568,7 @@
     "image": "Wst_Charger_Normal_01^w.png"
   },
   {
-    "id": 4012,
+    "id": 315,
     "main_key": "Charge_Normal_02",
     "name": "Charge_Normal02",
     "sub": "Shield",
@@ -576,7 +576,7 @@
     "image": "Wst_Charger_Normal_02^w.png"
   },
   {
-    "id": 4015,
+    "id": 304,
     "main_key": "Charge_Normal_H",
     "name": "Charge_NormalH",
     "sub": "Bomb_Throw",
@@ -584,7 +584,7 @@
     "image": "Wst_Charger_Normal_H^w.png"
   },
   {
-    "id": 4020,
+    "id": 305,
     "main_key": "Charge_NormalScope_00",
     "name": "Charge_NormalScp00",
     "sub": "Bomb_Throw",
@@ -592,7 +592,7 @@
     "image": "Wst_Charger_NormalScope_00^w.png"
   },
   {
-    "id": 4021,
+    "id": 306,
     "main_key": "Charge_NormalScope_01",
     "name": "Charge_NormalScp01",
     "sub": "Sprinkler",
@@ -600,7 +600,7 @@
     "image": "Wst_Charger_NormalScope_01^w.png"
   },
   {
-    "id": 4022,
+    "id": 316,
     "main_key": "Charge_NormalScope_02",
     "name": "Charge_NormalScp02",
     "sub": "Shield",
@@ -608,7 +608,7 @@
     "image": "Wst_Charger_NormalScope_02^w.png"
   },
   {
-    "id": 4030,
+    "id": 307,
     "main_key": "Charge_Long_00",
     "name": "Charge_Long00",
     "sub": "Bomb_Handy",
@@ -616,7 +616,7 @@
     "image": "Wst_Charger_Long_00^w.png"
   },
   {
-    "id": 4031,
+    "id": 308,
     "main_key": "Charge_Long_01",
     "name": "Charge_Long01",
     "sub": "Flag",
@@ -624,7 +624,7 @@
     "image": "Wst_Charger_Long_01^w.png"
   },
   {
-    "id": 4040,
+    "id": 309,
     "main_key": "Charge_LongScope_00",
     "name": "Charge_LongScp00",
     "sub": "Bomb_Handy",
@@ -632,7 +632,7 @@
     "image": "Wst_Charger_LongScope_00^w.png"
   },
   {
-    "id": 4041,
+    "id": 310,
     "main_key": "Charge_LongScope_01",
     "name": "Charge_LongScp01",
     "sub": "Flag",
@@ -640,7 +640,7 @@
     "image": "Wst_Charger_LongScope_01^w.png"
   },
   {
-    "id": 4050,
+    "id": 311,
     "main_key": "Charge_Light_00",
     "name": "Charge_Light00",
     "sub": "Shield",
@@ -648,7 +648,7 @@
     "image": "Wst_Charger_Light_00^w.png"
   },
   {
-    "id": 4051,
+    "id": 312,
     "main_key": "Charge_Light_01",
     "name": "Charge_Light01",
     "sub": "DevilBall",
@@ -656,7 +656,7 @@
     "image": "Wst_Charger_Light_01^w.png"
   },
   {
-    "id": 4052,
+    "id": 314,
     "main_key": "Charge_Light_02",
     "name": "Charge_Light02",
     "sub": "Bomb_Handy",
@@ -664,7 +664,7 @@
     "image": null
   },
   {
-    "id": 5000,
+    "id": 500,
     "main_key": "Gatling_Quick_00",
     "name": "Gatling_Quick00",
     "sub": "Bomb_Hold",
@@ -672,7 +672,7 @@
     "image": "Wst_Spinner_Quick_00^w.png"
   },
   {
-    "id": 5001,
+    "id": 501,
     "main_key": "Gatling_Quick_01",
     "name": "Gatling_Quick01",
     "sub": "DevilBall",
@@ -680,7 +680,7 @@
     "image": "Wst_Spinner_Quick_01^w.png"
   },
   {
-    "id": 5002,
+    "id": 506,
     "main_key": "Gatling_Quick_02",
     "name": "Gatling_Quick02",
     "sub": "Bomb_Handy",
@@ -688,7 +688,7 @@
     "image": null
   },
   {
-    "id": 5010,
+    "id": 502,
     "main_key": "Gatling_Standard_00",
     "name": "Gatling_Standard00",
     "sub": "Shield",
@@ -696,7 +696,7 @@
     "image": "Wst_Spinner_Standard_00^w.png"
   },
   {
-    "id": 5011,
+    "id": 503,
     "main_key": "Gatling_Standard_01",
     "name": "Gatling_Standard01",
     "sub": "MarkingBall",
@@ -704,7 +704,7 @@
     "image": "Wst_Spinner_Standard_01^w.png"
   },
   {
-    "id": 5012,
+    "id": 507,
     "main_key": "Gatling_Standard_02",
     "name": "Gatling_Standard02",
     "sub": "Sprinkler",
@@ -712,7 +712,7 @@
     "image": null
   },
   {
-    "id": 5020,
+    "id": 504,
     "main_key": "Gatling_Hyper_00",
     "name": "Gatling_Hyper00",
     "sub": "Bomb_Throw",
@@ -720,7 +720,7 @@
     "image": "Wst_Spinner_Hyper_00^w.png"
   },
   {
-    "id": 5021,
+    "id": 505,
     "main_key": "Gatling_Hyper_01",
     "name": "Gatling_Hyper01",
     "sub": "Sprinkler",
