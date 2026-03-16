@@ -9,6 +9,32 @@ window.loadHeader(function(headerContainer) {
         });
     }
 
+    const extractMiiName = (miiDataB64) => {
+        try {
+            const binaryString = atob(miiDataB64.replace(/-/g, '+').replace(/_/g, '/'));
+            const data = new Uint8Array(binaryString.length);
+            for (let i = 0; i < binaryString.length; i++) {
+                data[i] = binaryString.charCodeAt(i);
+            }
+            const size = data.length;
+            let offset = -1;
+            let isBE = false;
+            if ([92, 96, 104, 106, 108, 336, 72].includes(size)) offset = 0x1A;
+            else if ([74, 76].includes(size)) { offset = 0x02; isBE = true; }
+            else if (size === 88) offset = 0x10;
+            else if ([48, 68].includes(size)) offset = 0x1C;
+            if (offset === -1) return null;
+            const decoder = new TextDecoder(isBE ? 'utf-16be' : 'utf-16le');
+            let end = offset;
+            while (end < offset + 20 && end + 1 < data.length && (data[end] !== 0 || data[end + 1] !== 0)) {
+                end += 2;
+            }
+            return decoder.decode(data.slice(offset, end));
+        } catch (e) {
+            return null;
+        }
+    };
+
     const udemaeMap = {
         "0": "C-", "1": "C", "2": "C+", "3": "B-", "4": "B",
         "5": "B+", "6": "A-", "7": "A", "8": "A+", "9": "S", "10": "S+"
@@ -42,9 +68,12 @@ window.loadHeader(function(headerContainer) {
         combinedData = { ...combinedData, ...data };
         const finalData = combinedData;
         const equipped = finalData.last_equipped || {};
-        const name = (finalData.mii && finalData.mii.name) || finalData.user_id || finalData.mii_name || "User";
+        
         const miiBlob = (finalData.mii && finalData.mii.data) || finalData.mii_data;
-        const miiImgUrl = miiBlob ? `https://mii-unsecure.ariankordi.net/miis/image.png?erri=s6u7r-rsp&data=${encodeURIComponent(miiBlob)}&type=face&width=270` : "";
+        const parsedName = miiBlob ? extractMiiName(miiBlob) : null;
+        const name = parsedName || (finalData.mii && finalData.mii.name) || finalData.nickname || finalData.user_id || finalData.mii_name || "User";
+        
+        const miiImgUrl = miiBlob ? `https://mii-unsecure.ariankordi.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270` : "";
 
         const sidebarName = document.getElementById('mii-name');
         const sidebarImg = document.getElementById('mii-img');
@@ -124,7 +153,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${headImg}" />
                         </div>
                         <div class="abilities mid">
-                            <img src="${clothesSub1}" /><img src="${clothesSub2}" />" />
+                            <img src="${clothesSub1}" /><img src="${clothesSub2}" />
                         </div>
 
                         <div class="gear-slot-small body-slot">
@@ -132,7 +161,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${clothesImg}" />
                         </div>
                         <div class="abilities bottom">
-                            <img src="${headSub1}" /><img src="${headSub2}" />" />
+                            <img src="${headSub1}" /><img src="${headSub2}" />
                         </div>
 
                         <div class="gear-slot-small shoes-slot">
@@ -140,7 +169,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${shoesImg}" />
                         </div>
                         <div class="abilities bottom-right">
-                            <img src="${shoesSub1}" /><img src="${shoesSub2}" />" />
+                            <img src="${shoesSub1}" /><img src="${shoesSub2}" />
                         </div>
                     </div>
                 </div>

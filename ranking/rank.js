@@ -5,7 +5,6 @@ window.loadHeader(function(headerContainer) {
     }
 
     const logoutForm = document.getElementById("logout-form");
-    
     if (logoutForm) {
         logoutForm.action = "/api/v1/spfn/logout";
         const originInput = document.getElementById("logout_frontend_origin");
@@ -16,6 +15,33 @@ window.loadHeader(function(headerContainer) {
         });
     }
 
+    const extractMiiName = (miiDataB64) => {
+        try {
+            const data = Uint8Array.from(atob(miiDataB64.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+            const size = data.length;
+            let offset = -1;
+            let isBE = false;
+
+            if ([92, 96, 104, 106, 108, 336, 72].includes(size)) offset = 0x1A; // 3DS/WiiU
+            else if ([74, 76].includes(size)) { offset = 0x02; isBE = true; }    // Wii
+            else if (size === 88) offset = 0x10;                                // Switch CharInfo
+            else if ([48, 68].includes(size)) offset = 0x1C;                    // Switch CoreData
+
+            if (offset === -1) return null;
+
+            const decoder = new TextDecoder(isBE ? 'utf-16be' : 'utf-16le');
+            let end = offset;
+            while (end < offset + 20 && (data[end] !== 0 || data[end + 1] !== 0)) end += 2;
+            return decoder.decode(data.slice(offset, end));
+        } catch (e) {
+            return null;
+        }
+    };
+
+    const getMiiRenderUrl = (data) => {
+        return `https://mii-unsecure.ariankordi.net/miis/image.png?data=${encodeURIComponent(data)}&type=face&width=270&resourceType=very_high`;
+    };
+
     const renderData = (data) => {
         if (typeof data === 'string') {
             try { data = JSON.parse(data); } catch (e) { console.error(e); }
@@ -23,17 +49,16 @@ window.loadHeader(function(headerContainer) {
         
         const nameEl = document.getElementById('mii-name');
         const imgEl = document.getElementById('mii-img');
+        const miiBlob = (data.mii && data.mii.data) || data.mii_data;
         
         if (nameEl) {
-            nameEl.textContent = (data.mii && data.mii.name) || data.nickname || data.user_id || data.username || "User";
+            const parsedName = miiBlob ? extractMiiName(miiBlob) : null;
+            nameEl.textContent = parsedName || (data.mii && data.mii.name) || data.nickname || data.username || "User";
         }
         
-        if (imgEl) {
-            const miiBlob = (data.mii && data.mii.data) || data.mii_data;
-            if (miiBlob) {
-                imgEl.src = `https://mii-unsecure.ariankordi.net/miis/image.png?erri=s6u7r-rsp&data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
-                imgEl.style.display = 'block';
-            }
+        if (imgEl && miiBlob) {
+            imgEl.src = getMiiRenderUrl(miiBlob);
+            imgEl.style.display = 'block';
         }
     };
 
