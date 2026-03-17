@@ -109,14 +109,17 @@ window.loadHeader(function(headerContainer) {
             const headMain = getImg(abilities, equipped.Gear_Head_Skill0, 'ability', true);
             const headSub1 = getImg(abilities, equipped.Gear_Head_Skill1, 'ability', true);
             const headSub2 = getImg(abilities, equipped.Gear_Head_Skill2, 'ability', true);
+            const headSub3 = getImg(abilities, equipped.Gear_Head_Skill3, 'ability', true);
 
             const clothesMain = getImg(abilities, equipped.Gear_Clothes_Skill0, 'ability', true);
             const clothesSub1 = getImg(abilities, equipped.Gear_Clothes_Skill1, 'ability', true);
             const clothesSub2 = getImg(abilities, equipped.Gear_Clothes_Skill2, 'ability', true);
+            const clothesSub3 = getImg(abilities, equipped.Gear_Clothes_Skill3, 'ability', true);
 
             const shoesMain = getImg(abilities, equipped.Gear_Shoes_Skill0, 'ability', true);
             const shoesSub1 = getImg(abilities, equipped.Gear_Shoes_Skill1, 'ability', true);
             const shoesSub2 = getImg(abilities, equipped.Gear_Shoes_Skill2, 'ability', true);
+            const shoesSub3 = getImg(abilities, equipped.Gear_Shoes_Skill3, 'ability', true);
             
             await Promise.all([
                 preloadImage(miiImgUrl),
@@ -153,7 +156,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${headImg}" />
                         </div>
                         <div class="abilities mid">
-                            <img src="${clothesSub1}" /><img src="${clothesSub2}" />
+                            <img src="${clothesSub1}" /><img src="${clothesSub2}" /><img src="${clothesSub3}" />
                         </div>
 
                         <div class="gear-slot-small body-slot">
@@ -161,7 +164,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${clothesImg}" />
                         </div>
                         <div class="abilities bottom">
-                            <img src="${headSub1}" /><img src="${headSub2}" />
+                            <img src="${headSub1}" /><img src="${headSub2}" /><img src="${headSub3}" />
                         </div>
 
                         <div class="gear-slot-small shoes-slot">
@@ -169,7 +172,7 @@ window.loadHeader(function(headerContainer) {
                             <img class="gear-icon" src="${shoesImg}" />
                         </div>
                         <div class="abilities bottom-right">
-                            <img src="${shoesSub1}" /><img src="${shoesSub2}" />
+                            <img src="${shoesSub1}" /><img src="${shoesSub2}" /><img src="${shoesSub3}" />
                         </div>
                     </div>
                 </div>
