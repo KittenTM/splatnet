@@ -294,6 +294,7 @@ body {
   display: flex;
   gap: 15px;
   top: 935px;
+  z-index: 67;
 }
 
 .abilities.bottom { left: 325px; }
