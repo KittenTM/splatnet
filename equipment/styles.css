@@ -315,15 +315,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 1044px;
-    margin: 20px auto 0 auto;
+    margin: 75px auto 0 auto;
     position: relative;
     z-index: 10;
     clear: both;
 }
 
 .area-inked-title {
-    width: 250px; 
+    width: 300px; 
     height: auto;
     display: block;
-    margin-right: 200px;
+    margin-right: 220px;
 }
