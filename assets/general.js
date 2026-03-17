@@ -30,7 +30,7 @@ window.animateLoadingCanvas = function() {
                 return;
             }
             if (!lastUpdateTime) lastUpdateTime = timestamp;
-            if (timestamp - lastUpdateTime > 50) {
+            if (timestamp - lastUpdateTime > 10) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.drawImage(image, 0, currentFrame * frameHeight, frameWidth, frameHeight, 0, 0, frameWidth, frameHeight);
                 currentFrame = (currentFrame + 1) % totalFrames;
