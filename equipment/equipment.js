@@ -1,4 +1,4 @@
-window.loadHeader(function(headerContainer) {
+window.loadHeader(async function(headerContainer) {
     const logoutForm = document.getElementById("logout-form");
     if (logoutForm) {
         logoutForm.action = "/api/v1/spfn/logout";
@@ -41,6 +41,7 @@ window.loadHeader(function(headerContainer) {
     };
 
     let combinedData = {};
+    let mappingCache = null;
 
     const preloadImage = (url) => {
         return new Promise((resolve) => {
@@ -52,7 +53,7 @@ window.loadHeader(function(headerContainer) {
         });
     };
 
-    const renderData = async (newData) => {
+    const renderData = async (newData, isFinalFallback = false) => {
         if (!newData) return;
 
         let data = newData;
@@ -85,20 +86,25 @@ window.loadHeader(function(headerContainer) {
 
         const infoBox = document.querySelector('.splat-info-box');
         if (infoBox) {
-            const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : []);
-            const [clothing, headgear, shoes, weapons, abilities] = await Promise.all([
-                fetchJson('/assets/mapping/clothing.json'),
-                fetchJson('/assets/mapping/headgear.json'),
-                fetchJson('/assets/mapping/shoes.json'),
-                fetchJson('/assets/mapping/weapons.json'),
-                fetchJson('/assets/mapping/ability.json')
-            ]);
+            if (!mappingCache) {
+                const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : []);
+                mappingCache = await Promise.all([
+                    fetchJson('/assets/mapping/clothing.json'),
+                    fetchJson('/assets/mapping/headgear.json'),
+                    fetchJson('/assets/mapping/shoes.json'),
+                    fetchJson('/assets/mapping/weapons.json'),
+                    fetchJson('/assets/mapping/ability.json')
+                ]);
+            }
+            const [clothing, headgear, shoes, weapons, abilities] = mappingCache;
 
             const getImg = (list, id, folder, isAbility = false) => {
-                const fallback = isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png";
-                if (id === undefined || id === null) return fallback;
+                if (id === undefined || id === null) {
+                    return isFinalFallback ? (isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png") : "";
+                }
                 const item = list.find(i => String(i.id) === String(id));
-                return (item && item.image) ? `../assets/${folder}/${item.image}` : fallback;
+                if (item && item.image) return `../assets/${folder}/${item.image}`;
+                return isFinalFallback ? (isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png") : "";
             };
 
             const weaponImg = getImg(weapons, equipped.weapon, 'weapons');
@@ -131,7 +137,10 @@ window.loadHeader(function(headerContainer) {
 
             const rankLevel = equipped.Rank !== undefined ? equipped.Rank : (finalData.Rank || "--");
             const udemaeKey = equipped.Udemae !== undefined ? String(equipped.Udemae) : String(finalData.Udemae || "");
-            const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "C-");
+            const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "--");
+
+            const renderImg = (src, className) => src ? `<img class="${className}" src="${src}" />` : '';
+            const renderSub = (src) => src ? `<img src="${src}" />` : '';
 
             infoBox.innerHTML = `
                 <div id="scale-root">
@@ -149,30 +158,30 @@ window.loadHeader(function(headerContainer) {
                             <span class="rank-text">${rankGrade}</span>
                             <img src="../assets/en/svg/text/scene/equipment/tx_udemae-3f0e377d89a469c62069c2304dae87dfdf2b98076a0a4662b9190800c2d9da91.svg" class="rank-label" />
                         </div>
-                        <div class="weapon-slot"><img class="weapon" src="${weaponImg}" /></div>
+                        <div class="weapon-slot">${renderImg(weaponImg, 'weapon')}</div>
                         
                         <div class="gear-slot-small head-slot">
-                            <img class="main-ability" src="${headMain}" />
-                            <img class="gear-icon" src="${headImg}" />
+                            ${renderImg(headMain, 'main-ability')}
+                            ${renderImg(headImg, 'gear-icon')}
                         </div>
                         <div class="abilities mid">
-                            <img src="${clothesSub1}" /><img src="${clothesSub2}" /><img src="${clothesSub3}" />
+                            ${renderSub(clothesSub1)}${renderSub(clothesSub2)}${renderSub(clothesSub3)}
                         </div>
 
                         <div class="gear-slot-small body-slot">
-                            <img class="main-ability" src="${clothesMain}" />
-                            <img class="gear-icon" src="${clothesImg}" />
+                            ${renderImg(clothesMain, 'main-ability')}
+                            ${renderImg(clothesImg, 'gear-icon')}
                         </div>
                         <div class="abilities bottom">
-                            <img src="${headSub1}" /><img src="${headSub2}" /><img src="${headSub3}" />
+                            ${renderSub(headSub1)}${renderSub(headSub2)}${renderSub(headSub3)}
                         </div>
 
                         <div class="gear-slot-small shoes-slot">
-                            <img class="main-ability" src="${shoesMain}" />
-                            <img class="gear-icon" src="${shoesImg}" />
+                            ${renderImg(shoesMain, 'main-ability')}
+                            ${renderImg(shoesImg, 'gear-icon')}
                         </div>
                         <div class="abilities bottom-right">
-                            <img src="${shoesSub1}" /><img src="${shoesSub2}" /><img src="${shoesSub3}" />
+                            ${renderSub(shoesSub1)}${renderSub(shoesSub2)}${renderSub(shoesSub3)}
                         </div>
                     </div>
                 </div>
@@ -185,18 +194,32 @@ window.loadHeader(function(headerContainer) {
 
     const init = async () => {
         const overlay = document.getElementById("loading-overlay");
+        let cacheFound = false;
+
+        const cached = sessionStorage.getItem('user_cache');
+        if (cached) {
+            try {
+                await renderData(JSON.parse(cached), false);
+                cacheFound = true;
+            } catch (e) {}
+        }
+
         try {
             const [profileRes, equipRes] = await Promise.all([
                 fetch("/api/v1/me", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
                 fetch("/api/v1/me/equipment", { credentials: 'include' }).then(res => res.ok ? res.json() : {})
             ]);
-            await renderData(profileRes);
-            await renderData(equipRes);
+            
+            await renderData(profileRes, false);
+            await renderData(equipRes, false);
             sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
         } catch (err) {
-            const cached = sessionStorage.getItem('user_cache');
-            if (cached) await renderData(JSON.parse(cached));
-            else await renderData({ user_id: "Guest" });
+            //last resort
+            if (cacheFound) {
+                await renderData(sessionStorage.getItem('user_cache'), true);
+            } else {
+                await renderData({ user_id: "Guest" }, true);
+            }
         } finally {
             if (overlay) overlay.style.display = "none";
         }

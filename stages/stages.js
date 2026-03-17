@@ -3,19 +3,17 @@ let currentIndex = 0;
 const ITEMS_PER_PAGE = 5;
 let observer;
 
-window.loadHeader(function(headerContainer) {
+window.loadHeader(async function(headerContainer) {
     const stageButton = headerContainer.querySelector('.menu-item.stage');
     if (stageButton) {
         stageButton.classList.add('active');
     }
 
     const logoutForm = document.getElementById("logout-form");
-    
     if (logoutForm) {
         logoutForm.action = "/api/v1/spfn/logout";
         const originInput = document.getElementById("logout_frontend_origin");
         if (originInput) originInput.value = window.location.origin;
-        
         logoutForm.addEventListener('submit', () => {
             sessionStorage.removeItem('user_cache');
         });
@@ -47,7 +45,8 @@ window.loadHeader(function(headerContainer) {
         }
     };
 
-    const renderData = (data) => {
+    const renderData = async (data) => {
+        if (!data) return;
         if (typeof data === 'string') {
             try { data = JSON.parse(data); } catch (e) { console.error(e); }
         }
@@ -66,24 +65,38 @@ window.loadHeader(function(headerContainer) {
         }
     };
 
-    const cached = sessionStorage.getItem('user_cache');
-    if (cached) renderData(JSON.parse(cached));
+    const init = async () => {
+        const overlay = document.getElementById("loading-overlay");
+        let cacheReady = false;
 
-    fetch("/api/v1/me", { credentials: 'include' })
-        .then(res => res.ok ? res.json() : Promise.reject(res))
-        .then(data => {
-            sessionStorage.setItem('user_cache', JSON.stringify(data));
-            renderData(data);
-        })
-        .catch(err => {
-            if (!cached) {
+        const cached = sessionStorage.getItem('user_cache');
+        if (cached) {
+            try {
+                await renderData(cached);
+                cacheReady = true;
+            } catch (e) {}
+        }
+
+        try {
+            const [profileRes, rotationsData] = await Promise.all([
+                fetch("/api/v1/me", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
+                renderStages()
+            ]);
+            
+            await renderData(profileRes);
+            sessionStorage.setItem('user_cache', JSON.stringify(profileRes));
+        } catch (err) {
+            if (!cacheReady) {
                 const nameEl = document.getElementById('mii-name');
                 if (nameEl) nameEl.textContent = "Guest";
             }
             console.error(err);
-        });
+        } finally {
+            if (overlay) overlay.style.display = "none";
+        }
+    };
 
-    renderStages();
+    init();
 });
 
 const API_URL = "/api/v1/boss";
@@ -144,13 +157,11 @@ async function fetchRotations() {
 
 async function renderStages() {
     const container = document.getElementById("stages-container");
-    const loadingOverlay = document.getElementById("loading-overlay");
     
     try {
         allRotations = await fetchRotations();
         if (!allRotations.length) {
             container.innerHTML = `<h2 class="error-message">Something went wrong! Try reloading the page.</h2>`;
-            if (loadingOverlay) loadingOverlay.style.display = 'none';
             return;
         }
         
@@ -174,7 +185,6 @@ async function renderStages() {
 
     } catch (err) {
         console.error(err);
-        if (loadingOverlay) loadingOverlay.style.display = 'none';
     }
 }
 
@@ -183,7 +193,7 @@ function loadMore(isInitial) {
     const loadingOverlay = document.getElementById("loading-overlay");
     const trigger = document.getElementById('scroll-trigger');
 
-    if (loadingOverlay) {
+    if (!isInitial && loadingOverlay) {
         loadingOverlay.style.display = 'flex';
         if (typeof window.animateLoadingCanvas === 'function') {
             window.animateLoadingCanvas();
@@ -254,7 +264,7 @@ function loadMore(isInitial) {
         container.insertAdjacentHTML('beforeend', html);
         currentIndex += ITEMS_PER_PAGE;
 
-        if (loadingOverlay) loadingOverlay.style.display = 'none';
+        if (!isInitial && loadingOverlay) loadingOverlay.style.display = 'none';
         if (trigger) trigger.style.display = 'block';
 
         if (currentIndex >= allRotations.length) {
