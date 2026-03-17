@@ -62,44 +62,66 @@ window.loadHeader(function(headerContainer) {
         }
     };
 
-    const cached = sessionStorage.getItem('user_cache');
-    if (cached) renderData(JSON.parse(cached));
+    const init = () => {
+        const cached = sessionStorage.getItem('user_cache');
+        if (cached) renderData(JSON.parse(cached));
 
-    fetch("/api/v1/me", { credentials: 'include' })
-        .then(res => res.ok ? res.json() : Promise.reject(res))
-        .then(data => {
-            sessionStorage.setItem('user_cache', JSON.stringify(data));
-            renderData(data);
-        })
-        .catch(err => {
-            if (!cached) {
-                const nameEl = document.getElementById('mii-name');
-                if (nameEl) nameEl.textContent = "Guest";
-            }
-            console.error("Profile fetch failed:", err);
-        });
+        fetch("/api/v1/me", { credentials: 'include' })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(data => {
+                sessionStorage.setItem('user_cache', JSON.stringify(data));
+                renderData(data);
+            })
+            .catch(err => {
+                if (!cached) {
+                    const nameEl = document.getElementById('mii-name');
+                    if (nameEl) nameEl.textContent = "Guest";
+                }
+                console.error("Profile fetch failed:", err);
+            });
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const mode = urlParams.get('mode');
-    const images = {
-        regular: "../assets/en/svg/ui/btn_tab_regular_selected-b636e3d21ace9434120061a32658b21a34feb6468553b6d6da30ce890b85ec1f.svg",
-        gachi: "../assets/en/svg/ui/btn_tab_gachi_selected-4796f167399dca12cb274dcb0348cdf709a1f722ddd241210e55a3e04fdb6ff4.svg"
+        const urlParams = new URLSearchParams(window.location.search);
+        const mode = urlParams.get('mode') || 'regular';
+        
+        const regImg = document.getElementById('img-regular');
+        const gachiImg = document.getElementById('img-gachi');
+        
+        const images = {
+            regular: "../assets/en/svg/ui/btn_tab_regular_selected-b636e3d21ace9434120061a32658b21a34feb6468553b6d6da30ce890b85ec1f.svg",
+            gachi: "../assets/en/svg/ui/btn_tab_gachi_selected-4796f167399dca12cb274dcb0348cdf709a1f722ddd241210e55a3e04fdb6ff4.svg",
+            regular_off: "../assets/en/svg/ui/btn_tab_regular-40682de5f47922c608c0ddf6eddd44efcf4b0516092041cdb48977f777030487.svg",
+            gachi_off: "../assets/en/svg/ui/btn_tab_gachi-1ab8351babd76ea6dd8e23eb86293c8ceafaf23b9cae3001166fabf3a01011a7.svg"
+        };
+
+        if (regImg) regImg.src = (mode === 'regular') ? images.regular : images.regular_off;
+        if (gachiImg) gachiImg.src = (mode === 'gachi') ? images.gachi : images.gachi_off;
+
+        if (typeof loadRankings === 'function') {
+            loadRankings();
+        }
+
+        const loadingOverlay = document.getElementById("loading-overlay");
+        if (loadingOverlay) {
+            loadingOverlay.style.display = "none";
+        }
     };
 
-    if (mode === 'regular') {
-        const regImg = document.getElementById('img-regular');
-        if (regImg) regImg.src = images.regular;
-    } else if (mode === 'gachi') {
-        const gachiImg = document.getElementById('img-gachi');
-        if (gachiImg) gachiImg.src = images.gachi;
-    }
+    document.querySelectorAll('.mode-selection a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            window.history.pushState({}, '', href);
 
-    if (typeof loadRankings === 'function') {
-        loadRankings();
-    }
+            const loadingOverlay = document.getElementById("loading-overlay");
+            if (loadingOverlay) {
+                loadingOverlay.style.display = "flex";
+                if (typeof window.animateLoadingCanvas === 'function') {
+                    window.animateLoadingCanvas();
+                }
+            }
+            init();
+        });
+    });
 
-    const loadingOverlay = document.getElementById("loading-overlay");
-    if (loadingOverlay) {
-        loadingOverlay.style.display = "none";
-    }
+    init();
 });
