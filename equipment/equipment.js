@@ -176,6 +176,9 @@ window.loadHeader(function(headerContainer) {
                         </div>
                     </div>
                 </div>
+                <div class="area-inked-title-image-container">
+                    <img src="/assets/en/svg/text/scene/equipment/tx_painted-ab352ac64b62b5c8e5e118f40bb20d9130f0987b7813e1587bf4c39daa40ec4f.svg" class="area-inked-title">
+                </div>
             `;
         }
     };

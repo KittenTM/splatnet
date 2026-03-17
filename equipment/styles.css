@@ -309,3 +309,21 @@ body {
 .menu-item .hover-state { display: none; }
 .menu-item:hover .hover-state, .menu-item.active .hover-state { display: block; }
 .menu-item:hover .default, .menu-item.active .default { display: none; }
+
+.area-inked-title-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1044px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    z-index: 10;
+    clear: both;
+}
+
+.area-inked-title {
+    width: 250px; 
+    height: auto;
+    display: block;
+    margin-right: 200px;
+}
