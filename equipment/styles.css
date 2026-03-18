@@ -157,9 +157,11 @@ body {
 .splat-info-box {
   position: relative;
   width: 1044px;
-  height: 600px;
   margin: 40px auto;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #scale-root {
@@ -310,20 +312,74 @@ body {
 .menu-item:hover .hover-state, .menu-item.active .hover-state { display: block; }
 .menu-item:hover .default, .menu-item.active .default { display: none; }
 
-.area-inked-title-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1044px;
-    margin: 75px auto 0 auto;
-    position: relative;
-    z-index: 10;
-    clear: both;
+.inked-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto;
+  position: relative;
+  left: -100px; 
 }
 
-.area-inked-title {
-    width: 300px; 
-    height: auto;
-    display: block;
-    margin-right: 220px;
+.area-inked-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.area-inked-title-img {
+  width: 240px;
+  height: auto;
+  margin-bottom: 80px;
+  margin-top: 70px;
+}
+
+.weapon-painted-black-box {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 15px;
+  padding: 0 30px 0 15px;
+  width: 550px;
+  height: 110px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 65px;
+}
+
+.weapon-icon-bg-wrapper {
+  width: 150px;
+  height: 145px;
+  background-image: url("/assets/en/ui/gearsmallbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -65px;
+  margin-right: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.weapon-inked-icon {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+
+.weapon-painted-text {
+  font-family: 'Splatoon1', sans-serif;
+  font-size: 62px;
+  color: #ffffff;
+  flex-grow: 1;
+  text-align: right;
+  letter-spacing: 1px;
+  line-height: 110px;
+  margin-left: 10px;
+  text-align: right;
 }

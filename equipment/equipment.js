@@ -69,6 +69,7 @@ window.loadHeader(async function(headerContainer) {
         combinedData = { ...combinedData, ...data };
         const finalData = combinedData;
         const equipped = finalData.last_equipped || {};
+        const history = finalData.history || [];
         
         const miiBlob = (finalData.mii && finalData.mii.data) || finalData.mii_data;
         const parsedName = miiBlob ? extractMiiName(miiBlob) : null;
@@ -99,12 +100,16 @@ window.loadHeader(async function(headerContainer) {
             const [clothing, headgear, shoes, weapons, abilities] = mappingCache;
 
             const getImg = (list, id, folder, isAbility = false) => {
+                const weaponFallback = "/assets/weapons/NotFound^w.png";
+                const abilityFallback = "../assets/ability/ParameterIcon^q.png";
+                
                 if (id === undefined || id === null) {
-                    return isFinalFallback ? (isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png") : "";
+                    return isAbility ? abilityFallback : weaponFallback;
                 }
                 const item = list.find(i => String(i.id) === String(id));
                 if (item && item.image) return `../assets/${folder}/${item.image}`;
-                return isFinalFallback ? (isAbility ? "../assets/ability/ParameterIcon^q.png" : "/assets/weapons/NotFound^w.png") : "";
+                
+                return isAbility ? abilityFallback : weaponFallback;
             };
 
             const weaponImg = getImg(weapons, equipped.weapon, 'weapons');
@@ -139,8 +144,33 @@ window.loadHeader(async function(headerContainer) {
             const udemaeKey = equipped.Udemae !== undefined ? String(equipped.Udemae) : String(finalData.Udemae || "");
             const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "--");
 
-            const renderImg = (src, className) => src ? `<img class="${className}" src="${src}" />` : '';
-            const renderSub = (src) => src ? `<img src="${src}" />` : '';
+            // do this bs so splahoon will be happy
+            // im glad i can make people happy with a 2 liner though.. C:
+            const renderImg = (src, className) => {
+                const fallback = className.includes('weapon') || className.includes('gear') ? 'this.src="/assets/weapons/NotFound^w.png"' : 'this.src="../assets/ability/ParameterIcon^q.png"';
+                return src ? `<img class="${className}" src="${src}" onerror='${fallback}' />` : '';
+            };
+            const renderSub = (src) => src ? `<img src="${src}" onerror='this.src="../assets/ability/ParameterIcon^q.png"' />` : '';
+
+            let historyHtml = '';
+            if (history.length > 0) {
+                const sortedHistory = [...history].sort((a, b) => Number(b.sumpaint) - Number(a.sumpaint));
+                
+                historyHtml = sortedHistory.map(item => {
+                    const hWeaponImg = getImg(weapons, item.weapon, 'weapons');
+                    const paintVal = Number(item.sumpaint);
+                    const displayPaint = paintVal > 999999 ? "999999" : paintVal;
+
+                    return `
+                        <div class="weapon-painted-black-box">
+                            <div class="weapon-icon-bg-wrapper">
+                                 <img src="${hWeaponImg}" class="weapon-inked-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                            </div>
+                            <div class="weapon-painted-text">${displayPaint}p</div>
+                        </div>
+                    `;
+                }).join('');
+            }
 
             infoBox.innerHTML = `
                 <div id="scale-root">
@@ -185,8 +215,12 @@ window.loadHeader(async function(headerContainer) {
                         </div>
                     </div>
                 </div>
-                <div class="area-inked-title-image-container">
-                    <img src="/assets/en/svg/text/scene/equipment/tx_painted-ab352ac64b62b5c8e5e118f40bb20d9130f0987b7813e1587bf4c39daa40ec4f.svg" class="area-inked-title">
+                
+                <div class="inked-section-container">
+                    <div class="area-inked-title-wrapper">
+                        <img src="/assets/en/svg/text/scene/equipment/tx_painted-ab352ac64b62b5c8e5e118f40bb20d9130f0987b7813e1587bf4c39daa40ec4f.svg" class="area-inked-title-img">
+                    </div>
+                    ${historyHtml}
                 </div>
             `;
         }
@@ -205,16 +239,17 @@ window.loadHeader(async function(headerContainer) {
         }
 
         try {
-            const [profileRes, equipRes] = await Promise.all([
+            const [profileRes, equipRes, historyRes] = await Promise.all([
                 fetch("/api/v1/me", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
-                fetch("/api/v1/me/equipment", { credentials: 'include' }).then(res => res.ok ? res.json() : {})
+                fetch("/api/v1/me/equipment", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
+                fetch("/api/v1/me/equipment/history", { credentials: 'include' }).then(res => res.ok ? res.json() : [])
             ]);
             
             await renderData(profileRes, false);
             await renderData(equipRes, false);
+            await renderData({ history: historyRes }, false);
             sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
         } catch (err) {
-            //last resort
             if (cacheFound) {
                 await renderData(sessionStorage.getItem('user_cache'), true);
             } else {
