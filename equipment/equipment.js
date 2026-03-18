@@ -264,4 +264,4 @@ window.loadHeader(async function(headerContainer) {
     if (equipButton) equipButton.classList.add('active');
 
     init();
-});w
+});
