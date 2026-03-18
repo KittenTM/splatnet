@@ -14,9 +14,10 @@ jobs:
         run: npm install -g htmlhint stylelint stylelint-config-standard eslint
       - name: HTML
         run: htmlhint "**/*.html" --ignore "assets/**"
+
       - name: CSS
         run: |
-        echo '{
+          echo '{
             "ignoreFiles": [
               "assets/**/*.css",
               "users/auth/**/*.css"
@@ -36,6 +37,7 @@ jobs:
             }
           }' > .stylelintrc.json
           stylelint "**/*.css" --allow-empty-input --fix || stylelint "**/*.css" --allow-empty-input
+
       - name: JS
         run: |
           echo "export default [
