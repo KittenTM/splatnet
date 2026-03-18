@@ -228,6 +228,8 @@ window.loadHeader(async function(headerContainer) {
 
     const init = async () => {
         const overlay = document.getElementById("loading-overlay");
+        const infoBox = document.querySelector('.splat-info-box');
+        if (infoBox) infoBox.style.visibility = "hidden";
         let cacheFound = false;
 
         const cached = sessionStorage.getItem('user_cache');
@@ -257,6 +259,7 @@ window.loadHeader(async function(headerContainer) {
             }
         } finally {
             if (overlay) overlay.style.display = "none";
+            if (infoBox) infoBox.style.visibility = "visible";
         }
     };
 
