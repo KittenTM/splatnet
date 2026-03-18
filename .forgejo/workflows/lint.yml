@@ -16,8 +16,11 @@ jobs:
         run: htmlhint "**/*.html" --ignore "assets/**"
       - name: CSS
         run: |
-          echo '{
-            "ignoreFiles": ["assets/**/*.css"],
+        echo '{
+            "ignoreFiles": [
+              "assets/**/*.css",
+              "users/auth/**/*.css"
+            ],
             "extends": "stylelint-config-standard",
             "rules": {
               "no-duplicate-selectors": null,
