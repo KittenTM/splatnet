@@ -17,7 +17,7 @@ jobs:
       - name: CSS
         run: |
           echo '{
-            "ignoreFiles": ["assets/application-*.css"],
+            "ignoreFiles": ["assets/**/*.css"],
             "extends": "stylelint-config-standard",
             "rules": {
               "no-duplicate-selectors": null,
