@@ -21,10 +21,10 @@ This project operates on a frontend - backend basis. The backend is not optional
 
 ### Requires Telemetry portion of backend:
 - [ ] Rank
-- [ ] Equipment
+- [x] Equipment
   - [x] Show most recent weapon
   - [x] Show current Rank + Level
-  - [ ] Show all weapons w/ turf inked #
+  - [x] Show all weapons w/ turf inked #
 
 ### Requires backend
 - [ ] Friends List
