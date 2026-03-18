@@ -1,170 +1,388 @@
 @font-face {
-    font-family: "Splatoon1";
-    src: url("../splatoon1.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Splatoon1";
+  src: url("../splatoon1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Regular";
-    src: url("../regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Regular";
+  src: url("../regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-image: url("/assets/en/bg/@2x/bg_equipment-bedf92d6f41ee59b7f391f7e01d7ec00cb932e5152a2196ac939df0ad6c674b3.png"); 
-    background-repeat: repeat;
-    background-size: 800px 800px;
-    background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-image: url("/assets/en/bg/@2x/bg_equipment-bedf92d6f41ee59b7f391f7e01d7ec00cb932e5152a2196ac939df0ad6c674b3.png");
+  background-repeat: repeat;
+  background-size: 800px 800px;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-.menu-item .hover-state {
-    display: none;
-}
-
-.menu-item:hover .hover-state,
-.menu-item.active .hover-state {
-    display: block;
-}
-
-.menu-item:hover .default,
-.menu-item.active .default {
-    display: none;
-}
-
-.loading-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 250px;
-    background-color: rgba(0,0,0,0.8);
-    border: 3px solid white;
-    border-radius: 12px;
-    padding: 20px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    user-select: none;
-    pointer-events: none;
-    box-sizing: border-box;
-}
-
-#loading-canvas {
-    image-rendering: pixelated;
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin: 0 auto;
-}
-
-#loading-text {
-    margin-top: 12px;
-    color: white;
-    font-family: "Splatoon1", sans-serif;
-    font-size: 20px;
-    letter-spacing: 1.2px;
-    text-align: center;
+.content {
+  position: relative;
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 #squid-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: visible;
-    pointer-events: none;
-    z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
 }
 
 #squid-canvas {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 1920px;
-    height: 1080px;
-    will-change: transform;
-    pointer-events: none;
-    user-select: none;
-    z-index: 0;
-    display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 1080px;
+  will-change: transform;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  display: block;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0,0,0);
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  user-select: none;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+#loading-canvas {
+  image-rendering: pixelated;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
 }
 
 #loading-text img {
-    height: 35px;
-    width: auto;
-    display: block;
+  height: 35px;
+  width: auto;
+  display: block;
+  margin-top: 12px;
 }
 
 .logo-left-align {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px; 
-    margin-left: 40px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 
 #stage-header-logo {
-    position: relative;
-    width: 400px; 
-    height: 80px; 
-    cursor: default;
-    pointer-events: none;
-    margin-bottom: 10px;
+  position: relative;
+  width: 400px;
+  height: 80px;
+  cursor: default;
+  pointer-events: none;
+  margin-bottom: 10px;
 }
 
 #stage-header-logo .bg-layer {
-    width: 400px;
-    height: auto;
-    position: relative;
-    display: block;
+  width: 400px;
+  height: auto;
+  position: relative;
+  display: block;
 }
 
 #stage-header-logo .icon-layer {
-    position: absolute;
-    width: 65px; 
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    margin-left: 10px;
+  position: absolute;
+  width: 65px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  margin-left: 10px;
 }
 
 #stage-header-logo .label-layer {
-    position: absolute;
-    width: 200px; 
-    left: 110px;
-    top: 45%;
-    transform: translateY(-50%);
-    z-index: 2;
+  position: absolute;
+  width: 200px;
+  left: 110px;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .equipmentsubtitle-text {
-    margin: 0;
-    padding-top: 20px;
-    padding-right: 100px;
-    max-width: 1200px;
-    text-align: left;
-    color: white;
-    font-family: "Regular", sans-serif;
-    font-size: 24px;
-    line-height: 1.3;
+  margin: 0;
+  padding-top: 20px;
+  text-align: left;
+  color: white;
+  font-family: "Regular", sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  width: 100%;
+}
+
+.splat-info-box {
+  position: relative;
+  width: 1044px;
+  margin: 40px auto;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scale-root {
+  width: 1044px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+#canvas {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  transform: scale(0.54) translateX(-210px);
+  transform-origin: top left;
+}
+
+.panel {
+  position: absolute;
+  left: 210px;
+  top: 39px;
+  width: 1500px;
+  height: 1060px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 40px;
+}
+
+.white-dot {
+  position: absolute;
+  left: 450px;
+  top: 80px;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.player-name {
+  position: absolute;
+  left: 265px;
+  top: 200px;
+  width: 480px;
+  text-align: center;
+  font-family: "Regular";
+  font-size: 58px;
+  color: #fff;
+}
+
+.rank-box {
+  position: absolute;
+  width: 520px;
+  height: 145px;
+  background: #000;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+
+.rank-level { left: 265px; top: 300px; }
+.rank-grade { left: 265px; top: 480px; }
+
+.rank-text {
+  font-family: "Splatoon1";
+  font-size: 130px;
+  color: #fff;
+}
+
+.rank-label {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+}
+
+.weapon-slot {
+  position: absolute;
+  left: 920px;
+  top: 140px;
+  width: 620px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/en/ui/gearbigbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.weapon {
+  width: 360px;
+  height: 360px;
+  object-fit: contain;
+}
+
+.gear-slot-small {
+  position: absolute;
+  width: 320px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/en/ui/gearsmallbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.head-slot { left: 300px; top: 700px; }
+.body-slot { left: 780px; top: 700px; }
+.shoes-slot { left: 1260px; top: 700px; }
+
+.gear-icon {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.main-ability {
+  position: absolute;
+  top: -15px;
+  right: -5px;
+  width: 110px;
+  height: 110px;
+  z-index: 3;
+}
+
+.abilities {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  top: 935px;
+  z-index: 67;
+}
+
+.abilities.bottom { left: 325px; }
+.abilities.mid { left: 805px; }
+.abilities.bottom-right { left: 1285px; }
+
+.abilities img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.menu-item .hover-state { display: none; }
+.menu-item:hover .hover-state, .menu-item.active .hover-state { display: block; }
+.menu-item:hover .default, .menu-item.active .default { display: none; }
+
+.inked-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto;
+  position: relative;
+  left: -100px; 
+}
+
+.area-inked-title-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.area-inked-title-img {
+  width: 240px;
+  height: auto;
+  margin-bottom: 80px;
+  margin-top: 70px;
+}
+
+.weapon-painted-black-box {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 15px;
+  padding: 0 30px 0 15px;
+  width: 550px;
+  height: 110px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 65px;
+}
+
+.weapon-icon-bg-wrapper {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  top: 20px;
+  background-image: url("/assets/en/ui/gearsmallbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -65px;
+  margin-right: 20px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.weapon-inked-icon {
+  position: relative;
+  bottom: 13px;
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+
+.weapon-painted-text {
+  font-family: 'Splatoon1', sans-serif;
+  font-size: 62px;
+  color: #ffffff;
+  flex-grow: 1;
+  text-align: right;
+  letter-spacing: 1px;
+  line-height: 110px;
+  margin-left: 10px;
+  text-align: right;
 }

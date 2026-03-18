@@ -5,8 +5,8 @@
   <title>SplatNet - Splatoon's multiplayer service hub</title>
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="/assets/jquery-1.9.1.js"></script>
   <script src="/assets/general.js"></script>
-  <script src="/config.js"></script>
 </head>
 <body>
   <div id="header-container"></div>
@@ -24,17 +24,22 @@
 
   <div class="main-wrapper">
     <div class="content">
-      <div class="logo-left-align">
-        <div id="stage-header-logo">
-          <img class="bg-layer" src="../assets/en/svg/ui/bg_h1-62e768f2a1ca52f993b5953c78d46bc53b35b70df7f8e13619a982f8f10ab750.svg">
-          <img class="icon-layer" src="../assets/en/svg/ui/ico_equipment-40943361040a3d62c745a21d1a1fa95794c851f378e11334f2dc6c1cc81b4984.svg">
-          <img class="label-layer" src="../assets/en/svg/text/scene/equipment/tx_equipment-ea02b805bb9aec4677fb4a4629f515d402822e8eed1f3fcc524336fe3c813fee.svg">
+      <div class="header-flex-row">
+        <div class="logo-left-align">
+          <div id="stage-header-logo">
+            <img class="bg-layer" src="../assets/en/svg/ui/bg_h1-62e768f2a1ca52f993b5953c78d46bc53b35b70df7f8e13619a982f8f10ab750.svg">
+            <img class="icon-layer" src="../assets/en/svg/ui/ico_equipment-40943361040a3d62c745a21d1a1fa95794c851f378e11334f2dc6c1cc81b4984.svg">
+            <img class="label-layer" src="../assets/en/svg/text/scene/equipment/tx_equipment-ea02b805bb9aec4677fb4a4629f515d402822e8eed1f3fcc524336fe3c813fee.svg">
+          </div>
+          <div class="equipmentsubtitle-text">
+            Check out the gear and weapons you had equipped while playing online!
+          </div>
         </div>
-        <div class="equipmentsubtitle-text">
-          Check out the gear and weapons you had equipped while playing online!
-        </div>
-        <div class="stages-container" id="stages-container"></div>
+
+        <div class="splat-info-box"></div>
+
       </div>
+      <div class="stages-container" id="stages-container"></div>
     </div>
   </div>
 

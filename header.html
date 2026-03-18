@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>hi</title>
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
-<aside class="splatnet-sidebar">
-    <div class="icon-header-logo">
-    </div>
+<div class="splatnet-sidebar">
+    <div class="icon-header-logo"></div>
 
     <a href="/friend_list/" class="menu-link">
         <div class="menu-item icon-navi-friend friend">
@@ -58,7 +55,7 @@
 
     <div class="twitterbgbox">
         <div class="mii-icon-container">
-            <img id="mii-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display:none; width:100%; border-radius:50%;">
+            <img id="mii-img" src="" style="display:none; width:100%; border-radius:50%;">
         </div>
         <span id="mii-name" class="profile-name-label">Loading...</span>
 
@@ -76,9 +73,35 @@
             </form>
         </div>
     </div>
-</aside>
 
-<script src="config.js"></script>
-<script src="logout.js"></script>
+    <div class="lang-options">
+        <div class="image-dropdown-toggle" id="dropdownToggle">
+            <img id="selected-img" src="../assets/en/svg/text/menu/tx_English-11762e5c1d4ff09f310bcf46f3dbfbfbe8c8ef2ee8a12b7e793c784d44442d4f.svg" alt="English">
+            <img class="dropdown-arrow-icon" src="../assets/en/svg/ui/ico_pulldown-daeb8f6ce24ca8e2faedddd342929c54d3d323ff25116ea0877be93efba2a347.svg">
+        </div>
+        
+        <ul class="image-dropdown-options" id="dropdownOptions">
+            <li data-value="en" data-src="../assets/en/svg/text/menu/tx_English-11762e5c1d4ff09f310bcf46f3dbfbfbe8c8ef2ee8a12b7e793c784d44442d4f.svg">
+                <img src="../assets/en/svg/text/menu/tx_English-11762e5c1d4ff09f310bcf46f3dbfbfbe8c8ef2ee8a12b7e793c784d44442d4f.svg">
+            </li>
+            <li data-value="jp" data-src="../assets/en/svg/text/menu/tx_Japanese-2ffb0b4509759532318fba9d93b7befb8d6d4b3aa5434afe159d7656c60bedea.svg">
+                <img src="../assets/en/svg/text/menu/tx_Japanese-2ffb0b4509759532318fba9d93b7befb8d6d4b3aa5434afe159d7656c60bedea.svg">
+            </li>
+        </ul>
+    </div>
+
+    <div class="websiteredirect-link-container">
+        <a href="https://www.nintendo.co.jp/wiiu/agmj/" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/en/svg/text/menu/tx_officialpage-51d6bd752e52fb7c599246bec3c9bbb960e9f2ab063cf6e9e5b037e8fab8a7ea.svg" alt="Official Page">
+        </a>
+        
+        <div class="nintylogo-static">
+            <img src="/assets/en/svg/text/menu/tx_nintendo-8cad05eb543ca2c254e282cdf62fc0b3a027aed70e77a11a8cd45f0631f0acd7.svg" alt="Static Decoration">
+        </div>
+    </div>
+
+    <div class="corner-patch"></div>
+
+</div> 
 </body>
 </html>

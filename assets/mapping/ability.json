@@ -1,0 +1,210 @@
+[
+  {
+    "id": -2,
+    "main_key": "Blank",
+    "name": "Blank",
+    "sub": null,
+    "special": null,
+    "image": "Blank.png"
+  },
+  {
+    "id": -1,
+    "main_key": "Unknown",
+    "name": "Unknown",
+    "sub": null,
+    "special": null,
+    "image": "ParameterIcon^q.png"
+  },
+  {
+    "id": 0,
+    "main_key": "Attack_Up",
+    "name": "Attack_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Damage_Up.svg"
+  },
+  {
+    "id": 1,
+    "main_key": "Defense_Up",
+    "name": "Defense_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Defense_Up.svg"
+  },
+  {
+    "id": 2,
+    "main_key": "MainInk_Save",
+    "name": "MainInk_Save",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Ink_Saver_-Main-.svg"
+  },
+  {
+    "id": 3,
+    "main_key": "SubInk_Save",
+    "name": "SubInk_Save",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Ink_Saver_-Sub-.svg"
+  },
+  {
+    "id": 4,
+    "main_key": "InkRecovery_Up",
+    "name": "InkRecovery_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Ink_Recovery_Up.svg"
+  },
+  {
+    "id": 5,
+    "main_key": "HumanMove_Up",
+    "name": "HumanMove_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Run_Speed_Up.svg"
+  },
+  {
+    "id": 6,
+    "main_key": "SquidMove_Up",
+    "name": "SquidMove_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Swim_Speed_Up.svg"
+  },
+  {
+    "id": 7,
+    "main_key": "SpecialIncrease_Up",
+    "name": "SpecialIncrease_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Special_Charge_Up.svg"
+  },
+  {
+    "id": 8,
+    "main_key": "SpecialTime_Up",
+    "name": "SpecialTime_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Special_Duration_Up.svg"
+  },
+  {
+    "id": 9,
+    "main_key": "RespawnTime_Save",
+    "name": "RespawnTime_Save",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Quick_Respawn.svg"
+  },
+  {
+    "id": 10,
+    "main_key": "RespawnSpecialGauge_Save",
+    "name": "RespawnSpecialGauge_Save",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Special_Saver.svg"
+  },
+  {
+    "id": 11,
+    "main_key": "JumpTime_Save",
+    "name": "JumpTime_Save",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Quick_Super_Jump.svg"
+  },
+  {
+    "id": 12,
+    "main_key": "BombDistance_Up",
+    "name": "BombDistance_Up",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Bomb_Range_Up.svg"
+  },
+  {
+    "id": 100,
+    "main_key": "StartAllUp",
+    "name": "StartAllUp",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Opening_Gambit.svg"
+  },
+  {
+    "id": 101,
+    "main_key": "EndAllUp",
+    "name": "EndAllUp",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Last-Ditch_Effort.svg"
+  },
+  {
+    "id": 102,
+    "main_key": "MinorityUp",
+    "name": "MinorityUp",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Tenacity.svg"
+  },
+  {
+    "id": 103,
+    "main_key": "ComeBack",
+    "name": "ComeBack",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Comeback.svg"
+  },
+  {
+    "id": 104,
+    "main_key": "MarkingCancel",
+    "name": "MarkingCancel",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Cold_Blooded.svg"
+  },
+  {
+    "id": 105,
+    "main_key": "SquidMoveSpatter_Reduction",
+    "name": "SquidMoveSpatter_Reduction",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Ninja_Squid.svg"
+  },
+  {
+    "id": 106,
+    "main_key": "DeathMarking",
+    "name": "DeathMarking",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Haunt.svg"
+  },
+  {
+    "id": 107,
+    "main_key": "RespawnRadar",
+    "name": "RespawnRadar",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Recon.svg"
+  },
+  {
+    "id": 108,
+    "main_key": "TrapDetect",
+    "name": "TrapDetect",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Bomb_Sniffer.svg"
+  },
+  {
+    "id": 109,
+    "main_key": "EnemyInkEffect_Reduction",
+    "name": "EnemyInkEffect_Reduction",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Ink_Resistance_Up.svg"
+  },
+  {
+    "id": 110,
+    "main_key": "SuperJumpSign_Hide",
+    "name": "SuperJumpSign_Hide",
+    "sub": null,
+    "special": null,
+    "image": "Ability_Stealth_Jump.svg"
+  }
+]

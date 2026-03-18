@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiBase = CONFIG.API_BASE_URL;
     const friendListUrl = "/friend_list/index.html";
 
     async function checkExistingSession() {
         try {
-            const response = await fetch(`${apiBase}/api/v1/session_id/check`, {
+            const response = await fetch("/api/v1/session_id/check", {
                 method: 'GET',
                 credentials: 'include'
             });

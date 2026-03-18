@@ -1,0 +1,522 @@
+[
+  {
+    "id": 2000,
+    "main_key": "SHI000",
+    "name": "RedHi-Horses",
+    "sub": null,
+    "special": null,
+    "image": "SHI000.png"
+  },
+  {
+    "id": 1,
+    "main_key": "First",
+    "name": "CreamBasics",
+    "sub": null,
+    "special": null,
+    "image": "First.png"
+  },
+  {
+    "id": 1000,
+    "main_key": "SLO000",
+    "name": "BlueLo-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SLO000.png"
+  },
+  {
+    "id": 1001,
+    "main_key": "SLO001",
+    "name": "BananaBasics",
+    "sub": null,
+    "special": null,
+    "image": "SLO001.png"
+  },
+  {
+    "id": 1002,
+    "main_key": "SLO002",
+    "name": "LELo-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SLO002.png"
+  },
+  {
+    "id": 1003,
+    "main_key": "SLO003",
+    "name": "WhiteSeahorses",
+    "sub": null,
+    "special": null,
+    "image": "SLO003.png"
+  },
+  {
+    "id": 1004,
+    "main_key": "SLO004",
+    "name": "OrangeLo-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SLO004.png"
+  },
+  {
+    "id": 1005,
+    "main_key": "SLO005",
+    "name": "BlackSeahorses",
+    "sub": null,
+    "special": null,
+    "image": "SLO005.png"
+  },
+  {
+    "id": 1006,
+    "main_key": "SLO006",
+    "name": "ClownfishBasics",
+    "sub": null,
+    "special": null,
+    "image": "SLO006.png"
+  },
+  {
+    "id": 1007,
+    "main_key": "SLO007",
+    "name": "YellowSeahorses",
+    "sub": null,
+    "special": null,
+    "image": "SLO007.png"
+  },
+  {
+    "id": 1008,
+    "main_key": "SLO008",
+    "name": "StrappingWhites",
+    "sub": null,
+    "special": null,
+    "image": "SLO008.png"
+  },
+  {
+    "id": 1009,
+    "main_key": "SLO009",
+    "name": "StrappingReds",
+    "sub": null,
+    "special": null,
+    "image": "SLO009.png"
+  },
+  {
+    "id": 1010,
+    "main_key": "SLO010",
+    "name": "SoccerCleats",
+    "sub": null,
+    "special": null,
+    "image": "SLO010.png"
+  },
+  {
+    "id": 1011,
+    "main_key": "SLO011",
+    "name": "LESoccerCleats",
+    "sub": null,
+    "special": null,
+    "image": "SLO011.png"
+  },
+  {
+    "id": 1011,
+    "main_key": "SHT004",
+    "name": "CyanTrainers",
+    "sub": null,
+    "special": null,
+    "image": "SHT004.png"
+  },
+  {
+    "id": 2001,
+    "main_key": "SHI001",
+    "name": "CreamHi-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SHI001.png"
+  },
+  {
+    "id": 2002,
+    "main_key": "SHI002",
+    "name": "PurpleHi-Horses",
+    "sub": null,
+    "special": null,
+    "image": "SHI002.png"
+  },
+  {
+    "id": 2003,
+    "main_key": "SHI004",
+    "name": "HunterHi-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SHI004.png"
+  },
+  {
+    "id": 2004,
+    "main_key": "SHI005",
+    "name": "RedHi-Tops",
+    "sub": null,
+    "special": null,
+    "image": "SHI005.png"
+  },
+  {
+    "id": 2005,
+    "main_key": "SHI006",
+    "name": "GoldHi-Horses",
+    "sub": null,
+    "special": null,
+    "image": "SHI006.png"
+  },
+  {
+    "id": 2006,
+    "main_key": "SHT000",
+    "name": "PinkTrainers",
+    "sub": null,
+    "special": null,
+    "image": "SHT000.png"
+  },
+  {
+    "id": 2007,
+    "main_key": "SHI007",
+    "name": "SQUIDGIRLShoes",
+    "sub": null,
+    "special": null,
+    "image": "SHI007.png"
+  },
+  {
+    "id": 2007,
+    "main_key": "SHT001",
+    "name": "OrangeArrows",
+    "sub": null,
+    "special": null,
+    "image": "SHT001.png"
+  },
+  {
+    "id": 2008,
+    "main_key": "SHI008",
+    "name": "SharkMoccasins",
+    "sub": null,
+    "special": null,
+    "image": "SHI008.png"
+  },
+  {
+    "id": 2008,
+    "main_key": "SHT002",
+    "name": "NeonSeaSlugs",
+    "sub": null,
+    "special": null,
+    "image": "SHT002.png"
+  },
+  {
+    "id": 2009,
+    "main_key": "SHI009",
+    "name": "Mawcasins",
+    "sub": null,
+    "special": null,
+    "image": "SHI009.png"
+  },
+  {
+    "id": 2009,
+    "main_key": "SHT003",
+    "name": "WhiteArrows",
+    "sub": null,
+    "special": null,
+    "image": "SHT003.png"
+  },
+  {
+    "id": 25000,
+    "main_key": "AMB000",
+    "name": "SchoolShoes",
+    "sub": null,
+    "special": null,
+    "image": "AMB000.png"
+  },
+  {
+    "id": 25001,
+    "main_key": "AMB001",
+    "name": "SamuraiShoes",
+    "sub": null,
+    "special": null,
+    "image": "AMB001.png"
+  },
+  {
+    "id": 25002,
+    "main_key": "AMB002",
+    "name": "PowerBoots",
+    "sub": null,
+    "special": null,
+    "image": "AMB002.png"
+  },
+  {
+    "id": 27004,
+    "main_key": "MSN004",
+    "name": "HeroRunnerReplicas",
+    "sub": null,
+    "special": null,
+    "image": "MSN004.png"
+  },
+  {
+    "id": 28000,
+    "main_key": "RVL000",
+    "name": "OctolingBoots",
+    "sub": null,
+    "special": null,
+    "image": "RVL000.png"
+  },
+  {
+    "id": 3005,
+    "main_key": "SHT005",
+    "name": "PurpleSeaSlugs",
+    "sub": null,
+    "special": null,
+    "image": "SHT005.png"
+  },
+  {
+    "id": 3006,
+    "main_key": "SHT006",
+    "name": "RedSeaSlugs",
+    "sub": null,
+    "special": null,
+    "image": "SHT006.png"
+  },
+  {
+    "id": 3007,
+    "main_key": "SHT007",
+    "name": "BlueSeaSlugs",
+    "sub": null,
+    "special": null,
+    "image": "SHT007.png"
+  },
+  {
+    "id": 3008,
+    "main_key": "SHT008",
+    "name": "CrazyArrows",
+    "sub": null,
+    "special": null,
+    "image": "SHT008.png"
+  },
+  {
+    "id": 3009,
+    "main_key": "SHT009",
+    "name": "BlackTrainers",
+    "sub": null,
+    "special": null,
+    "image": "SHT009.png"
+  },
+  {
+    "id": 4000,
+    "main_key": "SDL000",
+    "name": "OysterClogs",
+    "sub": null,
+    "special": null,
+    "image": "SDL000.png"
+  },
+  {
+    "id": 4001,
+    "main_key": "SDL001",
+    "name": "ChocoClogs",
+    "sub": null,
+    "special": null,
+    "image": "SDL001.png"
+  },
+  {
+    "id": 4002,
+    "main_key": "CFS000",
+    "name": "BlueberryCasuals",
+    "sub": null,
+    "special": null,
+    "image": "CFS000.png"
+  },
+  {
+    "id": 4003,
+    "main_key": "CFS001",
+    "name": "PlumCasuals",
+    "sub": null,
+    "special": null,
+    "image": "CFS001.png"
+  },
+  {
+    "id": 4006,
+    "main_key": "SDL002",
+    "name": "TraditionalSandals",
+    "sub": null,
+    "special": null,
+    "image": "SDL002.png"
+  },
+  {
+    "id": 5000,
+    "main_key": "TRS000",
+    "name": "TrailBoots",
+    "sub": null,
+    "special": null,
+    "image": "TRS000.png"
+  },
+  {
+    "id": 5001,
+    "main_key": "TRS001",
+    "name": "CustomTrailBoots",
+    "sub": null,
+    "special": null,
+    "image": "TRS001.png"
+  },
+  {
+    "id": 5002,
+    "main_key": "TRS002",
+    "name": "ProTrailBoots",
+    "sub": null,
+    "special": null,
+    "image": "TRS002.png"
+  },
+  {
+    "id": 6000,
+    "main_key": "BOT000",
+    "name": "MotoBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT000.png"
+  },
+  {
+    "id": 6001,
+    "main_key": "BOT001",
+    "name": "TanWorkBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT001.png"
+  },
+  {
+    "id": 6002,
+    "main_key": "BOT002",
+    "name": "RedWorkBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT002.png"
+  },
+  {
+    "id": 6003,
+    "main_key": "BOT003",
+    "name": "BlueMotoBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT003.png"
+  },
+  {
+    "id": 6004,
+    "main_key": "BOT004",
+    "name": "GreenRainBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT004.png"
+  },
+  {
+    "id": 6005,
+    "main_key": "BOT005",
+    "name": "AcerolaRainBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT005.png"
+  },
+  {
+    "id": 6006,
+    "main_key": "BOT006",
+    "name": "PunkWhites",
+    "sub": null,
+    "special": null,
+    "image": "BOT006.png"
+  },
+  {
+    "id": 6007,
+    "main_key": "BOT007",
+    "name": "PunkCherries",
+    "sub": null,
+    "special": null,
+    "image": "BOT007.png"
+  },
+  {
+    "id": 6008,
+    "main_key": "BOT008",
+    "name": "PunkYellows",
+    "sub": null,
+    "special": null,
+    "image": "BOT008.png"
+  },
+  {
+    "id": 6009,
+    "main_key": "BOT009",
+    "name": "BubbleRainBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT009.png"
+  },
+  {
+    "id": 6010,
+    "main_key": "BOT010",
+    "name": "SnowyDownBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT010.png"
+  },
+  {
+    "id": 6011,
+    "main_key": "BOT011",
+    "name": "IcyDownBoots",
+    "sub": null,
+    "special": null,
+    "image": "BOT011.png"
+  },
+  {
+    "id": 7000,
+    "main_key": "SLP000",
+    "name": "BlueSlip-Ons",
+    "sub": null,
+    "special": null,
+    "image": "SLP000.png"
+  },
+  {
+    "id": 7001,
+    "main_key": "SLP001",
+    "name": "RedSlip-Ons",
+    "sub": null,
+    "special": null,
+    "image": "SLP001.png"
+  },
+  {
+    "id": 7002,
+    "main_key": "SLP002",
+    "name": "Squid-StitchSlip-Ons",
+    "sub": null,
+    "special": null,
+    "image": "SLP002.png"
+  },
+  {
+    "id": 8000,
+    "main_key": "LTS000",
+    "name": "WhiteKicks",
+    "sub": null,
+    "special": null,
+    "image": "LTS000.png"
+  },
+  {
+    "id": 8001,
+    "main_key": "LTS001",
+    "name": "CherryKicks",
+    "sub": null,
+    "special": null,
+    "image": "LTS001.png"
+  },
+  {
+    "id": 8002,
+    "main_key": "LTS002",
+    "name": "TurquoiseKicks",
+    "sub": null,
+    "special": null,
+    "image": "LTS002.png"
+  },
+  {
+    "id": 8003,
+    "main_key": "LTS003",
+    "name": "SquinkWingtips",
+    "sub": null,
+    "special": null,
+    "image": "LTS003.png"
+  },
+  {
+    "id": 8004,
+    "main_key": "LTS004",
+    "name": "RoastedBrogues",
+    "sub": null,
+    "special": null,
+    "image": "LTS004.png"
+  }
+]

@@ -1,0 +1,962 @@
+[
+  {
+    "id": 6000,
+    "main_key": "TNK000",
+    "name": "B-ballJersey(Home)",
+    "sub": null,
+    "special": null,
+    "image": "TNK000.png"
+  },
+  {
+    "id": 6001,
+    "main_key": "TNK001",
+    "name": "B-ballJersey(Away)",
+    "sub": null,
+    "special": null,
+    "image": "TNK001.png"
+  },
+  {
+    "id": 7000,
+    "main_key": "SWT000",
+    "name": "GrayCollegeSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT000.png"
+  },
+  {
+    "id": 7001,
+    "main_key": "SWT001",
+    "name": "SquidmarkSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT001.png"
+  },
+  {
+    "id": 8009,
+    "main_key": "SHT006",
+    "name": "GrayMixedShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT006.png"
+  },
+  {
+    "id": 1,
+    "main_key": "First",
+    "name": "BasicTee",
+    "sub": null,
+    "special": null,
+    "image": "First.png"
+  },
+  {
+    "id": 1000,
+    "main_key": "TES000",
+    "name": "WhiteTee",
+    "sub": null,
+    "special": null,
+    "image": "TES000.png"
+  },
+  {
+    "id": 10000,
+    "main_key": "PRK000",
+    "name": "CamoZipHoodie",
+    "sub": null,
+    "special": null,
+    "image": "PRK000.png"
+  },
+  {
+    "id": 10001,
+    "main_key": "PRK001",
+    "name": "GreenZipHoodie",
+    "sub": null,
+    "special": null,
+    "image": "PRK001.png"
+  },
+  {
+    "id": 10002,
+    "main_key": "PRK002",
+    "name": "ZekkoHoodie",
+    "sub": null,
+    "special": null,
+    "image": "PRK002.png"
+  },
+  {
+    "id": 10003,
+    "main_key": "PRK003",
+    "name": "CoroCoroHoodie",
+    "sub": null,
+    "special": null,
+    "image": "PRK003.png"
+  },
+  {
+    "id": 1001,
+    "main_key": "TES001",
+    "name": "BlackSquideye",
+    "sub": null,
+    "special": null,
+    "image": "TES001.png"
+  },
+  {
+    "id": 1003,
+    "main_key": "TES003",
+    "name": "Sky-BlueSquideye",
+    "sub": null,
+    "special": null,
+    "image": "TES003.png"
+  },
+  {
+    "id": 1004,
+    "main_key": "TES004",
+    "name": "RockenbergWhite",
+    "sub": null,
+    "special": null,
+    "image": "TES004.png"
+  },
+  {
+    "id": 1005,
+    "main_key": "TES005",
+    "name": "RockenbergBlack",
+    "sub": null,
+    "special": null,
+    "image": "TES005.png"
+  },
+  {
+    "id": 1006,
+    "main_key": "TES006",
+    "name": "BlackTee",
+    "sub": null,
+    "special": null,
+    "image": "TES006.png"
+  },
+  {
+    "id": 1007,
+    "main_key": "TES007",
+    "name": "Sunny-DayTee",
+    "sub": null,
+    "special": null,
+    "image": "TES007.png"
+  },
+  {
+    "id": 1008,
+    "main_key": "TES008",
+    "name": "Rainy-DayTee",
+    "sub": null,
+    "special": null,
+    "image": "TES008.png"
+  },
+  {
+    "id": 1009,
+    "main_key": "TES009",
+    "name": "ReggaeTee",
+    "sub": null,
+    "special": null,
+    "image": "TES009.png"
+  },
+  {
+    "id": 1010,
+    "main_key": "TES010",
+    "name": "FuguTee",
+    "sub": null,
+    "special": null,
+    "image": "TES010.png"
+  },
+  {
+    "id": 1011,
+    "main_key": "TES011",
+    "name": "MintTee",
+    "sub": null,
+    "special": null,
+    "image": "TES011.png"
+  },
+  {
+    "id": 1012,
+    "main_key": "TES012",
+    "name": "GrapeTee",
+    "sub": null,
+    "special": null,
+    "image": "TES012.png"
+  },
+  {
+    "id": 1014,
+    "main_key": "TES014",
+    "name": "GrayVectorTee",
+    "sub": null,
+    "special": null,
+    "image": "TES014.png"
+  },
+  {
+    "id": 1015,
+    "main_key": "TES015",
+    "name": "BluePeaksTee",
+    "sub": null,
+    "special": null,
+    "image": "TES015.png"
+  },
+  {
+    "id": 1016,
+    "main_key": "TES016",
+    "name": "IvoryPeaksTee",
+    "sub": null,
+    "special": null,
+    "image": "TES016.png"
+  },
+  {
+    "id": 1017,
+    "main_key": "TES017",
+    "name": "Squid-StitchTee",
+    "sub": null,
+    "special": null,
+    "image": "TES017.png"
+  },
+  {
+    "id": 1018,
+    "main_key": "TES018",
+    "name": "Pirate-StripeTee",
+    "sub": null,
+    "special": null,
+    "image": "TES018.png"
+  },
+  {
+    "id": 1019,
+    "main_key": "TES019",
+    "name": "Sailor-StripeTee",
+    "sub": null,
+    "special": null,
+    "image": "TES019.png"
+  },
+  {
+    "id": 1020,
+    "main_key": "TES020",
+    "name": "White8-BitFishFry",
+    "sub": null,
+    "special": null,
+    "image": "TES020.png"
+  },
+  {
+    "id": 1021,
+    "main_key": "TES021",
+    "name": "Black8-BitFishFry",
+    "sub": null,
+    "special": null,
+    "image": "TES021.png"
+  },
+  {
+    "id": 1022,
+    "main_key": "TES022",
+    "name": "WhiteAnchorTee",
+    "sub": null,
+    "special": null,
+    "image": "TES022.png"
+  },
+  {
+    "id": 1023,
+    "main_key": "TES023",
+    "name": "BlackAnchorTee",
+    "sub": null,
+    "special": null,
+    "image": "TES023.png"
+  },
+  {
+    "id": 1024,
+    "main_key": "TES024",
+    "name": "WhiteLineTee",
+    "sub": null,
+    "special": null,
+    "image": "TES024.png"
+  },
+  {
+    "id": 1025,
+    "main_key": "TES025",
+    "name": "BlackPipeTee",
+    "sub": null,
+    "special": null,
+    "image": "TES025.png"
+  },
+  {
+    "id": 1026,
+    "main_key": "TES026",
+    "name": "CarnivoreTee",
+    "sub": null,
+    "special": null,
+    "image": "TES026.png"
+  },
+  {
+    "id": 1027,
+    "main_key": "TES027",
+    "name": "PearlTee",
+    "sub": null,
+    "special": null,
+    "image": "TES027.png"
+  },
+  {
+    "id": 1028,
+    "main_key": "TES028",
+    "name": "OctoTee",
+    "sub": null,
+    "special": null,
+    "image": "TES028.png"
+  },
+  {
+    "id": 1029,
+    "main_key": "TES029",
+    "name": "HerbivoreTee",
+    "sub": null,
+    "special": null,
+    "image": "TES029.png"
+  },
+  {
+    "id": 2000,
+    "main_key": "TEL000",
+    "name": "WhiteStripedLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL000.png"
+  },
+  {
+    "id": 2001,
+    "main_key": "TEL001",
+    "name": "BlackLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL001.png"
+  },
+  {
+    "id": 2002,
+    "main_key": "TEL002",
+    "name": "PurpleCamoLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL002.png"
+  },
+  {
+    "id": 2003,
+    "main_key": "TEL003",
+    "name": "NavyStripedLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL003.png"
+  },
+  {
+    "id": 2004,
+    "main_key": "TEL004",
+    "name": "ZekkoBaseballLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL004.png"
+  },
+  {
+    "id": 2005,
+    "main_key": "TEL005",
+    "name": "VarsityBaseballLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL005.png"
+  },
+  {
+    "id": 2006,
+    "main_key": "TEL006",
+    "name": "BlackBaseballLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL006.png"
+  },
+  {
+    "id": 2007,
+    "main_key": "TEL007",
+    "name": "WhiteBaseballLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL007.png"
+  },
+  {
+    "id": 2008,
+    "main_key": "TEL008",
+    "name": "WhiteLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL008.png"
+  },
+  {
+    "id": 2009,
+    "main_key": "TEL009",
+    "name": "GreenStripedLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL009.png"
+  },
+  {
+    "id": 2010,
+    "main_key": "TEL010",
+    "name": "SquidmarkLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL010.png"
+  },
+  {
+    "id": 2011,
+    "main_key": "TEL011",
+    "name": "ZinkLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL011.png"
+  },
+  {
+    "id": 2012,
+    "main_key": "TEL012",
+    "name": "StripedPeaksLS",
+    "sub": null,
+    "special": null,
+    "image": "TEL012.png"
+  },
+  {
+    "id": 25000,
+    "main_key": "AMB000",
+    "name": "SchoolUniform",
+    "sub": null,
+    "special": null,
+    "image": "AMB000.png"
+  },
+  {
+    "id": 25001,
+    "main_key": "AMB001",
+    "name": "SamuraiJacket",
+    "sub": null,
+    "special": null,
+    "image": "AMB001.png"
+  },
+  {
+    "id": 25002,
+    "main_key": "AMB002",
+    "name": "PowerArmor",
+    "sub": null,
+    "special": null,
+    "image": "AMB002.png"
+  },
+  {
+    "id": 26000,
+    "main_key": "HAP000",
+    "name": "SplatfestTee",
+    "sub": null,
+    "special": null,
+    "image": "HAP000.png"
+  },
+  {
+    "id": 27000,
+    "main_key": "MSN000",
+    "name": "ArmorJacketReplica",
+    "sub": null,
+    "special": null,
+    "image": "MSN000.png"
+  },
+  {
+    "id": 28000,
+    "main_key": "RVL000",
+    "name": "OctolingArmor",
+    "sub": null,
+    "special": null,
+    "image": "RVL000.png"
+  },
+  {
+    "id": 3000,
+    "main_key": "TLY000",
+    "name": "WhiteLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY000.png"
+  },
+  {
+    "id": 3001,
+    "main_key": "TLY001",
+    "name": "YellowLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY001.png"
+  },
+  {
+    "id": 3002,
+    "main_key": "TLY002",
+    "name": "CamoLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY002.png"
+  },
+  {
+    "id": 3003,
+    "main_key": "TLY003",
+    "name": "BlackLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY003.png"
+  },
+  {
+    "id": 3004,
+    "main_key": "TLY004",
+    "name": "ZinkLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY004.png"
+  },
+  {
+    "id": 3005,
+    "main_key": "TLY005",
+    "name": "LayeredAnchorLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY005.png"
+  },
+  {
+    "id": 3006,
+    "main_key": "TLY006",
+    "name": "ChocoLayeredLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY006.png"
+  },
+  {
+    "id": 3007,
+    "main_key": "TLY007",
+    "name": "Part-TimePirate",
+    "sub": null,
+    "special": null,
+    "image": "TLY007.png"
+  },
+  {
+    "id": 3008,
+    "main_key": "TLY008",
+    "name": "LayeredVectorLS",
+    "sub": null,
+    "special": null,
+    "image": "TLY008.png"
+  },
+  {
+    "id": 3009,
+    "main_key": "TLY009",
+    "name": "GreenTee",
+    "sub": null,
+    "special": null,
+    "image": "TLY009.png"
+  },
+  {
+    "id": 4000,
+    "main_key": "PLO000",
+    "name": "Shrimp-PinkPolo",
+    "sub": null,
+    "special": null,
+    "image": "PLO000.png"
+  },
+  {
+    "id": 4001,
+    "main_key": "PLO001",
+    "name": "StripedRugby",
+    "sub": null,
+    "special": null,
+    "image": "PLO001.png"
+  },
+  {
+    "id": 4002,
+    "main_key": "PLO002",
+    "name": "TricolorRugby",
+    "sub": null,
+    "special": null,
+    "image": "PLO002.png"
+  },
+  {
+    "id": 4003,
+    "main_key": "PLO003",
+    "name": "SagePolo",
+    "sub": null,
+    "special": null,
+    "image": "PLO003.png"
+  },
+  {
+    "id": 4004,
+    "main_key": "PLO004",
+    "name": "BlackPolo",
+    "sub": null,
+    "special": null,
+    "image": "PLO004.png"
+  },
+  {
+    "id": 4005,
+    "main_key": "PLO005",
+    "name": "CyclingShirt",
+    "sub": null,
+    "special": null,
+    "image": "PLO005.png"
+  },
+  {
+    "id": 4006,
+    "main_key": "PLO006",
+    "name": "CycleKingJersey",
+    "sub": null,
+    "special": null,
+    "image": "PLO006.png"
+  },
+  {
+    "id": 4007,
+    "main_key": "PLO007",
+    "name": "SlipstreamUnited",
+    "sub": null,
+    "special": null,
+    "image": "PLO007.png"
+  },
+  {
+    "id": 4008,
+    "main_key": "PLO008",
+    "name": "FCAlbacore",
+    "sub": null,
+    "special": null,
+    "image": "PLO008.png"
+  },
+  {
+    "id": 5000,
+    "main_key": "JKT000",
+    "name": "OliveSkiJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT000.png"
+  },
+  {
+    "id": 5002,
+    "main_key": "JKT002",
+    "name": "BerrySkiJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT002.png"
+  },
+  {
+    "id": 5003,
+    "main_key": "JKT003",
+    "name": "VarsityJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT003.png"
+  },
+  {
+    "id": 5004,
+    "main_key": "JKT004",
+    "name": "SchoolJersey",
+    "sub": null,
+    "special": null,
+    "image": "JKT004.png"
+  },
+  {
+    "id": 5005,
+    "main_key": "JKT005",
+    "name": "GreenCardigan",
+    "sub": null,
+    "special": null,
+    "image": "JKT005.png"
+  },
+  {
+    "id": 5006,
+    "main_key": "JKT006",
+    "name": "BlackInkyRider",
+    "sub": null,
+    "special": null,
+    "image": "JKT006.png"
+  },
+  {
+    "id": 5007,
+    "main_key": "JKT007",
+    "name": "WhiteInkyRider",
+    "sub": null,
+    "special": null,
+    "image": "JKT007.png"
+  },
+  {
+    "id": 5008,
+    "main_key": "JKT008",
+    "name": "RetroGamerJersey",
+    "sub": null,
+    "special": null,
+    "image": "JKT008.png"
+  },
+  {
+    "id": 5009,
+    "main_key": "JKT009",
+    "name": "OrangeCardigan",
+    "sub": null,
+    "special": null,
+    "image": "JKT009.png"
+  },
+  {
+    "id": 5010,
+    "main_key": "JKT010",
+    "name": "ForgeInklingParka",
+    "sub": null,
+    "special": null,
+    "image": "JKT010.png"
+  },
+  {
+    "id": 5011,
+    "main_key": "JKT011",
+    "name": "ForgeOctarianJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT011.png"
+  },
+  {
+    "id": 5012,
+    "main_key": "JKT012",
+    "name": "BlueSailorSuit",
+    "sub": null,
+    "special": null,
+    "image": "JKT012.png"
+  },
+  {
+    "id": 5013,
+    "main_key": "JKT013",
+    "name": "WhiteSailorSuit",
+    "sub": null,
+    "special": null,
+    "image": "JKT013.png"
+  },
+  {
+    "id": 5014,
+    "main_key": "JKT014",
+    "name": "SquidSatinJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT014.png"
+  },
+  {
+    "id": 5015,
+    "main_key": "JKT015",
+    "name": "ZapfishSatinJacket",
+    "sub": null,
+    "special": null,
+    "image": "JKT015.png"
+  },
+  {
+    "id": 5016,
+    "main_key": "JKT016",
+    "name": "Krak-On528",
+    "sub": null,
+    "special": null,
+    "image": "JKT016.png"
+  },
+  {
+    "id": 6002,
+    "main_key": "TNK002",
+    "name": "SQUIDGIRLTunic",
+    "sub": null,
+    "special": null,
+    "image": "TNK002.png"
+  },
+  {
+    "id": 7002,
+    "main_key": "SWT002",
+    "name": "RetroSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT002.png"
+  },
+  {
+    "id": 7003,
+    "main_key": "SWT003",
+    "name": "FirefinNavySweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT003.png"
+  },
+  {
+    "id": 7004,
+    "main_key": "SWT004",
+    "name": "NavyCollegeSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT004.png"
+  },
+  {
+    "id": 7005,
+    "main_key": "SWT005",
+    "name": "ReelSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT005.png"
+  },
+  {
+    "id": 7006,
+    "main_key": "SWT006",
+    "name": "AnchorSweat",
+    "sub": null,
+    "special": null,
+    "image": "SWT006.png"
+  },
+  {
+    "id": 8000,
+    "main_key": "SHT000",
+    "name": "LumberjackShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT000.png"
+  },
+  {
+    "id": 8001,
+    "main_key": "SHT001",
+    "name": "RodeoShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT001.png"
+  },
+  {
+    "id": 8002,
+    "main_key": "SHT002",
+    "name": "Green-CheckShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT002.png"
+  },
+  {
+    "id": 8003,
+    "main_key": "SHT002",
+    "name": "WhiteShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT002.png"
+  },
+  {
+    "id": 8004,
+    "main_key": "SHT003",
+    "name": "UrchinsJersey",
+    "sub": null,
+    "special": null,
+    "image": "SHT003.png"
+  },
+  {
+    "id": 8005,
+    "main_key": "SHT003",
+    "name": "AlohaShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT003.png"
+  },
+  {
+    "id": 8006,
+    "main_key": "SHT004",
+    "name": "Red-CheckShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT004.png"
+  },
+  {
+    "id": 8007,
+    "main_key": "SHT004",
+    "name": "Baby-JellyShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT004.png"
+  },
+  {
+    "id": 8008,
+    "main_key": "SHT005",
+    "name": "BaseballJersey",
+    "sub": null,
+    "special": null,
+    "image": "SHT005.png"
+  },
+  {
+    "id": 8010,
+    "main_key": "SHT010",
+    "name": "VintageCheckShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT010.png"
+  },
+  {
+    "id": 8011,
+    "main_key": "SHT011",
+    "name": "Round-CollarShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT011.png"
+  },
+  {
+    "id": 8012,
+    "main_key": "SHT012",
+    "name": "LogoAlohaShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT012.png"
+  },
+  {
+    "id": 8013,
+    "main_key": "SHT013",
+    "name": "StripedShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT013.png"
+  },
+  {
+    "id": 8014,
+    "main_key": "SHT014",
+    "name": "LinenShirt",
+    "sub": null,
+    "special": null,
+    "image": "SHT014.png"
+  },
+  {
+    "id": 8015,
+    "main_key": "SHT015",
+    "name": "Shirt&Tie",
+    "sub": null,
+    "special": null,
+    "image": "SHT015.png"
+  },
+  {
+    "id": 8016,
+    "main_key": "SHT016",
+    "name": "TraditionalApron",
+    "sub": null,
+    "special": null,
+    "image": "SHT016.png"
+  },
+  {
+    "id": 9000,
+    "main_key": "VST000",
+    "name": "MountainVest",
+    "sub": null,
+    "special": null,
+    "image": "VST000.png"
+  },
+  {
+    "id": 9001,
+    "main_key": "VST001",
+    "name": "ForestVest",
+    "sub": null,
+    "special": null,
+    "image": "VST001.png"
+  },
+  {
+    "id": 9002,
+    "main_key": "VST002",
+    "name": "DarkUrbanVest",
+    "sub": null,
+    "special": null,
+    "image": "VST002.png"
+  },
+  {
+    "id": 9003,
+    "main_key": "VST003",
+    "name": "YellowUrbanVest",
+    "sub": null,
+    "special": null,
+    "image": "VST003.png"
+  },
+  {
+    "id": 9004,
+    "main_key": "VST004",
+    "name": "Squid-PatternWaistcoat",
+    "sub": null,
+    "special": null,
+    "image": "VST004.png"
+  },
+  {
+    "id": 9005,
+    "main_key": "VST005",
+    "name": "SquidstarWaistcoat",
+    "sub": null,
+    "special": null,
+    "image": "VST005.png"
+  }
+]

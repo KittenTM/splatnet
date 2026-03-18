@@ -21,12 +21,15 @@ This project operates on a frontend - backend basis. The backend is not optional
 
 ### Requires Telemetry portion of backend:
 - [ ] Rank
-- [ ] Equipment
+- [x] Equipment
+  - [x] Show most recent weapon
+  - [x] Show current Rank + Level
+  - [x] Show all weapons w/ turf inked #
 
 ### Requires backend
 - [ ] Friends List
   - [ ] Support for fetching friends [Push this!](https://discord.com/channels/460820022777085983/835181904880730142/1470216180030771433)
-- [ ] Stage Info
+- [x] Stage Info
     - [x] Basic Stage Fetching (using pretendo)
       - [x] Ditch Splatcord API to allow use for other networks other than pretendo
     - [x] Show stage pngs

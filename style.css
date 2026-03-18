@@ -1,3 +1,23 @@
+body {
+  zoom: 0.96;
+  transform: scale(0.96);
+  transform-origin: top left;
+  width: 105%;
+  height: 105%;
+  overflow: visible;
+  margin-left: -5px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* see i care about mobile users */
+    min-height: 100vh;
+}
+
 @font-face {
   font-family: 'Splatoon1';
   src: url('Splatoon1.otf') format('opentype');
@@ -12,10 +32,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin-left: -5px;
-}
-
 .splatnet-sidebar {
   width: 330px;
   background-color: black;
@@ -23,6 +39,7 @@ body {
   padding: 0 24px 32px;
   position: relative;
   border-radius: 0;
+  z-index: 1;
 }
 
 .splatnet-sidebar::after {
@@ -35,20 +52,31 @@ body {
   background-image: url('assets/en/svg/ui/bg_menu_right_wave-c8ca7628fe4a702b3985b66f59c365748d266db743ec3a7a7e68211c81c74ec1.svg');
   background-repeat: repeat-y;
   background-size: contain;
-  z-index: 0;
+  z-index: 2;
 }
 
 .splatnet-sidebar::before {
   content: "";
   position: absolute;
-  bottom: -28px;
+  bottom: -48px;
   left: 0;
-  width: 340px;
+  width: 345px;
   height: 30px;
   background-image: url('assets/en/svg/ui/bg_menu_bottom_wave-03056ad08bac76d5bf1d0bc2895f30cda65a731d9d69789719da70a084be31cb.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  z-index: 2;
+}
+
+.corner-patch {
+  position: absolute;
+  bottom: -28px;
+  right: -15px;
+  width: 360px;
+  height: 48px;
+  background-color: black;
   z-index: 1;
+  border-bottom-right-radius: 20px;
 }
 
 .icon-header-logo {
@@ -66,8 +94,8 @@ body {
 .menu-item {
   position: relative;
   width: 266px; 
-  height: 56px; 
-  margin: 0 auto 8px;
+  height: 54px; 
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   padding-left: 22px; 
@@ -79,10 +107,10 @@ body {
   background-position: 0 -1564px;
 }
 
-.icon-navi-friend:hover, .icon-navi-friend.active, .friend:hover, .friend.active { background-position: 0 -1508px; }
-.icon-navi-ranking:hover, .icon-navi-ranking.active, .rank:hover, .rank.active { background-position: 0 -1620px; }
-.icon-navi-equipment:hover, .icon-navi-equipment.active, .equipment:hover, .equipment.active { background-position: 0 -1452px; }
-.icon-navi-stage:hover, .icon-navi-stage.active, .stage:hover, .stage.active { background-position: 0 -1676px; }
+.menu-item.friend:hover, .menu-item.friend.active { background-position: 0 -1508px !important; }
+.menu-item.rank:hover, .menu-item.rank.active { background-position: 0 -1620px !important; }
+.menu-item.equipment:hover, .menu-item.equipment.active { background-position: 0 -1452px !important; }
+.menu-item.stage:hover, .menu-item.stage.active { background-position: 0 -1676px !important; }
 
 .menu-item img {
   position: absolute;
@@ -100,7 +128,7 @@ body {
   position: absolute;
   left: 62px;
   height: 28px;
-  top: 14px; 
+  top: 13px; 
   pointer-events: none;
   z-index: 1;
 }
@@ -148,7 +176,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid #333333; /* tickles my brain but might remove for original look */
+  border: 4px solid #333333;
 }
 
 #mii-img {
@@ -159,17 +187,6 @@ body {
 
 .twitterbgbox::before {
   display: none;
-}
-
-.profile-name-label {
-  position: absolute;
-  top: 14px;
-  left: 55px;
-  color: white;
-  font-family: 'RegularFont', sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  z-index: 1;
 }
 
 .profile-name-label {
@@ -215,4 +232,97 @@ body {
 .btn-icon, .btn-label-img {
   height: 18px;
   filter: brightness(0) invert(1);
+}
+
+.lang-options {
+  width: 220px;
+  margin: 20px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.image-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  padding: 5px;
+  background: transparent;
+}
+
+.image-dropdown-toggle img:first-child {
+  height: 24px;
+}
+
+.dropdown-arrow-icon {
+  height: 12px;
+}
+
+.image-dropdown-options {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  width: max-content;
+}
+
+.image-dropdown-options.show {
+  display: block !important;
+  z-index: 9999;
+}
+
+.image-dropdown-options li {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.image-dropdown-options li:hover {
+  opacity: 0.7;
+  background-color: #333;
+}
+
+.image-dropdown-options img {
+  height: 24px;
+  display: block;
+}
+
+.websiteredirect-link-container {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15px;
+  z-index: 2;
+}
+
+.websiteredirect-link-container img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.nintylogo-static {
+  width: 90px;      
+  height: 15px;     
+  overflow: hidden; 
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.nintylogo-static img {
+  width: 180px;     
+  height: auto;
+  position: absolute;
+  top: 0;           
+  left: 0;          
 }

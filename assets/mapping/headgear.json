@@ -1,0 +1,546 @@
+[
+  {
+    "id": 1,
+    "main_key": "First",
+    "name": "WhiteHeadband",
+    "sub": null,
+    "special": null,
+    "image": "First.png"
+  },
+  {
+    "id": 1000,
+    "main_key": "CAP000",
+    "name": "UrchinsCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP000.png"
+  },
+  {
+    "id": 1001,
+    "main_key": "CAP001",
+    "name": "LightweightCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP001.png"
+  },
+  {
+    "id": 1002,
+    "main_key": "CAP002",
+    "name": "TakorokaMesh",
+    "sub": null,
+    "special": null,
+    "image": "CAP002.png"
+  },
+  {
+    "id": 1003,
+    "main_key": "CAP003",
+    "name": "StreetstyleCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP003.png"
+  },
+  {
+    "id": 1004,
+    "main_key": "CAP004",
+    "name": "Squid-StitchCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP004.png"
+  },
+  {
+    "id": 1005,
+    "main_key": "CAP005",
+    "name": "SquidvaderCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP005.png"
+  },
+  {
+    "id": 1006,
+    "main_key": "CAP006",
+    "name": "CamoMesh",
+    "sub": null,
+    "special": null,
+    "image": "CAP006.png"
+  },
+  {
+    "id": 1007,
+    "main_key": "CAP007",
+    "name": "Five-PanelCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP007.png"
+  },
+  {
+    "id": 1008,
+    "main_key": "CAP008",
+    "name": "ZekkoMesh",
+    "sub": null,
+    "special": null,
+    "image": "CAP008.png"
+  },
+  {
+    "id": 1009,
+    "main_key": "CAP009",
+    "name": "BackwardsCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP009.png"
+  },
+  {
+    "id": 1010,
+    "main_key": "CAP010",
+    "name": "Two-StripeMesh",
+    "sub": null,
+    "special": null,
+    "image": "CAP010.png"
+  },
+  {
+    "id": 1011,
+    "main_key": "CAP011",
+    "name": "JetCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP011.png"
+  },
+  {
+    "id": 1012,
+    "main_key": "CAP012",
+    "name": "CyclingCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP012.png"
+  },
+  {
+    "id": 1013,
+    "main_key": "CAP013",
+    "name": "SQUIDGIRLHat",
+    "sub": null,
+    "special": null,
+    "image": "CAP013.png"
+  },
+  {
+    "id": 1014,
+    "main_key": "CAP014",
+    "name": "CycleKingCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP014.png"
+  },
+  {
+    "id": 1015,
+    "main_key": "CAP015",
+    "name": "LegendaryCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP015.png"
+  },
+  {
+    "id": 1016,
+    "main_key": "CAP016",
+    "name": "CoroCoroCap",
+    "sub": null,
+    "special": null,
+    "image": "CAP016.png"
+  },
+  {
+    "id": 2000,
+    "main_key": "NCP000",
+    "name": "RetroSpecs",
+    "sub": null,
+    "special": null,
+    "image": "NCP000.png"
+  },
+  {
+    "id": 2000,
+    "main_key": "NCP000",
+    "name": "BobbleHat",
+    "sub": null,
+    "special": null,
+    "image": "NCP000.png"
+  },
+  {
+    "id": 2001,
+    "main_key": "NCP001",
+    "name": "SplashGoggles",
+    "sub": null,
+    "special": null,
+    "image": "NCP001.png"
+  },
+  {
+    "id": 2001,
+    "main_key": "NCP001",
+    "name": "ShortBeanie",
+    "sub": null,
+    "special": null,
+    "image": "NCP001.png"
+  },
+  {
+    "id": 2002,
+    "main_key": "NCP002",
+    "name": "PilotGoggles",
+    "sub": null,
+    "special": null,
+    "image": "NCP002.png"
+  },
+  {
+    "id": 2002,
+    "main_key": "NCP002",
+    "name": "StripedBeanie",
+    "sub": null,
+    "special": null,
+    "image": "NCP002.png"
+  },
+  {
+    "id": 2003,
+    "main_key": "NCP003",
+    "name": "TintedShades",
+    "sub": null,
+    "special": null,
+    "image": "NCP003.png"
+  },
+  {
+    "id": 2003,
+    "main_key": "NCP003",
+    "name": "SportyBobbleHat",
+    "sub": null,
+    "special": null,
+    "image": "NCP003.png"
+  },
+  {
+    "id": 2004,
+    "main_key": "NCP004",
+    "name": "BlackArrowbands",
+    "sub": null,
+    "special": null,
+    "image": "NCP004.png"
+  },
+  {
+    "id": 2004,
+    "main_key": "NCP004",
+    "name": "SpecialForcesBeret",
+    "sub": null,
+    "special": null,
+    "image": "NCP004.png"
+  },
+  {
+    "id": 2005,
+    "main_key": "NCP005",
+    "name": "SnorkelMask",
+    "sub": null,
+    "special": null,
+    "image": "NCP005.png"
+  },
+  {
+    "id": 2005,
+    "main_key": "NCP005",
+    "name": "SquidNordic",
+    "sub": null,
+    "special": null,
+    "image": "NCP005.png"
+  },
+  {
+    "id": 25000,
+    "main_key": "AMB000",
+    "name": "SquidHairclip",
+    "sub": null,
+    "special": null,
+    "image": "AMB000.png"
+  },
+  {
+    "id": 25001,
+    "main_key": "AMB001",
+    "name": "SamuraiHelmet",
+    "sub": null,
+    "special": null,
+    "image": "AMB001.png"
+  },
+  {
+    "id": 25002,
+    "main_key": "AMB002",
+    "name": "PowerMask",
+    "sub": null,
+    "special": null,
+    "image": "AMB002.png"
+  },
+  {
+    "id": 27004,
+    "main_key": "MSN004",
+    "name": "ArmorHelmetReplica",
+    "sub": null,
+    "special": null,
+    "image": "MSN004.png"
+  },
+  {
+    "id": 28000,
+    "main_key": "RVL000",
+    "name": "OctolingGoggles",
+    "sub": null,
+    "special": null,
+    "image": "RVL000.png"
+  },
+  {
+    "id": 3006,
+    "main_key": "EYE006",
+    "name": "WhiteArrowbands",
+    "sub": null,
+    "special": null,
+    "image": "EYE006.png"
+  },
+  {
+    "id": 3008,
+    "main_key": "EYE008",
+    "name": "18KAviators",
+    "sub": null,
+    "special": null,
+    "image": "EYE008.png"
+  },
+  {
+    "id": 3009,
+    "main_key": "EYE009",
+    "name": "FullMoonGlasses",
+    "sub": null,
+    "special": null,
+    "image": "EYE009.png"
+  },
+  {
+    "id": 3010,
+    "main_key": "EYE010",
+    "name": "Octoglasses",
+    "sub": null,
+    "special": null,
+    "image": "EYE010.png"
+  },
+  {
+    "id": 4000,
+    "main_key": "HAT000",
+    "name": "SafariHat",
+    "sub": null,
+    "special": null,
+    "image": "HAT000.png"
+  },
+  {
+    "id": 4001,
+    "main_key": "HAT001",
+    "name": "JungleHat",
+    "sub": null,
+    "special": null,
+    "image": "HAT001.png"
+  },
+  {
+    "id": 4002,
+    "main_key": "HAT002",
+    "name": "CampingHat",
+    "sub": null,
+    "special": null,
+    "image": "HAT002.png"
+  },
+  {
+    "id": 4003,
+    "main_key": "HAT003",
+    "name": "BlowfishBellHat",
+    "sub": null,
+    "special": null,
+    "image": "HAT003.png"
+  },
+  {
+    "id": 4004,
+    "main_key": "HAT004",
+    "name": "BambooHat",
+    "sub": null,
+    "special": null,
+    "image": "HAT004.png"
+  },
+  {
+    "id": 4005,
+    "main_key": "HAT005",
+    "name": "StrawBoater",
+    "sub": null,
+    "special": null,
+    "image": "HAT005.png"
+  },
+  {
+    "id": 4006,
+    "main_key": "HAT006",
+    "name": "ClassicStrawBoater",
+    "sub": null,
+    "special": null,
+    "image": "HAT006.png"
+  },
+  {
+    "id": 4007,
+    "main_key": "HAT007",
+    "name": "TreasureHunter",
+    "sub": null,
+    "special": null,
+    "image": "HAT007.png"
+  },
+  {
+    "id": 5000,
+    "main_key": "HDP000",
+    "name": "StudioHeadphones",
+    "sub": null,
+    "special": null,
+    "image": "HDP000.png"
+  },
+  {
+    "id": 5001,
+    "main_key": "HDP001",
+    "name": "DesignerHeadphones",
+    "sub": null,
+    "special": null,
+    "image": "HDP001.png"
+  },
+  {
+    "id": 5002,
+    "main_key": "HDP002",
+    "name": "NoiseCancelers",
+    "sub": null,
+    "special": null,
+    "image": "HDP002.png"
+  },
+  {
+    "id": 6000,
+    "main_key": "VIS000",
+    "name": "GolfVisor",
+    "sub": null,
+    "special": null,
+    "image": "VIS000.png"
+  },
+  {
+    "id": 6001,
+    "main_key": "VIS001",
+    "name": "FishFryVisor",
+    "sub": null,
+    "special": null,
+    "image": "VIS001.png"
+  },
+  {
+    "id": 6002,
+    "main_key": "VIS002",
+    "name": "SunVisor",
+    "sub": null,
+    "special": null,
+    "image": "VIS002.png"
+  },
+  {
+    "id": 7000,
+    "main_key": "MET000",
+    "name": "BikeHelmet",
+    "sub": null,
+    "special": null,
+    "image": "MET000.png"
+  },
+  {
+    "id": 7002,
+    "main_key": "MET002",
+    "name": "StealthGoggles",
+    "sub": null,
+    "special": null,
+    "image": "MET002.png"
+  },
+  {
+    "id": 7003,
+    "main_key": "MET003",
+    "name": "TentaclesHelmet",
+    "sub": null,
+    "special": null,
+    "image": "MET003.png"
+  },
+  {
+    "id": 7004,
+    "main_key": "MET004",
+    "name": "VisorSkateHelmet",
+    "sub": null,
+    "special": null,
+    "image": "MET004.png"
+  },
+  {
+    "id": 7005,
+    "main_key": "MET005",
+    "name": "SkateHelmet",
+    "sub": null,
+    "special": null,
+    "image": "MET005.png"
+  },
+  {
+    "id": 8000,
+    "main_key": "MSK000",
+    "name": "GasMask",
+    "sub": null,
+    "special": null,
+    "image": "MSK000.png"
+  },
+  {
+    "id": 8001,
+    "main_key": "MSK001",
+    "name": "PaintballMask",
+    "sub": null,
+    "special": null,
+    "image": "MSK001.png"
+  },
+  {
+    "id": 8002,
+    "main_key": "MSK002",
+    "name": "PaisleyBandana",
+    "sub": null,
+    "special": null,
+    "image": "MSK002.png"
+  },
+  {
+    "id": 8003,
+    "main_key": "MSK003",
+    "name": "SkullBandana",
+    "sub": null,
+    "special": null,
+    "image": "MSK003.png"
+  },
+  {
+    "id": 9001,
+    "main_key": "HBD001",
+    "name": "B-ballHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD001.png"
+  },
+  {
+    "id": 9002,
+    "main_key": "HBD002",
+    "name": "SquashHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD002.png"
+  },
+  {
+    "id": 9003,
+    "main_key": "HBD003",
+    "name": "TennisHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD003.png"
+  },
+  {
+    "id": 9004,
+    "main_key": "HBD004",
+    "name": "JoggingHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD004.png"
+  },
+  {
+    "id": 9005,
+    "main_key": "HBD005",
+    "name": "SoccerHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD005.png"
+  },
+  {
+    "id": 9006,
+    "main_key": "HBD006",
+    "name": "TraditionalHeadband",
+    "sub": null,
+    "special": null,
+    "image": "HBD006.png"
+  }
+]

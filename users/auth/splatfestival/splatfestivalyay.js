@@ -2,15 +2,14 @@ $(document).ready(function () {
     const form = $("#auth-form");
     const errorContainer = $("#auth-error");
     const urlParams = new URLSearchParams(window.location.search);
-    const apiBase = CONFIG.API_BASE_URL;
 
     $("#frontend_origin").val(window.location.origin);
     
-    form.attr("action", apiBase + "/api/v2/sso/spfn/generate_token");
+    form.attr("action", "/api/v2/sso/spfn/generate_token");
 
     async function checkExistingSession() {
         try {
-            const response = await fetch(apiBase + "/api/v1/session_id/check", {
+            const response = await fetch("/api/v1/session_id/check", {
                 method: 'GET',
                 credentials: 'include'
             });
