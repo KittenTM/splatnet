@@ -205,7 +205,7 @@ body {
   top: 200px;
   width: 480px;
   text-align: center;
-  font-family: "Regular";
+  font-family: "Regular", sans-serif;
   font-size: 58px;
   color: #fff;
 }
@@ -226,7 +226,7 @@ body {
 .rank-grade { left: 265px; top: 480px; }
 
 .rank-text {
-  font-family: "Splatoon1";
+  font-family: "Splatoon1", sans-serif;
   font-size: 130px;
   color: #fff;
 }
