@@ -144,8 +144,6 @@ window.loadHeader(async function(headerContainer) {
             const udemaeKey = equipped.Udemae !== undefined ? String(equipped.Udemae) : String(finalData.Udemae || "");
             const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "--");
 
-            // do this bs so splahoon will be happy
-            // im glad i can make people happy with a 2 liner though.. C:
             const renderImg = (src, className) => {
                 const fallback = className.includes('weapon') || className.includes('gear') ? 'this.src="/assets/weapons/NotFound^w.png"' : 'this.src="../assets/ability/ParameterIcon^q.png"';
                 return src ? `<img class="${className}" src="${src}" onerror='${fallback}' />` : '';
@@ -241,15 +239,24 @@ window.loadHeader(async function(headerContainer) {
         }
 
         try {
+            const handleFetch = async (url) => {
+                const res = await fetch(url, { credentials: 'include' });
+                if (res.redirected) {
+                    window.location.href = res.url;
+                    return {};
+                }
+                return res.ok ? res.json() : {};
+            };
+
             const [profileRes, equipRes, historyRes] = await Promise.all([
-                fetch("/api/v1/me", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
-                fetch("/api/v1/me/equipment", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
-                fetch("/api/v1/me/equipment/history", { credentials: 'include' }).then(res => res.ok ? res.json() : [])
+                handleFetch("/api/v1/me"),
+                handleFetch("/api/v1/me/equipment"),
+                handleFetch("/api/v1/me/equipment/history")
             ]);
             
             await renderData(profileRes, false);
             await renderData(equipRes, false);
-            await renderData({ history: historyRes }, false);
+            await renderData({ history: Array.isArray(historyRes) ? historyRes : [] }, false);
             sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
         } catch (err) {
             if (cacheFound) {

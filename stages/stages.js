@@ -78,13 +78,21 @@ window.loadHeader(async function(headerContainer) {
         }
 
         try {
-            const [profileRes, rotationsData] = await Promise.all([
-                fetch("/api/v1/me", { credentials: 'include' }).then(res => res.ok ? res.json() : {}),
+            const [profileRes] = await Promise.all([
+                fetch("/api/v1/me", { credentials: 'include' }).then(res => {
+                    if (res.redirected) {
+                        window.location.href = res.url;
+                        return {};
+                    }
+                    return res.ok ? res.json() : {};
+                }),
                 renderStages()
             ]);
             
-            await renderData(profileRes);
-            sessionStorage.setItem('user_cache', JSON.stringify(profileRes));
+            if (profileRes && Object.keys(profileRes).length > 0) {
+                await renderData(profileRes);
+                sessionStorage.setItem('user_cache', JSON.stringify(profileRes));
+            }
         } catch (err) {
             if (!cacheReady) {
                 const nameEl = document.getElementById('mii-name');

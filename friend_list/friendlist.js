@@ -65,8 +65,15 @@ window.loadHeader(function(headerContainer) {
     if (cached) renderData(JSON.parse(cached));
 
     fetch("/api/v1/me", { credentials: 'include' })
-        .then(res => res.ok ? res.json() : Promise.reject(res))
+        .then(res => {
+            if (res.redirected) {
+                window.location.href = res.url;
+                return;
+            }
+            return res.ok ? res.json() : Promise.reject(res);
+        })
         .then(data => {
+            if (!data) return;
             sessionStorage.setItem('user_cache', JSON.stringify(data));
             renderData(data);
         })
