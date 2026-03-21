@@ -253,11 +253,28 @@ window.loadHeader(async function(headerContainer) {
                 handleFetch("/api/v1/me/equipment"),
                 handleFetch("/api/v1/me/equipment/history")
             ]);
-            
-            await renderData(profileRes, false);
-            await renderData(equipRes, false);
-            await renderData({ history: Array.isArray(historyRes) ? historyRes : [] }, false);
-            sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
+
+            const hasNullFields = !equipRes || Object.values(equipRes).some(v => v === null);
+
+            if (hasNullFields) {
+                await renderData(profileRes, false);
+                if (infoBox) {
+                    infoBox.innerHTML = `
+                        <div class="info-message-box">
+                            <p>
+                                To use this service, it is required for you to play at least one game on Splatfestival Network.
+                                Play a match on your Wii U on Splatoon!<br><br>
+
+                                Note: if this service does not support Cemu due to how the emulator does not support POST requests.
+                            </p>
+                        </div>`;
+                }
+            } else {
+                await renderData(profileRes, false);
+                await renderData(equipRes, false);
+                await renderData({ history: Array.isArray(historyRes) ? historyRes : [] }, false);
+                sessionStorage.setItem('user_cache', JSON.stringify(combinedData));
+            }
         } catch (err) {
             if (cacheFound) {
                 await renderData(sessionStorage.getItem('user_cache'), true);

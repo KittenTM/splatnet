@@ -164,6 +164,24 @@ body {
   align-items: center;
 }
 
+.info-message-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 25px 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.info-message-box p {
+    color: #ffffff;
+    font-family: "Regular", sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left; 
+}
+
 #scale-root {
   width: 1044px;
   height: 600px;
