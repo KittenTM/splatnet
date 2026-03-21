@@ -62,25 +62,59 @@ window.loadHeader(function(headerContainer) {
         }
     };
 
-    const getRankIcon = (rank) => {
-        const icons = {
-            1: "tx_nb_1_purple-e854b65457dce33c1570ee22dfdc6f3dbe74b49606d08bc92d69fb6d1ed7690a.svg",
-            2: "tx_nb_2_purple-50c81f51ce9f30ce89dd3f01a9812c846e7fbb7a00fc95d72726a772d2ef5bd7.svg",
-            3: "tx_nb_3_purple-0901c032e718a09d5e4c9c1f47646a3958da7bb566a2d4da06322d7be2a911aa.svg",
-            4: "tx_nb_4_purple-a2e279292822c0f181b7726bcef1ee6c3d7a18b2763ec4d8c0a54ca452fc5e04.svg",
-            5: "tx_nb_5_purple-16e43ef9f23e514f900ede4bde7bcb81aa062af961c553374fc7c80566cf8b47.svg",
-            6: "tx_nb_6_purple-1ed2cae2808bb656eb89d986c9e10289fc273cb7d026b989af0aac39722c6989.svg",
-            7: "tx_nb_7_purple-8cae82b95463c7ca3ab55f0bf652d10e2212b43d99e442d89fda9b1951c8b261.svg",
-            8: "tx_nb_8_purple-faf0aa1407d058709db1338ba8d4c42495911d63e77e9653b74b26ff25f4f355.svg",
-            9: "tx_nb_9_purple-68d2b702b4240b2cd2886fb146d2c9835e1a2fd79b8d218cb5b7fb32cecb4bfa.svg"
+    const getRankIcon = (rank, mode) => {
+        const modeColor = {
+            regular: 'green',
+            gachi: 'orange',
+            fes: 'purple'
+        }[mode] || 'green';
+
+        const iconHashes = {
+            green: {
+                1: "c54d4ba3d0651b1ee50a6df24b0692afa22dc6792b6e3a9bbe5a5e089ccf9515",
+                2: "f05fa75efc1803029130a07b3b87b394d638b7558386057568317a4bcca636cb",
+                3: "d327346e1997c941fb6d1a39922e89fb5c9fe1e78feb2a11de0b7e18e589b2aa",
+                4: "fad2da0c0135f5511d0033b6f9df1176e786dbb1dc80518c5459ebdacf3f6fa3",
+                5: "6158cc1815800a58a180f3c8dd0ff194978325795d43a168e3d6c5653a30cb20",
+                6: "01dde34f3fda5fb4a18f96a60d83261c555f7adf2b274d4518bd2b464a171ef8",
+                7: "9135b2919cfb0c37ce7f269edceaf4028e3e9f4a22e49e2e6c80913d73f55605",
+                8: "641f727121544e3f8b84cc3059f30188e8121a195f4d47ea53bd3acae5ed0397",
+                9: "42923a55266d346994722a719a7b76334ba7247b72eea9affa6dc71ba47f648a"
+            },
+            orange: {
+                1: "74328e96411c9d85b7a09cf021022e650e8baf24b1ebd0e6d088c12abb034403",
+                2: "48ae3f075ee261faf58f5fbc878ef6535044d089a039fad065a119b7ec353323",
+                3: "f039770517a13c41bd86a5837a8949a91d496cc2db33c90ccfc5c601b369efb7",
+                4: "e9264e1d9066804ffc92f831c4501256a41d2ddde2df7803b0c434fc95f901a1",
+                5: "c961244cc0d6683e1352fc8362d42632e3fb8236b8bbc74fcfeb79e8be439992",
+                6: "bbb6348726eb8fde9adcd9eee9191238ffc1a5ef73f306b0c8d095818ac4d3e8",
+                7: "42f9af312aa30482e705635b85e1232f1e89f055d7460aa0361c642a5ec1ad65",
+                8: "ffdb8ef663130e9d0dee82ecdeab69c006dbe2dc05ff41352b79b7d21b9f3902",
+                9: "b6363055cba47768e05b222390ebf1c9c09af70d3cbd6896dc68c86707311c6e"
+            },
+            purple: {
+                1: "e854b65457dce33c1570ee22dfdc6f3dbe74b49606d08bc92d69fb6d1ed7690a",
+                2: "50c81f51ce9f30ce89dd3f01a9812c846e7fbb7a00fc95d72726a772d2ef5bd7",
+                3: "0901c032e718a09d5e4c9c1f47646a3958da7bb566a2d4da06322d7be2a911aa",
+                4: "a2e279292822c0f181b7726bcef1ee6c3d7a18b2763ec4d8c0a54ca452fc5e04",
+                5: "16e43ef9f23e514f900ede4bde7bcb81aa062af961c553374fc7c80566cf8b47",
+                6: "1ed2cae2808bb656eb89d986c9e10289fc273cb7d026b989af0aac39722c6989",
+                7: "8cae82b95463c7ca3ab55f0bf652d10e2212b43d99e442d89fda9b1951c8b261",
+                8: "faf0aa1407d058709db1338ba8d4c42495911d63e77e9653b74b26ff25f4f355",
+                9: "68d2b702b4240b2cd2886fb146d2c9835e1a2fd79b8d218cb5b7fb32cecb4bfa"
+            }
         };
-        return `../assets/en/svg/text/scene/rank/number/${icons[rank]}`;
+
+        const hash = iconHashes[modeColor][rank];
+        return `../assets/en/svg/text/scene/rank/number/tx_nb_${rank}_${modeColor}-${hash}.svg`;
     };
 
-    const renderRankings = () => {
+    const renderRankings = (mode) => {
         const container = document.getElementById('ranking-cards-container');
         if (!container) return;
         container.innerHTML = '';
+
+        const isFes = mode === 'fes';
 
         for (let i = 1; i <= 9; i++) {
             const card = document.createElement('div');
@@ -88,7 +122,7 @@ window.loadHeader(function(headerContainer) {
             card.innerHTML = `
                 <div class="rank-bg"></div>
                 <div class="rank-profile-circle"></div>
-                <img src="${getRankIcon(i)}" class="rank-accent">
+                <img src="${getRankIcon(i, mode)}" class="rank-accent ${!isFes ? 'standard-mode-fix' : ''}">
                 <div class="rank-name-row">
                     <img src="/assets/en/svg/ui/34b4b97a4411.svg" class="rank-power-icon">
                     <div class="rank-name">Player ${i}</div>
@@ -135,6 +169,8 @@ window.loadHeader(function(headerContainer) {
         const regImg = document.getElementById('img-regular');
         const gachiImg = document.getElementById('img-gachi');
         const fesImg = document.getElementById('img-fes');
+        const modeTitleImg = document.getElementById('rank-mode-title');
+        const splatfestSubtitle = document.querySelector('.splatfest-subtitle');
         
         const images = {
             regular: "../assets/en/svg/ui/btn_tab_regular_selected-b636e3d21ace9434120061a32658b21a34feb6468553b6d6da30ce890b85ec1f.svg",
@@ -144,12 +180,23 @@ window.loadHeader(function(headerContainer) {
             gachi_off: "../assets/en/svg/ui/btn_tab_gachi-1ab8351babd76ea6dd8e23eb86293c8ceafaf23b9cae3001166fabf3a01011a7.svg",
             fes_off: "../assets/en/svg/ui/btn_tab_fes-f6f7d08ee7f4877df0c7b32998f6bad81fd3f8c28e287168dfffe7d6efb09f77.svg"
         };
+        const titleTextImages = {
+            regular: "/assets/en/svg/text/scene/rank/tx_regularmatch-b107a49b118c434fce83fcff580b5f695b9b57a29f86bb75df000dbe1d675869.svg", 
+            gachi: "/assets/en/svg/text/scene/rank/tx_gachimatch-8d02f62c7ffeb506d31e371ec7e2f5a1d01fd1c4117676f726973e28845ffb19.svg",
+            fes: "/assets/en/svg/text/scene/rank/tx_splatfest-7a0ef00ee7f4877df0c7b32998f6bad81fd3f8c28e287168dfffe7d6efb09f77.svg"
+        };
 
         if (regImg) regImg.src = (mode === 'regular') ? images.regular : images.regular_off;
         if (gachiImg) gachiImg.src = (mode === 'gachi') ? images.gachi : images.gachi_off;
         if (fesImg) fesImg.src = (mode === 'fes') ? images.fes : images.fes_off;
+        if (modeTitleImg) {
+            modeTitleImg.src = titleTextImages[mode] || titleTextImages.regular;
+        }
+        if (splatfestSubtitle) {
+            splatfestSubtitle.style.display = (mode === 'fes') ? 'block' : 'none';
+        }
 
-        renderRankings();
+        renderRankings(mode);
 
         const loadingOverlay = document.getElementById("loading-overlay");
         if (loadingOverlay) {

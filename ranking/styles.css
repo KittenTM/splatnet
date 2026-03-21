@@ -285,3 +285,8 @@ body {
     height: 41px;
     z-index: 4;
 }
+
+.rank-accent.standard-mode-fix {
+    transform: scale(2.0);
+    transform-origin: center;
+}
