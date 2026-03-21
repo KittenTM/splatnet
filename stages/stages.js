@@ -184,7 +184,7 @@ async function renderStages() {
         loadMore(true);
 
         observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && currentIndex > 0 && currentIndex < allRotations.length) {
+            if (entries.isIntersecting && currentIndex > 0 && currentIndex < allRotations.length) {
                 loadMore(false);
             }
         }, { rootMargin: '0px 0px 100px 0px' });
@@ -218,11 +218,17 @@ function loadMore(isInitial) {
         nextBatch.forEach((rotation, index) => {
             const isFirstItem = isInitial && index === 0;
             const isAboutToExpire = !rotation.isExpired && (rotation.endTime - now) < (15 * 60 * 1000);
-            const optionsDate = { day: "2-digit", month: "2-digit" };
-            if (rotation.isExpired) optionsDate.year = "numeric";
+            
+            const optionsDate = { day: "2-digit", month: "2-digit", year: "numeric" };
             const optionsTime = { hour: "numeric", minute: "2-digit", hour12: true };
             const timeZone = "Europe/Paris";
-            const formattedTime = `${rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST) ~ ${rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone })} at ${rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone })} (CEST)`;
+            
+            const startDay = rotation.startTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone });
+            const startTime = rotation.startTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone }).toLowerCase();
+            const endDay = rotation.endTime.toLocaleDateString("en-GB", { ...optionsDate, timeZone });
+            const endTime = rotation.endTime.toLocaleTimeString("en-GB", { ...optionsTime, timeZone }).toLowerCase();
+
+            const formattedTime = `${startDay} at ${startTime} (CEST) ~ ${endDay} at ${endTime} (CEST)`;
             
             if (isFirstItem) {
                 if (isAboutToExpire) {
