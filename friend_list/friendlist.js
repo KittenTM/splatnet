@@ -5,7 +5,6 @@ window.loadHeader(function(headerContainer) {
     }
 
     const logoutForm = document.getElementById("logout-form");
-    
     if (logoutForm) {
         logoutForm.action = "/api/v1/spfn/logout";
         const originInput = document.getElementById("logout_frontend_origin");
@@ -14,6 +13,30 @@ window.loadHeader(function(headerContainer) {
         logoutForm.addEventListener('submit', () => {
             sessionStorage.removeItem('user_cache');
         });
+    }
+
+    const twitterBtn = document.getElementById('twitter-link-btn');
+    const twitterLabel = document.getElementById('twitter-label-img');
+
+    const handleTwitterAction = () => {
+        const isLinked = twitterBtn.dataset.linked === "true";
+
+        if (isLinked) {
+            if (!confirm("Unlink Twitter account?")) return;
+            fetch("/api/v1/me/twitter/unlink", { method: "POST", credentials: 'include' })
+                .then(() => window.location.reload());
+        } else {
+            twitterBtn.style.opacity = "0.5";
+            twitterBtn.style.pointerEvents = "none";
+            fetch("/api/v1/me/twitter/link", { credentials: 'include' })
+                .then(res => res.status === 401 ? (window.location.href = "/sign_in/") : res.json())
+                .then(data => data?.url ? (window.location.href = data.url) : window.location.reload())
+                .catch(() => window.location.reload());
+        }
+    };
+
+    if (twitterBtn) {
+        twitterBtn.addEventListener('click', handleTwitterAction);
     }
 
     const extractMiiName = (miiDataB64) => {
@@ -42,6 +65,33 @@ window.loadHeader(function(headerContainer) {
         }
     };
 
+    const updateTwitterUI = () => {
+        if (!twitterBtn || !twitterLabel) return;
+        
+        //this is so shitty but it works so i dont care
+        fetch("/api/v1/me/twitter/status", { credentials: 'include' })
+            .then(res => res.ok ? res.json() : null)
+            .then(data => {
+                if (data && data.is_linked) {
+                    twitterBtn.dataset.linked = "true";
+                    twitterLabel.src = "/assets/en/svg/text/menu/tx_twitter_Cancel-34186e4e830964405f2528210d7278206d255bf40b69559babc36a7a041e0394.svg";
+                    twitterLabel.alt = "Unlink Twitter";
+                    twitterLabel.style.scale = "1.6";
+                    twitterLabel.style.marginLeft = "30px";
+                    twitterLabel.style.translate = "-10px -2px";
+    } else {
+        twitterBtn.dataset.linked = "false";
+        twitterLabel.src = "/assets/en/svg/text/menu/tx_twitter-47ce083cc4514ab6aeb75b7dd9f71ce89ddc54a18d930d90cf4df62047413831.svg";
+        twitterLabel.alt = "Link Twitter";
+        twitterLabel.style.height = "";
+        twitterLabel.style.transform = ""; 
+    }
+})
+            .catch(() => {
+                twitterBtn.dataset.linked = "false";
+            });
+    };
+
     const renderData = (data) => {
         if (typeof data === 'string') {
             try { data = JSON.parse(data); } catch (e) {}
@@ -59,19 +109,15 @@ window.loadHeader(function(headerContainer) {
             imgEl.src = `https://mii-unsecure.ariankordi.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
             imgEl.style.display = 'block';
         }
+
+        updateTwitterUI();
     };
 
     const cached = sessionStorage.getItem('user_cache');
     if (cached) renderData(JSON.parse(cached));
 
     fetch("/api/v1/me", { credentials: 'include' })
-        .then(res => {
-            if (res.redirected) {
-                window.location.href = res.url;
-                return;
-            }
-            return res.ok ? res.json() : Promise.reject(res);
-        })
+        .then(res => res.redirected ? (window.location.href = res.url) : (res.ok ? res.json() : Promise.reject(res)))
         .then(data => {
             if (!data) return;
             sessionStorage.setItem('user_cache', JSON.stringify(data));
