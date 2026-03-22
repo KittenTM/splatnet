@@ -22,8 +22,8 @@ This project operates on a frontend - backend basis. The backend is not optional
 - [x] Site Policy
 
 - [ ] Rank
-  - [ ] Rank Calc / mode
-  - [ ] HTML for reg/gachi/fest
+  - [x] Rank Calc / mode
+  - [x] HTML for reg/gachi/fest
   - [ ] Auto-post on twitter
 
 - [x] Equipment
