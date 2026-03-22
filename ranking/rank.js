@@ -109,25 +109,38 @@ window.loadHeader(function(headerContainer) {
         return `../assets/en/svg/text/scene/rank/number/tx_nb_${rank}_${modeColor}-${hash}.svg`;
     };
 
+    let cachedLeaderboardData = null;
+
     const renderRankings = (mode) => {
         const container = document.getElementById('ranking-cards-container');
-        if (!container) return;
-        container.innerHTML = '';
+        if (!container || !cachedLeaderboardData) return;
+        
+        container.innerHTML = ''; 
 
+        const modeMap = { 'regular': 0, 'gachi': 1, 'fes': 2 };
+        const apiModeKey = `mode_${modeMap[mode] || 0}`;
+        const players = cachedLeaderboardData[apiModeKey] || [];
         const isFes = mode === 'fes';
 
-        for (let i = 1; i <= 9; i++) {
+        players.forEach((player, index) => {
+            const rankNum = index + 1;
+            const displayScore = isFes ? player.FesPower : player.RankingScore;
+            
+            const powerIconHtml = (isFes && player.is_top_100_fes) 
+                ? `<img src="/assets/en/svg/ui/34b4b97a4411.svg" class="rank-power-icon">` 
+                : '';
+
             const card = document.createElement('div');
-            card.className = 'rank-card-container';
+            card.className = `rank-card-container`;
             card.innerHTML = `
                 <div class="rank-bg"></div>
                 <div class="rank-profile-circle"></div>
-                <img src="${getRankIcon(i, mode)}" class="rank-accent ${!isFes ? 'standard-mode-fix' : ''}">
+                <img src="${getRankIcon(rankNum, mode)}" class="rank-accent ${!isFes ? 'standard-mode-fix' : ''}">
                 <div class="rank-name-row">
-                    <img src="/assets/en/svg/ui/34b4b97a4411.svg" class="rank-power-icon">
-                    <div class="rank-name">Player ${i}</div>
+                    ${powerIconHtml}
+                    <div class="rank-name">${player.MiiName || 'User'}</div>
                 </div>
-                <div class="rank-power-value">${2500 - (i * 10)}</div>
+                <div class="rank-power-value">${displayScore}</div>
                 <div class="rank-gear-row">
                     <img src="/assets/en/ui/gearbigbg.png" class="gear-main">
                     <img src="/assets/en/ui/gearsmallbg.png" class="gear-sub">
@@ -136,36 +149,10 @@ window.loadHeader(function(headerContainer) {
                 </div>
             `;
             container.appendChild(card);
-        }
+        });
     };
 
-    const init = () => {
-        const cached = sessionStorage.getItem('user_cache');
-        if (cached) renderData(JSON.parse(cached));
-
-        fetch("/api/v1/me", { credentials: 'include' })
-            .then(res => {
-                if (res.redirected) {
-                    window.location.href = res.url;
-                    return;
-                }
-                return res.ok ? res.json() : Promise.reject(res);
-            })
-            .then(data => {
-                if (!data) return;
-                sessionStorage.setItem('user_cache', JSON.stringify(data));
-                renderData(data);
-            })
-            .catch(err => {
-                if (!cached) {
-                    const nameEl = document.getElementById('mii-name');
-                    if (nameEl) nameEl.textContent = "Guest";
-                }
-            });
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const mode = urlParams.get('mode') || 'regular';
-        
+    const updateTabUI = (mode) => {
         const regImg = document.getElementById('img-regular');
         const gachiImg = document.getElementById('img-gachi');
         const fesImg = document.getElementById('img-fes');
@@ -195,21 +182,44 @@ window.loadHeader(function(headerContainer) {
         if (splatfestSubtitle) {
             splatfestSubtitle.style.display = (mode === 'fes') ? 'block' : 'none';
         }
-
+        
         renderRankings(mode);
+    };
 
-        const loadingOverlay = document.getElementById("loading-overlay");
-        if (loadingOverlay) {
-            loadingOverlay.style.display = "none";
-        }
+    const init = () => {
+        const cachedUser = sessionStorage.getItem('user_cache');
+        if (cachedUser) renderData(JSON.parse(cachedUser));
+
+        fetch("/api/v1/me", { credentials: 'include' })
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(data => {
+                if (!data) return;
+                sessionStorage.setItem('user_cache', JSON.stringify(data));
+                renderData(data);
+            }).catch(() => {});
+
+        fetch("/api/v1/leaderboard")
+            .then(res => res.json())
+            .then(data => {
+                cachedLeaderboardData = data;
+                const urlParams = new URLSearchParams(window.location.search);
+                const mode = urlParams.get('mode') || 'regular';
+                updateTabUI(mode);
+
+                const loadingOverlay = document.getElementById("loading-overlay");
+                if (loadingOverlay) loadingOverlay.style.display = "none";
+            })
+            .catch(err => console.error("Leaderboard preload failed:", err));
     };
 
     document.querySelectorAll('.mode-selection a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const href = this.getAttribute('href');
-            window.history.pushState({}, '', href);
-            init();
+            const url = new URL(this.href, window.location.origin);
+            const newMode = url.searchParams.get('mode') || 'regular';
+            
+            window.history.pushState({}, '', this.href);
+            updateTabUI(newMode);
         });
     });
 
