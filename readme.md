@@ -58,7 +58,7 @@ This project operates on a frontend - backend basis. The backend is not optional
 - [x] Page switching (hamburger menu)
   - [x] Show Mii name
   - [x] Render mii via [mii-unsecure](https://mii-unsecure.ariankordi.net/)
-  - [ ] Link/unlink Twitter functionality
+  - [x] Link/unlink Twitter functionality
 
 - [x] Squid swimming background
   - [x] Port to use canvas
