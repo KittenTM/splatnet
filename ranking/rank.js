@@ -203,6 +203,12 @@ window.loadHeader(async function(headerContainer) {
         const modeTitleImg = document.getElementById('rank-mode-title');
         const splatfestSubtitle = document.querySelector('.splatfest-subtitle');
         
+        const modeSelection = document.querySelector('.mode-selection');
+        const glassPanel = document.querySelector('.rank-glass-panel');
+        
+        if (modeSelection) modeSelection.style.display = 'flex';
+        if (glassPanel) glassPanel.style.display = 'block';
+
         const images = {
             regular: "../assets/en/svg/ui/btn_tab_regular_selected-b636e3d21ace9434120061a32658b21a34feb6468553b6d6da30ce890b85ec1f.svg",
             gachi: "../assets/en/svg/ui/btn_tab_gachi_selected-4796f167399dca12cb274dcb0348cdf709a1f722ddd241210e55a3e04fdb6ff4.svg",
@@ -230,30 +236,35 @@ window.loadHeader(async function(headerContainer) {
         renderRankings(mode);
     };
 
-    const init = () => {
+    const init = async () => {
         const cachedUser = sessionStorage.getItem('user_cache');
         if (cachedUser) renderData(JSON.parse(cachedUser));
 
-        fetch("/api/v1/me", { credentials: 'include' })
-            .then(res => res.ok ? res.json() : Promise.reject(res))
-            .then(data => {
-                if (!data) return;
-                sessionStorage.setItem('user_cache', JSON.stringify(data));
-                renderData(data);
-            }).catch(() => {});
+        try {
+            await Promise.all([
+                fetch("/api/v1/me", { credentials: 'include' })
+                    .then(res => res.ok ? res.json() : Promise.reject(res))
+                    .then(data => {
+                        if (!data) return;
+                        sessionStorage.setItem('user_cache', JSON.stringify(data));
+                        renderData(data);
+                    }).catch(() => {}),
 
-        fetch("/api/v1/leaderboard")
-            .then(res => res.json())
-            .then(data => {
-                cachedLeaderboardData = data;
-                const urlParams = new URLSearchParams(window.location.search);
-                const mode = urlParams.get('mode') || 'regular';
-                updateTabUI(mode);
-
-                const loadingOverlay = document.getElementById("loading-overlay");
-                if (loadingOverlay) loadingOverlay.style.display = "none";
-            })
-            .catch(err => console.error("Leaderboard preload failed:", err));
+                fetch("/api/v1/leaderboard")
+                    .then(res => res.json())
+                    .then(data => {
+                        cachedLeaderboardData = data;
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const mode = urlParams.get('mode') || 'regular';
+                        updateTabUI(mode);
+                    })
+            ]);
+        } catch (err) {
+            console.error("Initialization failed:", err);
+        } finally {
+            const loadingOverlay = document.getElementById("loading-overlay");
+            if (loadingOverlay) loadingOverlay.style.display = "none";
+        }
     };
 
     document.querySelectorAll('.mode-selection a').forEach(link => {
