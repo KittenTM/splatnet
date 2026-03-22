@@ -1,4 +1,4 @@
-window.loadHeader(function(headerContainer) {
+window.loadHeader(async function(headerContainer) {
     const rankButton = headerContainer.querySelector('.menu-item.rank');
     if (rankButton) {
         rankButton.classList.add('active');
@@ -110,12 +110,32 @@ window.loadHeader(function(headerContainer) {
     };
 
     let cachedLeaderboardData = null;
+    let mappingCache = null;
 
-    const renderRankings = (mode) => {
+    const renderRankings = async (mode) => {
         const container = document.getElementById('ranking-cards-container');
         if (!container || !cachedLeaderboardData) return;
         
         container.innerHTML = ''; 
+
+        if (!mappingCache) {
+            const fetchJson = url => fetch(url).then(r => r.ok ? r.json() : []);
+            mappingCache = await Promise.all([
+                fetchJson('/assets/mapping/clothing.json'),
+                fetchJson('/assets/mapping/headgear.json'),
+                fetchJson('/assets/mapping/shoes.json'),
+                fetchJson('/assets/mapping/weapons.json')
+            ]);
+        }
+        const [clothing, headgear, shoes, weapons] = mappingCache;
+
+        const getImg = (list, id, folder) => {
+            const fallback = "/assets/weapons/NotFound^w.png";
+            if (id === undefined || id === null) return fallback;
+            const item = list.find(i => String(i.id) === String(id));
+            if (item && item.image) return `../assets/${folder}/${item.image}`;
+            return fallback;
+        };
 
         const modeMap = { 'regular': 0, 'gachi': 1, 'fes': 2 };
         const apiModeKey = `mode_${modeMap[mode] || 0}`;
@@ -130,6 +150,11 @@ window.loadHeader(function(headerContainer) {
                 ? `<img src="/assets/en/svg/ui/34b4b97a4411.svg" class="rank-power-icon">` 
                 : '';
 
+            const weaponImg = getImg(weapons, player.weapon, 'weapons');
+            const headImg = getImg(headgear, player.headgear, 'headgear');
+            const clothesImg = getImg(clothing, player.clothes, 'clothing');
+            const shoesImg = getImg(shoes, player.shoes, 'shoes');
+
             const card = document.createElement('div');
             card.className = `rank-card-container`;
             card.innerHTML = `
@@ -142,10 +167,22 @@ window.loadHeader(function(headerContainer) {
                 </div>
                 <div class="rank-power-value">${displayScore}</div>
                 <div class="rank-gear-row">
-                    <img src="/assets/en/ui/gearbigbg.png" class="gear-main">
-                    <img src="/assets/en/ui/gearsmallbg.png" class="gear-sub">
-                    <img src="/assets/en/ui/gearsmallbg.png" class="gear-sub">
-                    <img src="/assets/en/ui/gearsmallbg.png" class="gear-sub">
+                    <div class="gear-wrapper main">
+                        <img src="/assets/en/ui/gearbigbg.png" class="gear-bg">
+                        <img src="${weaponImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                    </div>
+                    <div class="gear-wrapper sub">
+                        <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
+                        <img src="${headImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                    </div>
+                    <div class="gear-wrapper sub">
+                        <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
+                        <img src="${clothesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                    </div>
+                    <div class="gear-wrapper sub">
+                        <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
+                        <img src="${shoesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                    </div>
                 </div>
             `;
             container.appendChild(card);
