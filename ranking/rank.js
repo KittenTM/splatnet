@@ -124,7 +124,7 @@ window.loadHeader(function(headerContainer) {
 
         players.forEach((player, index) => {
             const rankNum = index + 1;
-            const displayScore = isFes ? player.FesPower : player.RankingScore;
+            const displayScore = Math.round(player.RankingScore);
             
             const powerIconHtml = (isFes && player.is_top_100_fes) 
                 ? `<img src="/assets/en/svg/ui/34b4b97a4411.svg" class="rank-power-icon">` 
