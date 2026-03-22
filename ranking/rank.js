@@ -154,12 +154,19 @@ window.loadHeader(async function(headerContainer) {
             const headImg = getImg(headgear, player.headgear, 'headgear');
             const clothesImg = getImg(clothing, player.clothes, 'clothing');
             const shoesImg = getImg(shoes, player.shoes, 'shoes');
+            const miiImgUrl = `https://mii.spfn.net/${player.PId}/main.png`;
+            const fallbackMii = `/assets/weapons/ParameterIcon^q.png`;
 
             const card = document.createElement('div');
             card.className = `rank-card-container`;
             card.innerHTML = `
                 <div class="rank-bg"></div>
-                <div class="rank-profile-circle"></div>
+                <div class="rank-profile-circle">
+                    <img src="${miiImgUrl}" 
+                         class="rank-mii-img" 
+                         onerror="this.src='${fallbackMii}'; this.style.filter='invert(1)';" 
+                         style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;">
+                </div>
                 <img src="${getRankIcon(rankNum, mode)}" class="rank-accent ${!isFes ? 'standard-mode-fix' : ''}">
                 <div class="rank-name-row">
                     ${powerIconHtml}
