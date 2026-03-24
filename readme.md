@@ -1,8 +1,8 @@
 <p align= "center">
-<img src="https://git.crafterpika.cc/kittentm/splatnet-backend/raw/branch/main/cover.png" width=600>
+<img src="https://git.crafterpika.cc/kittentm/splatnet/raw/branch/main/cover.png" width=600>
 <br>
 
-   <img src="https://git.crafterpika.cc/kittentm/splatnet-backend/raw/branch/main/currentprogress.png" height=50px> 
+   <img src="https://git.crafterpika.cc/kittentm/splatnet/raw/branch/main/currentprogress.png" height=50px> 
   <img src="https://progress-bar.xyz/60?title=&height=20&show_text=false" width="100%" height=20px>
   <br>
   <strong>Basically 0% lol</strong>
