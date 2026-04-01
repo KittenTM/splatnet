@@ -292,6 +292,24 @@ window.loadHeader(async function(headerContainer) {
         renderRankings(mode);
     };
 
+    const updateSplatfestNames = (fesData) => {
+        if (!fesData || !fesData.splatfestivalSplatfest) return;
+        const fes = fesData.splatfestivalSplatfest;
+        const teams = fes.teams;
+        if (teams && teams.length >= 2) {
+            const teamLeft = document.querySelector('.team-left-label');
+            const teamRight = document.querySelector('.team-right-label');
+            if (teamLeft) teamLeft.textContent = teams.USen || "Yaoi";
+            if (teamRight) teamRight.textContent = teams.USen || "Yuri";
+            const subtitle = document.querySelector('.splatfest-subtitle');
+            if (subtitle) {
+                const name1 = teams.USen || "Yaoi";
+                const name2 = teams.USen || "Yuri";
+                subtitle.textContent = `${name1} VS ${name2}`;
+            }
+        }
+    };
+
     const init = async () => {
         const cachedUser = sessionStorage.getItem('user_cache');
         if (cachedUser) renderData(JSON.parse(cachedUser));
@@ -313,6 +331,12 @@ window.loadHeader(async function(headerContainer) {
                         const urlParams = new URLSearchParams(window.location.search);
                         const mode = urlParams.get('mode') || 'regular';
                         updateTabUI(mode);
+                    }),
+
+                fetch("/api/v1/boss")
+                    .then(res => res.json())
+                    .then(data => {
+                        updateSplatfestNames(data);
                     })
             ]);
         } catch (err) {
