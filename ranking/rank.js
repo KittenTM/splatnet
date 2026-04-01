@@ -195,6 +195,19 @@ window.loadHeader(async function(headerContainer) {
         const players = cachedLeaderboardData[apiModeKey] || [];
         const isFes = mode === 'fes';
 
+        if (players.length === 0) {
+            const emptyMsg = document.createElement('div');
+            emptyMsg.className = 'rank-empty-message';
+            emptyMsg.style.fontFamily = 'Splatoon1, sans-serif';
+            emptyMsg.style.color = 'white';
+            emptyMsg.style.fontSize = '24px';
+            emptyMsg.style.textAlign = 'center';
+            emptyMsg.style.padding = '50px';
+            emptyMsg.textContent = "Looks like no one has appeared here, Play Splatoon on Wii U to compete here!";
+            container.appendChild(emptyMsg);
+            return;
+        }
+
         players.forEach((player, index) => {
             const rankNum = index + 1;
             const displayScore = Math.round(player.RankingScore);
