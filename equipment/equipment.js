@@ -315,7 +315,7 @@ window.loadHeader(async function(headerContainer) {
                                 To use this service, it is required for you to play at least one game on Splatfestival Network.
                                 Play a match on your Wii U on Splatoon!<br><br>
 
-                                Note: if this service does not support Cemu due to how the emulator does not support POST requests.
+                                Note: This service does not support Cemu due to how the emulator does not support POST requests.
                             </p>
                         </div>`;
                 }
