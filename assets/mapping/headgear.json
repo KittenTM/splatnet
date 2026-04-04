@@ -2,306 +2,266 @@
   {
     "id": 1,
     "main_key": "First",
-    "name": "WhiteHeadband",
+    "name": "White Headband",
     "sub": null,
     "special": null,
-    "image": "First.png"
+    "image": "Hed_First^q.bflim.png"
   },
   {
     "id": 1000,
     "main_key": "CAP000",
-    "name": "UrchinsCap",
+    "name": "Urchins Cap",
     "sub": null,
     "special": null,
-    "image": "CAP000.png"
+    "image": "Hed_CAP000^q.bflim.png"
   },
   {
     "id": 1001,
     "main_key": "CAP001",
-    "name": "LightweightCap",
+    "name": "Lightweight Cap",
     "sub": null,
     "special": null,
-    "image": "CAP001.png"
+    "image": "Hed_CAP001^q.bflim.png"
   },
   {
     "id": 1002,
     "main_key": "CAP002",
-    "name": "TakorokaMesh",
+    "name": "Takoroka Mesh",
     "sub": null,
     "special": null,
-    "image": "CAP002.png"
+    "image": "Hed_CAP002^q.bflim.png"
   },
   {
     "id": 1003,
     "main_key": "CAP003",
-    "name": "StreetstyleCap",
+    "name": "Streetstyle Cap",
     "sub": null,
     "special": null,
-    "image": "CAP003.png"
+    "image": "Hed_CAP003^q.bflim.png"
   },
   {
     "id": 1004,
     "main_key": "CAP004",
-    "name": "Squid-StitchCap",
+    "name": "Squid-Stitch Cap",
     "sub": null,
     "special": null,
-    "image": "CAP004.png"
+    "image": "Hed_CAP004^q.bflim.png"
   },
   {
     "id": 1005,
     "main_key": "CAP005",
-    "name": "SquidvaderCap",
+    "name": "Squidvader Cap",
     "sub": null,
     "special": null,
-    "image": "CAP005.png"
+    "image": "Hed_CAP005^q.bflim.png"
   },
   {
     "id": 1006,
     "main_key": "CAP006",
-    "name": "CamoMesh",
+    "name": "Camo Mesh",
     "sub": null,
     "special": null,
-    "image": "CAP006.png"
+    "image": "Hed_CAP006^q.bflim.png"
   },
   {
     "id": 1007,
     "main_key": "CAP007",
-    "name": "Five-PanelCap",
+    "name": "Five-Panel Cap",
     "sub": null,
     "special": null,
-    "image": "CAP007.png"
+    "image": "Hed_CAP007^q.bflim.png"
   },
   {
     "id": 1008,
     "main_key": "CAP008",
-    "name": "ZekkoMesh",
+    "name": "Zekko Mesh",
     "sub": null,
     "special": null,
-    "image": "CAP008.png"
+    "image": "Hed_CAP008^q.bflim.png"
   },
   {
     "id": 1009,
     "main_key": "CAP009",
-    "name": "BackwardsCap",
+    "name": "Backwards Cap",
     "sub": null,
     "special": null,
-    "image": "CAP009.png"
+    "image": "Hed_CAP009^q.bflim.png"
   },
   {
     "id": 1010,
     "main_key": "CAP010",
-    "name": "Two-StripeMesh",
+    "name": "Two-Stripe Mesh",
     "sub": null,
     "special": null,
-    "image": "CAP010.png"
+    "image": "Hed_CAP010^q.bflim.png"
   },
   {
     "id": 1011,
     "main_key": "CAP011",
-    "name": "JetCap",
+    "name": "Jet Cap",
     "sub": null,
     "special": null,
-    "image": "CAP011.png"
+    "image": "Hed_CAP011^q.bflim.png"
   },
   {
     "id": 1012,
     "main_key": "CAP012",
-    "name": "CyclingCap",
+    "name": "Cycling Cap",
     "sub": null,
     "special": null,
-    "image": "CAP012.png"
+    "image": "Hed_CAP012^q.bflim.png"
   },
   {
     "id": 1013,
     "main_key": "CAP013",
-    "name": "SQUIDGIRLHat",
+    "name": "SQUID GIRL Hat",
     "sub": null,
     "special": null,
-    "image": "CAP013.png"
+    "image": "Hed_CAP013^q.bflim.png"
   },
   {
     "id": 1014,
     "main_key": "CAP014",
-    "name": "CycleKingCap",
+    "name": "Cycle King Cap",
     "sub": null,
     "special": null,
-    "image": "CAP014.png"
+    "image": "Hed_CAP014^q.bflim.png"
   },
   {
     "id": 1015,
     "main_key": "CAP015",
-    "name": "LegendaryCap",
+    "name": "Legendary Cap",
     "sub": null,
     "special": null,
-    "image": "CAP015.png"
+    "image": "Hed_CAP015^q.bflim.png"
   },
   {
     "id": 1016,
     "main_key": "CAP016",
-    "name": "CoroCoroCap",
+    "name": "CoroCoro Cap",
     "sub": null,
     "special": null,
-    "image": "CAP016.png"
+    "image": "Hed_CAP016^q.bflim.png"
   },
   {
     "id": 2000,
     "main_key": "NCP000",
-    "name": "RetroSpecs",
+    "name": "Bobble Hat",
     "sub": null,
     "special": null,
-    "image": "NCP000.png"
-  },
-  {
-    "id": 2000,
-    "main_key": "NCP000",
-    "name": "BobbleHat",
-    "sub": null,
-    "special": null,
-    "image": "NCP000.png"
+    "image": "Hed_NCP000^q.bflim.png"
   },
   {
     "id": 2001,
     "main_key": "NCP001",
-    "name": "SplashGoggles",
+    "name": "Short Beanie",
     "sub": null,
     "special": null,
-    "image": "NCP001.png"
-  },
-  {
-    "id": 2001,
-    "main_key": "NCP001",
-    "name": "ShortBeanie",
-    "sub": null,
-    "special": null,
-    "image": "NCP001.png"
+    "image": "Hed_NCP001^q.bflim.png"
   },
   {
     "id": 2002,
     "main_key": "NCP002",
-    "name": "PilotGoggles",
+    "name": "Striped Beanie",
     "sub": null,
     "special": null,
-    "image": "NCP002.png"
-  },
-  {
-    "id": 2002,
-    "main_key": "NCP002",
-    "name": "StripedBeanie",
-    "sub": null,
-    "special": null,
-    "image": "NCP002.png"
+    "image": "Hed_NCP002^q.bflim.png"
   },
   {
     "id": 2003,
     "main_key": "NCP003",
-    "name": "TintedShades",
+    "name": "Sporty Bobble Hat",
     "sub": null,
     "special": null,
-    "image": "NCP003.png"
-  },
-  {
-    "id": 2003,
-    "main_key": "NCP003",
-    "name": "SportyBobbleHat",
-    "sub": null,
-    "special": null,
-    "image": "NCP003.png"
+    "image": "Hed_NCP003^q.bflim.png"
   },
   {
     "id": 2004,
     "main_key": "NCP004",
-    "name": "BlackArrowbands",
+    "name": "Special Forces Beret",
     "sub": null,
     "special": null,
-    "image": "NCP004.png"
-  },
-  {
-    "id": 2004,
-    "main_key": "NCP004",
-    "name": "SpecialForcesBeret",
-    "sub": null,
-    "special": null,
-    "image": "NCP004.png"
+    "image": "Hed_NCP004^q.bflim.png"
   },
   {
     "id": 2005,
     "main_key": "NCP005",
-    "name": "SnorkelMask",
+    "name": "Squid Nordic",
     "sub": null,
     "special": null,
-    "image": "NCP005.png"
+    "image": "Hed_NCP005^q.bflim.png"
   },
   {
-    "id": 2005,
-    "main_key": "NCP005",
-    "name": "SquidNordic",
+    "id": 3000,
+    "main_key": "EYE000",
+    "name": "Retro Specs",
     "sub": null,
     "special": null,
-    "image": "NCP005.png"
+    "image": "Hed_EYE000^q.bflim.png"
   },
   {
-    "id": 25000,
-    "main_key": "AMB000",
-    "name": "SquidHairclip",
+    "id": 3001,
+    "main_key": "EYE001",
+    "name": "Splash Goggles",
     "sub": null,
     "special": null,
-    "image": "AMB000.png"
+    "image": "Hed_EYE001^q.bflim.png"
   },
   {
-    "id": 25001,
-    "main_key": "AMB001",
-    "name": "SamuraiHelmet",
+    "id": 3002,
+    "main_key": "EYE002",
+    "name": "Pilot Goggles",
     "sub": null,
     "special": null,
-    "image": "AMB001.png"
+    "image": "Hed_EYE002^q.bflim.png"
   },
   {
-    "id": 25002,
-    "main_key": "AMB002",
-    "name": "PowerMask",
+    "id": 3003,
+    "main_key": "EYE003",
+    "name": "Tinted Shades",
     "sub": null,
     "special": null,
-    "image": "AMB002.png"
+    "image": "Hed_EYE003^q.bflim.png"
   },
   {
-    "id": 27004,
-    "main_key": "MSN004",
-    "name": "ArmorHelmetReplica",
+    "id": 3004,
+    "main_key": "EYE004",
+    "name": "Black Arrowbands",
     "sub": null,
     "special": null,
-    "image": "MSN004.png"
+    "image": "Hed_EYE004^q.bflim.png"
   },
   {
-    "id": 28000,
-    "main_key": "RVL000",
-    "name": "OctolingGoggles",
+    "id": 3005,
+    "main_key": "EYE005",
+    "name": "Snorkel Mask",
     "sub": null,
     "special": null,
-    "image": "RVL000.png"
+    "image": "Hed_EYE005^q.bflim.png"
   },
   {
     "id": 3006,
     "main_key": "EYE006",
-    "name": "WhiteArrowbands",
+    "name": "White Arrowbands",
     "sub": null,
     "special": null,
-    "image": "EYE006.png"
+    "image": "Hed_EYE006^q.bflim.png"
   },
   {
     "id": 3008,
     "main_key": "EYE008",
-    "name": "18KAviators",
+    "name": "18K Aviators",
     "sub": null,
     "special": null,
-    "image": "EYE008.png"
+    "image": "Hed_EYE008^q.bflim.png"
   },
   {
     "id": 3009,
     "main_key": "EYE009",
-    "name": "FullMoonGlasses",
+    "name": "Full Moon Glasses",
     "sub": null,
     "special": null,
-    "image": "EYE009.png"
+    "image": "Hed_EYE009^q.bflim.png"
   },
   {
     "id": 3010,
@@ -309,238 +269,246 @@
     "name": "Octoglasses",
     "sub": null,
     "special": null,
-    "image": "EYE010.png"
+    "image": "Hed_EYE010^q.bflim.png"
   },
   {
     "id": 4000,
     "main_key": "HAT000",
-    "name": "SafariHat",
+    "name": "Safari Hat",
     "sub": null,
     "special": null,
-    "image": "HAT000.png"
+    "image": "Hed_HAT000^q.bflim.png"
   },
   {
     "id": 4001,
     "main_key": "HAT001",
-    "name": "JungleHat",
+    "name": "Jungle Hat",
     "sub": null,
     "special": null,
-    "image": "HAT001.png"
+    "image": "Hed_HAT001^q.bflim.png"
   },
   {
     "id": 4002,
     "main_key": "HAT002",
-    "name": "CampingHat",
+    "name": "Camping Hat",
     "sub": null,
     "special": null,
-    "image": "HAT002.png"
+    "image": "Hed_HAT002^q.bflim.png"
   },
   {
     "id": 4003,
     "main_key": "HAT003",
-    "name": "BlowfishBellHat",
+    "name": "Blowfish Bell Hat",
     "sub": null,
     "special": null,
-    "image": "HAT003.png"
+    "image": "Hed_HAT003^q.bflim.png"
   },
   {
     "id": 4004,
     "main_key": "HAT004",
-    "name": "BambooHat",
+    "name": "Bamboo Hat",
     "sub": null,
     "special": null,
-    "image": "HAT004.png"
+    "image": "Hed_HAT004^q.bflim.png"
   },
   {
     "id": 4005,
     "main_key": "HAT005",
-    "name": "StrawBoater",
+    "name": "Straw Boater",
     "sub": null,
     "special": null,
-    "image": "HAT005.png"
+    "image": "Hed_HAT005^q.bflim.png"
   },
   {
     "id": 4006,
     "main_key": "HAT006",
-    "name": "ClassicStrawBoater",
+    "name": "Classic Straw Boater",
     "sub": null,
     "special": null,
-    "image": "HAT006.png"
+    "image": "Hed_HAT006^q.bflim.png"
   },
   {
     "id": 4007,
     "main_key": "HAT007",
-    "name": "TreasureHunter",
+    "name": "Treasure Hunter",
     "sub": null,
     "special": null,
-    "image": "HAT007.png"
+    "image": "Hed_HAT007^q.bflim.png"
   },
   {
     "id": 5000,
     "main_key": "HDP000",
-    "name": "StudioHeadphones",
+    "name": "Studio Headphones",
     "sub": null,
     "special": null,
-    "image": "HDP000.png"
+    "image": "Hed_HDP000^q.bflim.png"
   },
   {
     "id": 5001,
     "main_key": "HDP001",
-    "name": "DesignerHeadphones",
+    "name": "Designer Headphones",
     "sub": null,
     "special": null,
-    "image": "HDP001.png"
+    "image": "Hed_HDP001^q.bflim.png"
   },
   {
     "id": 5002,
     "main_key": "HDP002",
-    "name": "NoiseCancelers",
+    "name": "Noise Cancelers",
     "sub": null,
     "special": null,
-    "image": "HDP002.png"
+    "image": "Hed_HDP002^q.bflim.png"
   },
   {
     "id": 6000,
     "main_key": "VIS000",
-    "name": "GolfVisor",
+    "name": "Golf Visor",
     "sub": null,
     "special": null,
-    "image": "VIS000.png"
+    "image": "Hed_VIS000^q.bflim.png"
   },
   {
     "id": 6001,
     "main_key": "VIS001",
-    "name": "FishFryVisor",
+    "name": "FishFry Visor",
     "sub": null,
     "special": null,
-    "image": "VIS001.png"
+    "image": "Hed_VIS001^q.bflim.png"
   },
   {
     "id": 6002,
     "main_key": "VIS002",
-    "name": "SunVisor",
+    "name": "Sun Visor",
     "sub": null,
     "special": null,
-    "image": "VIS002.png"
+    "image": "Hed_VIS002^q.bflim.png"
   },
   {
     "id": 7000,
     "main_key": "MET000",
-    "name": "BikeHelmet",
+    "name": "Bike Helmet",
     "sub": null,
     "special": null,
-    "image": "MET000.png"
+    "image": "Hed_MET000^q.bflim.png"
   },
   {
     "id": 7002,
     "main_key": "MET002",
-    "name": "StealthGoggles",
+    "name": "Stealth Goggles",
     "sub": null,
     "special": null,
-    "image": "MET002.png"
+    "image": "Hed_MET002^q.bflim.png"
   },
   {
     "id": 7003,
     "main_key": "MET003",
-    "name": "TentaclesHelmet",
+    "name": "Tentacles Helmet",
     "sub": null,
     "special": null,
-    "image": "MET003.png"
+    "image": "Hed_MET003^q.bflim.png"
   },
   {
     "id": 7004,
     "main_key": "MET004",
-    "name": "VisorSkateHelmet",
+    "name": "Visor Skate Helmet",
     "sub": null,
     "special": null,
-    "image": "MET004.png"
+    "image": "Hed_MET004^q.bflim.png"
   },
   {
     "id": 7005,
     "main_key": "MET005",
-    "name": "SkateHelmet",
+    "name": "Skate Helmet",
     "sub": null,
     "special": null,
-    "image": "MET005.png"
+    "image": "Hed_MET005^q.bflim.png"
   },
   {
     "id": 8000,
     "main_key": "MSK000",
-    "name": "GasMask",
+    "name": "Gas Mask",
     "sub": null,
     "special": null,
-    "image": "MSK000.png"
+    "image": "Hed_MSK000^q.bflim.png"
   },
   {
     "id": 8001,
     "main_key": "MSK001",
-    "name": "PaintballMask",
+    "name": "Paintball Mask",
     "sub": null,
     "special": null,
-    "image": "MSK001.png"
+    "image": "Hed_MSK001^q.bflim.png"
   },
   {
     "id": 8002,
     "main_key": "MSK002",
-    "name": "PaisleyBandana",
+    "name": "Paisley Bandana",
     "sub": null,
     "special": null,
-    "image": "MSK002.png"
+    "image": "Hed_MSK002^q.bflim.png"
   },
   {
     "id": 8003,
     "main_key": "MSK003",
-    "name": "SkullBandana",
+    "name": "Skull Bandana",
     "sub": null,
     "special": null,
-    "image": "MSK003.png"
+    "image": "Hed_MSK003^q.bflim.png"
   },
   {
     "id": 9001,
     "main_key": "HBD001",
-    "name": "B-ballHeadband",
+    "name": "B-ball Headband",
     "sub": null,
     "special": null,
-    "image": "HBD001.png"
+    "image": "Hed_HBD001^q.bflim.png"
   },
   {
     "id": 9002,
     "main_key": "HBD002",
-    "name": "SquashHeadband",
+    "name": "Squash Headband",
     "sub": null,
     "special": null,
-    "image": "HBD002.png"
+    "image": "Hed_HBD002^q.bflim.png"
   },
   {
     "id": 9003,
     "main_key": "HBD003",
-    "name": "TennisHeadband",
+    "name": "Tennis Headband",
     "sub": null,
     "special": null,
-    "image": "HBD003.png"
+    "image": "Hed_HBD003^q.bflim.png"
   },
   {
     "id": 9004,
     "main_key": "HBD004",
-    "name": "JoggingHeadband",
+    "name": "Jogging Headband",
     "sub": null,
     "special": null,
-    "image": "HBD004.png"
+    "image": "Hed_HBD004^q.bflim.png"
   },
   {
     "id": 9005,
     "main_key": "HBD005",
-    "name": "SoccerHeadband",
+    "name": "Soccer Headband",
     "sub": null,
     "special": null,
-    "image": "HBD005.png"
+    "image": "Hed_HBD005^q.bflim.png"
   },
   {
     "id": 9006,
     "main_key": "HBD006",
-    "name": "TraditionalHeadband",
+    "name": "Traditional Headband",
     "sub": null,
     "special": null,
-    "image": "HBD006.png"
+    "image": "Hed_HBD006^q.bflim.png"
+  },
+  {
+   "id": 3007,
+   "main_key": "EYE007",
+   "name": "Fake Contacts",
+   "sub": null,
+   "special": null,
+   "image": "Hed_EYE007^t.bflim.png"
   }
 ]

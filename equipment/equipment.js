@@ -149,7 +149,7 @@ window.loadHeader(async function(headerContainer) {
             const [clothing, headgear, shoes, weapons, abilities] = mappingCache;
 
             const getImg = (list, id, folder, isAbility = false) => {
-                const weaponFallback = "/assets/weapons/NotFound^w.png";
+                const weaponFallback = "/assets/weapons/NotFound^t.bflim.png";
                 const abilityFallback = "../assets/ability/ParameterIcon^q.png";
                 
                 if (id === undefined || id === null) {
@@ -194,7 +194,7 @@ window.loadHeader(async function(headerContainer) {
             const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "--");
 
             const renderImg = (src, className) => {
-                const fallback = className.includes('weapon') || className.includes('gear') ? 'this.src="/assets/weapons/NotFound^w.png"' : 'this.src="../assets/ability/ParameterIcon^q.png"';
+                const fallback = className.includes('weapon') || className.includes('gear') ? 'this.src="/assets/weapons/NotFound^t.bflim.png"' : 'this.src="../assets/ability/ParameterIcon^q.png"';
                 return src ? `<img class="${className}" src="${src}" onerror='${fallback}' />` : '';
             };
             const renderSub = (src) => src ? `<img src="${src}" onerror='this.src="../assets/ability/ParameterIcon^q.png"' />` : '';
@@ -211,7 +211,7 @@ window.loadHeader(async function(headerContainer) {
                     return `
                         <div class="weapon-painted-black-box">
                             <div class="weapon-icon-bg-wrapper">
-                                 <img src="${hWeaponImg}" class="weapon-inked-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                                 <img src="${hWeaponImg}" class="weapon-inked-icon" onerror='this.src="/assets/weapons/NotFound^t.bflim.png"'>
                             </div>
                             <div class="weapon-painted-text">${displayPaint}p</div>
                         </div>

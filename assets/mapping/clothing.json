@@ -1,51 +1,11 @@
 [
   {
-    "id": 6000,
-    "main_key": "TNK000",
-    "name": "B-ballJersey(Home)",
-    "sub": null,
-    "special": null,
-    "image": "TNK000.png"
-  },
-  {
-    "id": 6001,
-    "main_key": "TNK001",
-    "name": "B-ballJersey(Away)",
-    "sub": null,
-    "special": null,
-    "image": "TNK001.png"
-  },
-  {
-    "id": 7000,
-    "main_key": "SWT000",
-    "name": "GrayCollegeSweat",
-    "sub": null,
-    "special": null,
-    "image": "SWT000.png"
-  },
-  {
-    "id": 7001,
-    "main_key": "SWT001",
-    "name": "SquidmarkSweat",
-    "sub": null,
-    "special": null,
-    "image": "SWT001.png"
-  },
-  {
-    "id": 8009,
-    "main_key": "SHT006",
-    "name": "GrayMixedShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT006.png"
-  },
-  {
     "id": 1,
     "main_key": "First",
     "name": "BasicTee",
     "sub": null,
     "special": null,
-    "image": "First.png"
+    "image": "Clt_First^q.bflim.png"
   },
   {
     "id": 1000,
@@ -53,39 +13,7 @@
     "name": "WhiteTee",
     "sub": null,
     "special": null,
-    "image": "TES000.png"
-  },
-  {
-    "id": 10000,
-    "main_key": "PRK000",
-    "name": "CamoZipHoodie",
-    "sub": null,
-    "special": null,
-    "image": "PRK000.png"
-  },
-  {
-    "id": 10001,
-    "main_key": "PRK001",
-    "name": "GreenZipHoodie",
-    "sub": null,
-    "special": null,
-    "image": "PRK001.png"
-  },
-  {
-    "id": 10002,
-    "main_key": "PRK002",
-    "name": "ZekkoHoodie",
-    "sub": null,
-    "special": null,
-    "image": "PRK002.png"
-  },
-  {
-    "id": 10003,
-    "main_key": "PRK003",
-    "name": "CoroCoroHoodie",
-    "sub": null,
-    "special": null,
-    "image": "PRK003.png"
+    "image": "Clt_TES000^q.bflim.png"
   },
   {
     "id": 1001,
@@ -93,7 +21,7 @@
     "name": "BlackSquideye",
     "sub": null,
     "special": null,
-    "image": "TES001.png"
+    "image": "Clt_TES001^q.bflim.png"
   },
   {
     "id": 1003,
@@ -101,7 +29,7 @@
     "name": "Sky-BlueSquideye",
     "sub": null,
     "special": null,
-    "image": "TES003.png"
+    "image": "Clt_TES003^q.bflim.png"
   },
   {
     "id": 1004,
@@ -109,7 +37,7 @@
     "name": "RockenbergWhite",
     "sub": null,
     "special": null,
-    "image": "TES004.png"
+    "image": "Clt_TES004^q.bflim.png"
   },
   {
     "id": 1005,
@@ -117,7 +45,7 @@
     "name": "RockenbergBlack",
     "sub": null,
     "special": null,
-    "image": "TES005.png"
+    "image": "Clt_TES005^q.bflim.png"
   },
   {
     "id": 1006,
@@ -125,7 +53,7 @@
     "name": "BlackTee",
     "sub": null,
     "special": null,
-    "image": "TES006.png"
+    "image": "Clt_TES006^q.bflim.png"
   },
   {
     "id": 1007,
@@ -133,7 +61,7 @@
     "name": "Sunny-DayTee",
     "sub": null,
     "special": null,
-    "image": "TES007.png"
+    "image": "Clt_TES007^q.bflim.png"
   },
   {
     "id": 1008,
@@ -141,7 +69,7 @@
     "name": "Rainy-DayTee",
     "sub": null,
     "special": null,
-    "image": "TES008.png"
+    "image": "Clt_TES008^q.bflim.png"
   },
   {
     "id": 1009,
@@ -149,7 +77,7 @@
     "name": "ReggaeTee",
     "sub": null,
     "special": null,
-    "image": "TES009.png"
+    "image": "Clt_TES009^q.bflim.png"
   },
   {
     "id": 1010,
@@ -157,7 +85,7 @@
     "name": "FuguTee",
     "sub": null,
     "special": null,
-    "image": "TES010.png"
+    "image": "Clt_TES010^q.bflim.png"
   },
   {
     "id": 1011,
@@ -165,7 +93,7 @@
     "name": "MintTee",
     "sub": null,
     "special": null,
-    "image": "TES011.png"
+    "image": "Clt_TES011^q.bflim.png"
   },
   {
     "id": 1012,
@@ -173,7 +101,15 @@
     "name": "GrapeTee",
     "sub": null,
     "special": null,
-    "image": "TES012.png"
+    "image": "Clt_TES012^q.bflim.png"
+  },
+  {
+    "id": 1013,
+    "main_key": "TES013",
+    "name": "Clt_TES013",
+    "sub": null,
+    "special": null,
+    "image": "Clt_TES013^q.bflim.png"
   },
   {
     "id": 1014,
@@ -181,7 +117,7 @@
     "name": "GrayVectorTee",
     "sub": null,
     "special": null,
-    "image": "TES014.png"
+    "image": "Clt_TES014^q.bflim.png"
   },
   {
     "id": 1015,
@@ -189,7 +125,7 @@
     "name": "BluePeaksTee",
     "sub": null,
     "special": null,
-    "image": "TES015.png"
+    "image": "Clt_TES015^q.bflim.png"
   },
   {
     "id": 1016,
@@ -197,7 +133,7 @@
     "name": "IvoryPeaksTee",
     "sub": null,
     "special": null,
-    "image": "TES016.png"
+    "image": "Clt_TES016^q.bflim.png"
   },
   {
     "id": 1017,
@@ -205,7 +141,7 @@
     "name": "Squid-StitchTee",
     "sub": null,
     "special": null,
-    "image": "TES017.png"
+    "image": "Clt_TES017^q.bflim.png"
   },
   {
     "id": 1018,
@@ -213,7 +149,7 @@
     "name": "Pirate-StripeTee",
     "sub": null,
     "special": null,
-    "image": "TES018.png"
+    "image": "Clt_TES018^q.bflim.png"
   },
   {
     "id": 1019,
@@ -221,7 +157,7 @@
     "name": "Sailor-StripeTee",
     "sub": null,
     "special": null,
-    "image": "TES019.png"
+    "image": "Clt_TES019^q.bflim.png"
   },
   {
     "id": 1020,
@@ -229,7 +165,7 @@
     "name": "White8-BitFishFry",
     "sub": null,
     "special": null,
-    "image": "TES020.png"
+    "image": "Clt_TES020^q.bflim.png"
   },
   {
     "id": 1021,
@@ -237,7 +173,7 @@
     "name": "Black8-BitFishFry",
     "sub": null,
     "special": null,
-    "image": "TES021.png"
+    "image": "Clt_TES021^q.bflim.png"
   },
   {
     "id": 1022,
@@ -245,7 +181,7 @@
     "name": "WhiteAnchorTee",
     "sub": null,
     "special": null,
-    "image": "TES022.png"
+    "image": "Clt_TES022^q.bflim.png"
   },
   {
     "id": 1023,
@@ -253,7 +189,7 @@
     "name": "BlackAnchorTee",
     "sub": null,
     "special": null,
-    "image": "TES023.png"
+    "image": "Clt_TES023^q.bflim.png"
   },
   {
     "id": 1024,
@@ -261,7 +197,7 @@
     "name": "WhiteLineTee",
     "sub": null,
     "special": null,
-    "image": "TES024.png"
+    "image": "Clt_TES024^q.bflim.png"
   },
   {
     "id": 1025,
@@ -269,7 +205,7 @@
     "name": "BlackPipeTee",
     "sub": null,
     "special": null,
-    "image": "TES025.png"
+    "image": "Clt_TES025^q.bflim.png"
   },
   {
     "id": 1026,
@@ -277,7 +213,7 @@
     "name": "CarnivoreTee",
     "sub": null,
     "special": null,
-    "image": "TES026.png"
+    "image": "Clt_TES026^q.bflim.png"
   },
   {
     "id": 1027,
@@ -285,7 +221,7 @@
     "name": "PearlTee",
     "sub": null,
     "special": null,
-    "image": "TES027.png"
+    "image": "Clt_TES027^q.bflim.png"
   },
   {
     "id": 1028,
@@ -293,7 +229,7 @@
     "name": "OctoTee",
     "sub": null,
     "special": null,
-    "image": "TES028.png"
+    "image": "Clt_TES028^q.bflim.png"
   },
   {
     "id": 1029,
@@ -301,7 +237,7 @@
     "name": "HerbivoreTee",
     "sub": null,
     "special": null,
-    "image": "TES029.png"
+    "image": "Clt_TES029^q.bflim.png"
   },
   {
     "id": 2000,
@@ -309,7 +245,7 @@
     "name": "WhiteStripedLS",
     "sub": null,
     "special": null,
-    "image": "TEL000.png"
+    "image": "Clt_TEL000^q.bflim.png"
   },
   {
     "id": 2001,
@@ -317,7 +253,7 @@
     "name": "BlackLS",
     "sub": null,
     "special": null,
-    "image": "TEL001.png"
+    "image": "Clt_TEL001^q.bflim.png"
   },
   {
     "id": 2002,
@@ -325,7 +261,7 @@
     "name": "PurpleCamoLS",
     "sub": null,
     "special": null,
-    "image": "TEL002.png"
+    "image": "Clt_TEL002^q.bflim.png"
   },
   {
     "id": 2003,
@@ -333,7 +269,7 @@
     "name": "NavyStripedLS",
     "sub": null,
     "special": null,
-    "image": "TEL003.png"
+    "image": "Clt_TEL003^q.bflim.png"
   },
   {
     "id": 2004,
@@ -341,7 +277,7 @@
     "name": "ZekkoBaseballLS",
     "sub": null,
     "special": null,
-    "image": "TEL004.png"
+    "image": "Clt_TEL004^q.bflim.png"
   },
   {
     "id": 2005,
@@ -349,7 +285,7 @@
     "name": "VarsityBaseballLS",
     "sub": null,
     "special": null,
-    "image": "TEL005.png"
+    "image": "Clt_TEL005^q.bflim.png"
   },
   {
     "id": 2006,
@@ -357,7 +293,7 @@
     "name": "BlackBaseballLS",
     "sub": null,
     "special": null,
-    "image": "TEL006.png"
+    "image": "Clt_TEL006^q.bflim.png"
   },
   {
     "id": 2007,
@@ -365,7 +301,7 @@
     "name": "WhiteBaseballLS",
     "sub": null,
     "special": null,
-    "image": "TEL007.png"
+    "image": "Clt_TEL007^q.bflim.png"
   },
   {
     "id": 2008,
@@ -373,7 +309,7 @@
     "name": "WhiteLS",
     "sub": null,
     "special": null,
-    "image": "TEL008.png"
+    "image": "Clt_TEL008^q.bflim.png"
   },
   {
     "id": 2009,
@@ -381,7 +317,7 @@
     "name": "GreenStripedLS",
     "sub": null,
     "special": null,
-    "image": "TEL009.png"
+    "image": "Clt_TEL009^q.bflim.png"
   },
   {
     "id": 2010,
@@ -389,7 +325,7 @@
     "name": "SquidmarkLS",
     "sub": null,
     "special": null,
-    "image": "TEL010.png"
+    "image": "Clt_TEL010^q.bflim.png"
   },
   {
     "id": 2011,
@@ -397,7 +333,7 @@
     "name": "ZinkLS",
     "sub": null,
     "special": null,
-    "image": "TEL011.png"
+    "image": "Clt_TEL011^q.bflim.png"
   },
   {
     "id": 2012,
@@ -405,55 +341,7 @@
     "name": "StripedPeaksLS",
     "sub": null,
     "special": null,
-    "image": "TEL012.png"
-  },
-  {
-    "id": 25000,
-    "main_key": "AMB000",
-    "name": "SchoolUniform",
-    "sub": null,
-    "special": null,
-    "image": "AMB000.png"
-  },
-  {
-    "id": 25001,
-    "main_key": "AMB001",
-    "name": "SamuraiJacket",
-    "sub": null,
-    "special": null,
-    "image": "AMB001.png"
-  },
-  {
-    "id": 25002,
-    "main_key": "AMB002",
-    "name": "PowerArmor",
-    "sub": null,
-    "special": null,
-    "image": "AMB002.png"
-  },
-  {
-    "id": 26000,
-    "main_key": "HAP000",
-    "name": "SplatfestTee",
-    "sub": null,
-    "special": null,
-    "image": "HAP000.png"
-  },
-  {
-    "id": 27000,
-    "main_key": "MSN000",
-    "name": "ArmorJacketReplica",
-    "sub": null,
-    "special": null,
-    "image": "MSN000.png"
-  },
-  {
-    "id": 28000,
-    "main_key": "RVL000",
-    "name": "OctolingArmor",
-    "sub": null,
-    "special": null,
-    "image": "RVL000.png"
+    "image": "Clt_TEL012^q.bflim.png"
   },
   {
     "id": 3000,
@@ -461,7 +349,7 @@
     "name": "WhiteLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY000.png"
+    "image": "Clt_TLY000^q.bflim.png"
   },
   {
     "id": 3001,
@@ -469,7 +357,7 @@
     "name": "YellowLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY001.png"
+    "image": "Clt_TLY001^q.bflim.png"
   },
   {
     "id": 3002,
@@ -477,7 +365,7 @@
     "name": "CamoLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY002.png"
+    "image": "Clt_TLY002^q.bflim.png"
   },
   {
     "id": 3003,
@@ -485,7 +373,7 @@
     "name": "BlackLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY003.png"
+    "image": "Clt_TLY003^q.bflim.png"
   },
   {
     "id": 3004,
@@ -493,7 +381,7 @@
     "name": "ZinkLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY004.png"
+    "image": "Clt_TLY004^q.bflim.png"
   },
   {
     "id": 3005,
@@ -501,7 +389,7 @@
     "name": "LayeredAnchorLS",
     "sub": null,
     "special": null,
-    "image": "TLY005.png"
+    "image": "Clt_TLY005^q.bflim.png"
   },
   {
     "id": 3006,
@@ -509,7 +397,7 @@
     "name": "ChocoLayeredLS",
     "sub": null,
     "special": null,
-    "image": "TLY006.png"
+    "image": "Clt_TLY006^q.bflim.png"
   },
   {
     "id": 3007,
@@ -517,7 +405,7 @@
     "name": "Part-TimePirate",
     "sub": null,
     "special": null,
-    "image": "TLY007.png"
+    "image": "Clt_TLY007^q.bflim.png"
   },
   {
     "id": 3008,
@@ -525,7 +413,7 @@
     "name": "LayeredVectorLS",
     "sub": null,
     "special": null,
-    "image": "TLY008.png"
+    "image": "Clt_TLY008^q.bflim.png"
   },
   {
     "id": 3009,
@@ -533,7 +421,7 @@
     "name": "GreenTee",
     "sub": null,
     "special": null,
-    "image": "TLY009.png"
+    "image": "Clt_TLY009^q.bflim.png"
   },
   {
     "id": 4000,
@@ -541,7 +429,7 @@
     "name": "Shrimp-PinkPolo",
     "sub": null,
     "special": null,
-    "image": "PLO000.png"
+    "image": "Clt_PLO000^q.bflim.png"
   },
   {
     "id": 4001,
@@ -549,7 +437,7 @@
     "name": "StripedRugby",
     "sub": null,
     "special": null,
-    "image": "PLO001.png"
+    "image": "Clt_PLO001^q.bflim.png"
   },
   {
     "id": 4002,
@@ -557,7 +445,7 @@
     "name": "TricolorRugby",
     "sub": null,
     "special": null,
-    "image": "PLO002.png"
+    "image": "Clt_PLO002^q.bflim.png"
   },
   {
     "id": 4003,
@@ -565,7 +453,7 @@
     "name": "SagePolo",
     "sub": null,
     "special": null,
-    "image": "PLO003.png"
+    "image": "Clt_PLO003^q.bflim.png"
   },
   {
     "id": 4004,
@@ -573,7 +461,7 @@
     "name": "BlackPolo",
     "sub": null,
     "special": null,
-    "image": "PLO004.png"
+    "image": "Clt_PLO004^q.bflim.png"
   },
   {
     "id": 4005,
@@ -581,7 +469,7 @@
     "name": "CyclingShirt",
     "sub": null,
     "special": null,
-    "image": "PLO005.png"
+    "image": "Clt_PLO005^q.bflim.png"
   },
   {
     "id": 4006,
@@ -589,7 +477,7 @@
     "name": "CycleKingJersey",
     "sub": null,
     "special": null,
-    "image": "PLO006.png"
+    "image": "Clt_PLO006^q.bflim.png"
   },
   {
     "id": 4007,
@@ -597,7 +485,7 @@
     "name": "SlipstreamUnited",
     "sub": null,
     "special": null,
-    "image": "PLO007.png"
+    "image": "Clt_PLO007^q.bflim.png"
   },
   {
     "id": 4008,
@@ -605,7 +493,7 @@
     "name": "FCAlbacore",
     "sub": null,
     "special": null,
-    "image": "PLO008.png"
+    "image": "Clt_PLO008^q.bflim.png"
   },
   {
     "id": 5000,
@@ -613,7 +501,7 @@
     "name": "OliveSkiJacket",
     "sub": null,
     "special": null,
-    "image": "JKT000.png"
+    "image": "Clt_JKT000^q.bflim.png"
   },
   {
     "id": 5002,
@@ -621,7 +509,7 @@
     "name": "BerrySkiJacket",
     "sub": null,
     "special": null,
-    "image": "JKT002.png"
+    "image": "Clt_JKT002^q.bflim.png"
   },
   {
     "id": 5003,
@@ -629,7 +517,7 @@
     "name": "VarsityJacket",
     "sub": null,
     "special": null,
-    "image": "JKT003.png"
+    "image": "Clt_JKT003^q.bflim.png"
   },
   {
     "id": 5004,
@@ -637,7 +525,7 @@
     "name": "SchoolJersey",
     "sub": null,
     "special": null,
-    "image": "JKT004.png"
+    "image": "Clt_JKT004^q.bflim.png"
   },
   {
     "id": 5005,
@@ -645,7 +533,7 @@
     "name": "GreenCardigan",
     "sub": null,
     "special": null,
-    "image": "JKT005.png"
+    "image": "Clt_JKT005^q.bflim.png"
   },
   {
     "id": 5006,
@@ -653,7 +541,7 @@
     "name": "BlackInkyRider",
     "sub": null,
     "special": null,
-    "image": "JKT006.png"
+    "image": "Clt_JKT006^q.bflim.png"
   },
   {
     "id": 5007,
@@ -661,7 +549,7 @@
     "name": "WhiteInkyRider",
     "sub": null,
     "special": null,
-    "image": "JKT007.png"
+    "image": "Clt_JKT007^q.bflim.png"
   },
   {
     "id": 5008,
@@ -669,7 +557,7 @@
     "name": "RetroGamerJersey",
     "sub": null,
     "special": null,
-    "image": "JKT008.png"
+    "image": "Clt_JKT008^q.bflim.png"
   },
   {
     "id": 5009,
@@ -677,7 +565,7 @@
     "name": "OrangeCardigan",
     "sub": null,
     "special": null,
-    "image": "JKT009.png"
+    "image": "Clt_JKT009^q.bflim.png"
   },
   {
     "id": 5010,
@@ -685,7 +573,7 @@
     "name": "ForgeInklingParka",
     "sub": null,
     "special": null,
-    "image": "JKT010.png"
+    "image": "Clt_JKT010^q.bflim.png"
   },
   {
     "id": 5011,
@@ -693,7 +581,7 @@
     "name": "ForgeOctarianJacket",
     "sub": null,
     "special": null,
-    "image": "JKT011.png"
+    "image": "Clt_JKT011^q.bflim.png"
   },
   {
     "id": 5012,
@@ -701,7 +589,7 @@
     "name": "BlueSailorSuit",
     "sub": null,
     "special": null,
-    "image": "JKT012.png"
+    "image": "Clt_JKT012^q.bflim.png"
   },
   {
     "id": 5013,
@@ -709,7 +597,7 @@
     "name": "WhiteSailorSuit",
     "sub": null,
     "special": null,
-    "image": "JKT013.png"
+    "image": "Clt_JKT013^q.bflim.png"
   },
   {
     "id": 5014,
@@ -717,7 +605,7 @@
     "name": "SquidSatinJacket",
     "sub": null,
     "special": null,
-    "image": "JKT014.png"
+    "image": "Clt_JKT014^q.bflim.png"
   },
   {
     "id": 5015,
@@ -725,7 +613,7 @@
     "name": "ZapfishSatinJacket",
     "sub": null,
     "special": null,
-    "image": "JKT015.png"
+    "image": "Clt_JKT015^q.bflim.png"
   },
   {
     "id": 5016,
@@ -733,7 +621,7 @@
     "name": "Krak-On528",
     "sub": null,
     "special": null,
-    "image": "JKT016.png"
+    "image": "Clt_JKT016^q.bflim.png"
   },
   {
     "id": 6002,
@@ -741,7 +629,7 @@
     "name": "SQUIDGIRLTunic",
     "sub": null,
     "special": null,
-    "image": "TNK002.png"
+    "image": "Clt_TNK002^q.bflim.png"
   },
   {
     "id": 7002,
@@ -749,7 +637,7 @@
     "name": "RetroSweat",
     "sub": null,
     "special": null,
-    "image": "SWT002.png"
+    "image": "Clt_SWT002^q.bflim.png"
   },
   {
     "id": 7003,
@@ -757,7 +645,7 @@
     "name": "FirefinNavySweat",
     "sub": null,
     "special": null,
-    "image": "SWT003.png"
+    "image": "Clt_SWT003^q.bflim.png"
   },
   {
     "id": 7004,
@@ -765,7 +653,7 @@
     "name": "NavyCollegeSweat",
     "sub": null,
     "special": null,
-    "image": "SWT004.png"
+    "image": "Clt_SWT004^q.bflim.png"
   },
   {
     "id": 7005,
@@ -773,7 +661,7 @@
     "name": "ReelSweat",
     "sub": null,
     "special": null,
-    "image": "SWT005.png"
+    "image": "Clt_SWT005^q.bflim.png"
   },
   {
     "id": 7006,
@@ -781,111 +669,15 @@
     "name": "AnchorSweat",
     "sub": null,
     "special": null,
-    "image": "SWT006.png"
-  },
-  {
-    "id": 8000,
-    "main_key": "SHT000",
-    "name": "LumberjackShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT000.png"
-  },
-  {
-    "id": 8001,
-    "main_key": "SHT001",
-    "name": "RodeoShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT001.png"
-  },
-  {
-    "id": 8002,
-    "main_key": "SHT002",
-    "name": "Green-CheckShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT002.png"
-  },
-  {
-    "id": 8003,
-    "main_key": "SHT002",
-    "name": "WhiteShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT002.png"
-  },
-  {
-    "id": 8004,
-    "main_key": "SHT003",
-    "name": "UrchinsJersey",
-    "sub": null,
-    "special": null,
-    "image": "SHT003.png"
+    "image": "Clt_SWT006^q.bflim.png"
   },
   {
     "id": 8005,
-    "main_key": "SHT003",
-    "name": "AlohaShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT003.png"
-  },
-  {
-    "id": 8006,
-    "main_key": "SHT004",
-    "name": "Red-CheckShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT004.png"
-  },
-  {
-    "id": 8007,
-    "main_key": "SHT004",
-    "name": "Baby-JellyShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT004.png"
-  },
-  {
-    "id": 8008,
     "main_key": "SHT005",
     "name": "BaseballJersey",
     "sub": null,
     "special": null,
-    "image": "SHT005.png"
-  },
-  {
-    "id": 8010,
-    "main_key": "SHT010",
-    "name": "VintageCheckShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT010.png"
-  },
-  {
-    "id": 8011,
-    "main_key": "SHT011",
-    "name": "Round-CollarShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT011.png"
-  },
-  {
-    "id": 8012,
-    "main_key": "SHT012",
-    "name": "LogoAlohaShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT012.png"
-  },
-  {
-    "id": 8013,
-    "main_key": "SHT013",
-    "name": "StripedShirt",
-    "sub": null,
-    "special": null,
-    "image": "SHT013.png"
+    "image": "Clt_SHT005^q.bflim.png"
   },
   {
     "id": 8014,
@@ -893,7 +685,7 @@
     "name": "LinenShirt",
     "sub": null,
     "special": null,
-    "image": "SHT014.png"
+    "image": "Clt_SHT014^q.bflim.png"
   },
   {
     "id": 8015,
@@ -901,7 +693,7 @@
     "name": "Shirt&Tie",
     "sub": null,
     "special": null,
-    "image": "SHT015.png"
+    "image": "Clt_SHT015^q.bflim.png"
   },
   {
     "id": 8016,
@@ -909,7 +701,7 @@
     "name": "TraditionalApron",
     "sub": null,
     "special": null,
-    "image": "SHT016.png"
+    "image": "Clt_SHT016^q.bflim.png"
   },
   {
     "id": 9000,
@@ -917,7 +709,7 @@
     "name": "MountainVest",
     "sub": null,
     "special": null,
-    "image": "VST000.png"
+    "image": "Clt_VST000^q.bflim.png"
   },
   {
     "id": 9001,
@@ -925,7 +717,7 @@
     "name": "ForestVest",
     "sub": null,
     "special": null,
-    "image": "VST001.png"
+    "image": "Clt_VST001^q.bflim.png"
   },
   {
     "id": 9002,
@@ -933,7 +725,7 @@
     "name": "DarkUrbanVest",
     "sub": null,
     "special": null,
-    "image": "VST002.png"
+    "image": "Clt_VST002^q.bflim.png"
   },
   {
     "id": 9003,
@@ -941,7 +733,7 @@
     "name": "YellowUrbanVest",
     "sub": null,
     "special": null,
-    "image": "VST003.png"
+    "image": "Clt_VST003^q.bflim.png"
   },
   {
     "id": 9004,
@@ -949,7 +741,7 @@
     "name": "Squid-PatternWaistcoat",
     "sub": null,
     "special": null,
-    "image": "VST004.png"
+    "image": "Clt_VST004^q.bflim.png"
   },
   {
     "id": 9005,
@@ -957,6 +749,262 @@
     "name": "SquidstarWaistcoat",
     "sub": null,
     "special": null,
-    "image": "VST005.png"
+    "image": "Clt_VST005^q.bflim.png"
+  },
+  {
+    "id": 10000,
+    "main_key": "PRK000",
+    "name": "CamoZipHoodie",
+    "sub": null,
+    "special": null,
+    "image": "Clt_PRK000^q.bflim.png"
+  },
+  {
+    "id": 10001,
+    "main_key": "PRK001",
+    "name": "GreenZipHoodie",
+    "sub": null,
+    "special": null,
+    "image": "Clt_PRK001^q.bflim.png"
+  },
+  {
+    "id": 10002,
+    "main_key": "PRK002",
+    "name": "ZekkoHoodie",
+    "sub": null,
+    "special": null,
+    "image": "Clt_PRK002^q.bflim.png"
+  },
+  {
+    "id": 10003,
+    "main_key": "PRK003",
+    "name": "CoroCoroHoodie",
+    "sub": null,
+    "special": null,
+    "image": "Clt_PRK003^q.bflim.png"
+  },
+  {
+    "id": 25000,
+    "main_key": "AMB000",
+    "name": "SchoolUniform",
+    "sub": null,
+    "special": null,
+    "image": "Clt_AMB000^q.bflim.png"
+  },
+  {
+    "id": 25001,
+    "main_key": "AMB001",
+    "name": "SamuraiJacket",
+    "sub": null,
+    "special": null,
+    "image": "Clt_AMB001^q.bflim.png"
+  },
+  {
+    "id": 25002,
+    "main_key": "AMB002",
+    "name": "PowerArmor",
+    "sub": null,
+    "special": null,
+    "image": "Clt_AMB002^q.bflim.png"
+  },
+  {
+    "id": 26000,
+    "main_key": "HAP000",
+    "name": "SplatfestTee",
+    "sub": null,
+    "special": null,
+    "image": "Clt_HAP000^q.bflim.png"
+  },
+  {
+    "id": 27000,
+    "main_key": "MSN000",
+    "name": "ArmorJacketReplica",
+    "sub": null,
+    "special": null,
+    "image": "Clt_MSN000^q.bflim.png"
+  },
+  {
+    "id": 27004,
+    "main_key": "MSN004",
+    "name": "Clt_MSN004",
+    "sub": null,
+    "special": null,
+    "image": "Clt_MSN004^q.bflim.png"
+  },
+  {
+    "id": 28000,
+    "main_key": "RVL000",
+    "name": "OctolingArmor",
+    "sub": null,
+    "special": null,
+    "image": "Clt_RVL000^q.bflim.png"
+  },
+  {
+    "id": 29000,
+    "main_key": "SHT000",
+    "name": "LumberjackShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT000^q.bflim.png"
+  },
+  {
+    "id": 29001,
+    "main_key": "SHT001",
+    "name": "RodeoShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT001^q.bflim.png"
+  },
+  {
+    "id": 29002,
+    "main_key": "SHT002",
+    "name": "WhiteShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT002^q.bflim.png"
+  },
+  {
+    "id": 29003,
+    "main_key": "SHT003",
+    "name": "AlohaShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT003^q.bflim.png"
+  },
+  {
+    "id": 29004,
+    "main_key": "SHT004",
+    "name": "Baby-JellyShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT004^q.bflim.png"
+  },
+  {
+    "id": 29005,
+    "main_key": "SHT006",
+    "name": "GrayMixedShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT006^q.bflim.png"
+  },
+  {
+    "id": 29006,
+    "main_key": "SHT007",
+    "name": "Clt_SHT007",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT007^q.bflim.png"
+  },
+  {
+    "id": 29007,
+    "main_key": "SHT008",
+    "name": "Clt_SHT008",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT008^q.bflim.png"
+  },
+  {
+    "id": 29008,
+    "main_key": "SHT009",
+    "name": "Clt_SHT009",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT009^q.bflim.png"
+  },
+  {
+    "id": 29009,
+    "main_key": "SHT010",
+    "name": "VintageCheckShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT010^q.bflim.png"
+  },
+  {
+    "id": 29010,
+    "main_key": "SHT011",
+    "name": "Round-CollarShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT011^q.bflim.png"
+  },
+  {
+    "id": 29011,
+    "main_key": "SHT012",
+    "name": "LogoAlohaShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT012^q.bflim.png"
+  },
+  {
+    "id": 29012,
+    "main_key": "SHT013",
+    "name": "StripedShirt",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SHT013^q.bflim.png"
+  },
+  {
+    "id": 29013,
+    "main_key": "TNK000",
+    "name": "B-ballJersey(Home)",
+    "sub": null,
+    "special": null,
+    "image": "Clt_TNK000^q.bflim.png"
+  },
+  {
+    "id": 29014,
+    "main_key": "TNK001",
+    "name": "B-ballJersey(Away)",
+    "sub": null,
+    "special": null,
+    "image": "Clt_TNK001^q.bflim.png"
+  },
+  {
+    "id": 29015,
+    "main_key": "SWT001",
+    "name": "SquidmarkSweat",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SWT001^q.bflim.png"
+  },
+  {
+    "id": 29016,
+    "main_key": "SWT000",
+    "name": "GrayCollegeSweat",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SWT000^q.bflim.png"
+  },
+  {
+    "id": 29500,
+    "main_key": "SUP000",
+    "name": "Clt_SUP000",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SUP000^q.bflim.png"
+  },
+  {
+    "id": 29501,
+    "main_key": "SUP001",
+    "name": "Clt_SUP001",
+    "sub": null,
+    "special": null,
+    "image": "Clt_SUP001^q.bflim.png"
+  },
+  {
+    "id": null,
+    "main_key": "JKT001",
+    "name": "JKT001",
+    "sub": null,
+    "special": null,
+    "image": "Clt_JKT001^q.bflim.png"
+  },
+  {
+    "id": null,
+    "main_key": "TES002",
+    "name": "TES002",
+    "sub": null,
+    "special": null,
+    "image": "Clt_TES002^q.bflim.png"
   }
 ]

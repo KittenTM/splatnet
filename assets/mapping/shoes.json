@@ -5,7 +5,7 @@
     "name": "RedHi-Horses",
     "sub": null,
     "special": null,
-    "image": "SHI000.png"
+    "image": "Shs_SHI000^q.bflim.png"
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "name": "CreamBasics",
     "sub": null,
     "special": null,
-    "image": "First.png"
+    "image": "Shs_First^q.bflim.png"
   },
   {
     "id": 1000,
@@ -21,7 +21,7 @@
     "name": "BlueLo-Tops",
     "sub": null,
     "special": null,
-    "image": "SLO000.png"
+    "image": "Shs_SLO000^q.bflim.png"
   },
   {
     "id": 1001,
@@ -29,7 +29,7 @@
     "name": "BananaBasics",
     "sub": null,
     "special": null,
-    "image": "SLO001.png"
+    "image": "Shs_SLO001^q.bflim.png"
   },
   {
     "id": 1002,
@@ -37,7 +37,7 @@
     "name": "LELo-Tops",
     "sub": null,
     "special": null,
-    "image": "SLO002.png"
+    "image": "Shs_SLO002^q.bflim.png"
   },
   {
     "id": 1003,
@@ -45,7 +45,7 @@
     "name": "WhiteSeahorses",
     "sub": null,
     "special": null,
-    "image": "SLO003.png"
+    "image": "Shs_SLO003^q.bflim.png"
   },
   {
     "id": 1004,
@@ -53,7 +53,7 @@
     "name": "OrangeLo-Tops",
     "sub": null,
     "special": null,
-    "image": "SLO004.png"
+    "image": "Shs_SLO004^q.bflim.png"
   },
   {
     "id": 1005,
@@ -61,7 +61,7 @@
     "name": "BlackSeahorses",
     "sub": null,
     "special": null,
-    "image": "SLO005.png"
+    "image": "Shs_SLO005^q.bflim.png"
   },
   {
     "id": 1006,
@@ -69,7 +69,7 @@
     "name": "ClownfishBasics",
     "sub": null,
     "special": null,
-    "image": "SLO006.png"
+    "image": "Shs_SLO006^q.bflim.png"
   },
   {
     "id": 1007,
@@ -77,7 +77,7 @@
     "name": "YellowSeahorses",
     "sub": null,
     "special": null,
-    "image": "SLO007.png"
+    "image": "Shs_SLO007^q.bflim.png"
   },
   {
     "id": 1008,
@@ -85,7 +85,7 @@
     "name": "StrappingWhites",
     "sub": null,
     "special": null,
-    "image": "SLO008.png"
+    "image": "Shs_SLO008^q.bflim.png"
   },
   {
     "id": 1009,
@@ -93,7 +93,7 @@
     "name": "StrappingReds",
     "sub": null,
     "special": null,
-    "image": "SLO009.png"
+    "image": "Shs_SLO009^q.bflim.png"
   },
   {
     "id": 1010,
@@ -101,7 +101,7 @@
     "name": "SoccerCleats",
     "sub": null,
     "special": null,
-    "image": "SLO010.png"
+    "image": "Shs_SLO010^q.bflim.png"
   },
   {
     "id": 1011,
@@ -109,7 +109,7 @@
     "name": "LESoccerCleats",
     "sub": null,
     "special": null,
-    "image": "SLO011.png"
+    "image": "Shs_SLO011^q.bflim.png"
   },
   {
     "id": 1011,
@@ -117,7 +117,7 @@
     "name": "CyanTrainers",
     "sub": null,
     "special": null,
-    "image": "SHT004.png"
+    "image": "Shs_SHT004^q.bflim.png"
   },
   {
     "id": 2001,
@@ -125,7 +125,7 @@
     "name": "CreamHi-Tops",
     "sub": null,
     "special": null,
-    "image": "SHI001.png"
+    "image": "Shs_SHI001^q.bflim.png"
   },
   {
     "id": 2002,
@@ -133,7 +133,7 @@
     "name": "PurpleHi-Horses",
     "sub": null,
     "special": null,
-    "image": "SHI002.png"
+    "image": "Shs_SHI002^q.bflim.png"
   },
   {
     "id": 2003,
@@ -141,7 +141,7 @@
     "name": "HunterHi-Tops",
     "sub": null,
     "special": null,
-    "image": "SHI004.png"
+    "image": "Shs_SHI004^q.bflim.png"
   },
   {
     "id": 2004,
@@ -149,7 +149,7 @@
     "name": "RedHi-Tops",
     "sub": null,
     "special": null,
-    "image": "SHI005.png"
+    "image": "Shs_SHI005^q.bflim.png"
   },
   {
     "id": 2005,
@@ -157,7 +157,7 @@
     "name": "GoldHi-Horses",
     "sub": null,
     "special": null,
-    "image": "SHI006.png"
+    "image": "Shs_SHI006^q.bflim.png"
   },
   {
     "id": 2006,
@@ -165,7 +165,7 @@
     "name": "PinkTrainers",
     "sub": null,
     "special": null,
-    "image": "SHT000.png"
+    "image": "Shs_SHT000^q.bflim.png"
   },
   {
     "id": 2007,
@@ -173,7 +173,7 @@
     "name": "SQUIDGIRLShoes",
     "sub": null,
     "special": null,
-    "image": "SHI007.png"
+    "image": "Shs_SHI007^q.bflim.png"
   },
   {
     "id": 2007,
@@ -181,7 +181,7 @@
     "name": "OrangeArrows",
     "sub": null,
     "special": null,
-    "image": "SHT001.png"
+    "image": "Shs_SHT001^q.bflim.png"
   },
   {
     "id": 2008,
@@ -189,7 +189,7 @@
     "name": "SharkMoccasins",
     "sub": null,
     "special": null,
-    "image": "SHI008.png"
+    "image": "Shs_SHI008^q.bflim.png"
   },
   {
     "id": 2008,
@@ -197,7 +197,7 @@
     "name": "NeonSeaSlugs",
     "sub": null,
     "special": null,
-    "image": "SHT002.png"
+    "image": "Shs_SHT002^q.bflim.png"
   },
   {
     "id": 2009,
@@ -205,7 +205,7 @@
     "name": "Mawcasins",
     "sub": null,
     "special": null,
-    "image": "SHI009.png"
+    "image": "Shs_SHI009^q.bflim.png"
   },
   {
     "id": 2009,
@@ -213,7 +213,7 @@
     "name": "WhiteArrows",
     "sub": null,
     "special": null,
-    "image": "SHT003.png"
+    "image": "Shs_SHT003^q.bflim.png"
   },
   {
     "id": 25000,
@@ -221,7 +221,7 @@
     "name": "SchoolShoes",
     "sub": null,
     "special": null,
-    "image": "AMB000.png"
+    "image": "Shs_AMB000^q.bflim.png"
   },
   {
     "id": 25001,
@@ -229,7 +229,7 @@
     "name": "SamuraiShoes",
     "sub": null,
     "special": null,
-    "image": "AMB001.png"
+    "image": "Shs_AMB001^q.bflim.png"
   },
   {
     "id": 25002,
@@ -237,7 +237,7 @@
     "name": "PowerBoots",
     "sub": null,
     "special": null,
-    "image": "AMB002.png"
+    "image": "Shs_AMB002^q.bflim.png"
   },
   {
     "id": 27004,
@@ -245,7 +245,7 @@
     "name": "HeroRunnerReplicas",
     "sub": null,
     "special": null,
-    "image": "MSN004.png"
+    "image": "Shs_MSN004^q.bflim.png"
   },
   {
     "id": 28000,
@@ -253,7 +253,7 @@
     "name": "OctolingBoots",
     "sub": null,
     "special": null,
-    "image": "RVL000.png"
+    "image": "Shs_RVL000^q.bflim.png"
   },
   {
     "id": 3005,
@@ -261,7 +261,7 @@
     "name": "PurpleSeaSlugs",
     "sub": null,
     "special": null,
-    "image": "SHT005.png"
+    "image": "Shs_SHT005^q.bflim.png"
   },
   {
     "id": 3006,
@@ -269,7 +269,7 @@
     "name": "RedSeaSlugs",
     "sub": null,
     "special": null,
-    "image": "SHT006.png"
+    "image": "Shs_SHT006^q.bflim.png"
   },
   {
     "id": 3007,
@@ -277,7 +277,7 @@
     "name": "BlueSeaSlugs",
     "sub": null,
     "special": null,
-    "image": "SHT007.png"
+    "image": "Shs_SHT007^q.bflim.png"
   },
   {
     "id": 3008,
@@ -285,7 +285,7 @@
     "name": "CrazyArrows",
     "sub": null,
     "special": null,
-    "image": "SHT008.png"
+    "image": "Shs_SHT008^q.bflim.png"
   },
   {
     "id": 3009,
@@ -293,7 +293,7 @@
     "name": "BlackTrainers",
     "sub": null,
     "special": null,
-    "image": "SHT009.png"
+    "image": "Shs_SHT009^q.bflim.png"
   },
   {
     "id": 4000,
@@ -301,7 +301,7 @@
     "name": "OysterClogs",
     "sub": null,
     "special": null,
-    "image": "SDL000.png"
+    "image": "Shs_SDL000^q.bflim.png"
   },
   {
     "id": 4001,
@@ -309,7 +309,7 @@
     "name": "ChocoClogs",
     "sub": null,
     "special": null,
-    "image": "SDL001.png"
+    "image": "Shs_SDL001^q.bflim.png"
   },
   {
     "id": 4002,
@@ -317,7 +317,7 @@
     "name": "BlueberryCasuals",
     "sub": null,
     "special": null,
-    "image": "CFS000.png"
+    "image": "Shs_CFS000^q.bflim.png"
   },
   {
     "id": 4003,
@@ -325,7 +325,7 @@
     "name": "PlumCasuals",
     "sub": null,
     "special": null,
-    "image": "CFS001.png"
+    "image": "Shs_CFS001^q.bflim.png"
   },
   {
     "id": 4006,
@@ -333,7 +333,7 @@
     "name": "TraditionalSandals",
     "sub": null,
     "special": null,
-    "image": "SDL002.png"
+    "image": "Shs_SDL002^q.bflim.png"
   },
   {
     "id": 5000,
@@ -341,7 +341,7 @@
     "name": "TrailBoots",
     "sub": null,
     "special": null,
-    "image": "TRS000.png"
+    "image": "Shs_TRS000^q.bflim.png"
   },
   {
     "id": 5001,
@@ -349,7 +349,7 @@
     "name": "CustomTrailBoots",
     "sub": null,
     "special": null,
-    "image": "TRS001.png"
+    "image": "Shs_TRS001^q.bflim.png"
   },
   {
     "id": 5002,
@@ -357,7 +357,7 @@
     "name": "ProTrailBoots",
     "sub": null,
     "special": null,
-    "image": "TRS002.png"
+    "image": "Shs_TRS002^q.bflim.png"
   },
   {
     "id": 6000,
@@ -365,7 +365,7 @@
     "name": "MotoBoots",
     "sub": null,
     "special": null,
-    "image": "BOT000.png"
+    "image": "Shs_BOT000^q.bflim.png"
   },
   {
     "id": 6001,
@@ -373,7 +373,7 @@
     "name": "TanWorkBoots",
     "sub": null,
     "special": null,
-    "image": "BOT001.png"
+    "image": "Shs_BOT001^q.bflim.png"
   },
   {
     "id": 6002,
@@ -381,7 +381,7 @@
     "name": "RedWorkBoots",
     "sub": null,
     "special": null,
-    "image": "BOT002.png"
+    "image": "Shs_BOT002^q.bflim.png"
   },
   {
     "id": 6003,
@@ -389,7 +389,7 @@
     "name": "BlueMotoBoots",
     "sub": null,
     "special": null,
-    "image": "BOT003.png"
+    "image": "Shs_BOT003^q.bflim.png"
   },
   {
     "id": 6004,
@@ -397,7 +397,7 @@
     "name": "GreenRainBoots",
     "sub": null,
     "special": null,
-    "image": "BOT004.png"
+    "image": "Shs_BOT004^q.bflim.png"
   },
   {
     "id": 6005,
@@ -405,7 +405,7 @@
     "name": "AcerolaRainBoots",
     "sub": null,
     "special": null,
-    "image": "BOT005.png"
+    "image": "Shs_BOT005^q.bflim.png"
   },
   {
     "id": 6006,
@@ -413,7 +413,7 @@
     "name": "PunkWhites",
     "sub": null,
     "special": null,
-    "image": "BOT006.png"
+    "image": "Shs_BOT006^q.bflim.png"
   },
   {
     "id": 6007,
@@ -421,7 +421,7 @@
     "name": "PunkCherries",
     "sub": null,
     "special": null,
-    "image": "BOT007.png"
+    "image": "Shs_BOT007^q.bflim.png"
   },
   {
     "id": 6008,
@@ -429,7 +429,7 @@
     "name": "PunkYellows",
     "sub": null,
     "special": null,
-    "image": "BOT008.png"
+    "image": "Shs_BOT008^q.bflim.png"
   },
   {
     "id": 6009,
@@ -437,7 +437,7 @@
     "name": "BubbleRainBoots",
     "sub": null,
     "special": null,
-    "image": "BOT009.png"
+    "image": "Shs_BOT009^q.bflim.png"
   },
   {
     "id": 6010,
@@ -445,7 +445,7 @@
     "name": "SnowyDownBoots",
     "sub": null,
     "special": null,
-    "image": "BOT010.png"
+    "image": "Shs_BOT010^q.bflim.png"
   },
   {
     "id": 6011,
@@ -453,7 +453,7 @@
     "name": "IcyDownBoots",
     "sub": null,
     "special": null,
-    "image": "BOT011.png"
+    "image": "Shs_BOT011^q.bflim.png"
   },
   {
     "id": 7000,
@@ -461,7 +461,7 @@
     "name": "BlueSlip-Ons",
     "sub": null,
     "special": null,
-    "image": "SLP000.png"
+    "image": "Shs_SLP000^q.bflim.png"
   },
   {
     "id": 7001,
@@ -469,7 +469,7 @@
     "name": "RedSlip-Ons",
     "sub": null,
     "special": null,
-    "image": "SLP001.png"
+    "image": "Shs_SLP001^q.bflim.png"
   },
   {
     "id": 7002,
@@ -477,7 +477,7 @@
     "name": "Squid-StitchSlip-Ons",
     "sub": null,
     "special": null,
-    "image": "SLP002.png"
+    "image": "Shs_SLP002^q.bflim.png"
   },
   {
     "id": 8000,
@@ -485,7 +485,7 @@
     "name": "WhiteKicks",
     "sub": null,
     "special": null,
-    "image": "LTS000.png"
+    "image": "Shs_LTS000^q.bflim.png"
   },
   {
     "id": 8001,
@@ -493,7 +493,7 @@
     "name": "CherryKicks",
     "sub": null,
     "special": null,
-    "image": "LTS001.png"
+    "image": "Shs_LTS001^q.bflim.png"
   },
   {
     "id": 8002,
@@ -501,7 +501,7 @@
     "name": "TurquoiseKicks",
     "sub": null,
     "special": null,
-    "image": "LTS002.png"
+    "image": "Shs_LTS002^q.bflim.png"
   },
   {
     "id": 8003,
@@ -509,7 +509,7 @@
     "name": "SquinkWingtips",
     "sub": null,
     "special": null,
-    "image": "LTS003.png"
+    "image": "Shs_LTS003^q.bflim.png"
   },
   {
     "id": 8004,
@@ -517,6 +517,6 @@
     "name": "RoastedBrogues",
     "sub": null,
     "special": null,
-    "image": "LTS004.png"
+    "image": "Shs_LTS004^q.bflim.png"
   }
 ]
