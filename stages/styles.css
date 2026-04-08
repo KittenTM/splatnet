@@ -323,3 +323,15 @@ body {
 .sprite-stackoverflow { width: 30px; height: 30px; background-position: -1425px -745px; background-size: initial; aspect-ratio: 1/1; }
 .sprite-tumblr { width: 30px; height: 30px; background-position: -1465px -745px; background-size: initial; aspect-ratio: 1/1; }
 .sprite-twitter { width: 30px; height: 30px; background-position: -1505px -745px; background-size: initial; aspect-ratio: 1/1; }
+
+.splatfest-banner-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.its-splatfest-time {
+    max-width: auto;
+    height: 120%;
+    display: block;
+    margin: 0 auto;
+}
