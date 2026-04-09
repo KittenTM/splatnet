@@ -183,7 +183,7 @@ window.loadHeader(async function(headerContainer) {
         const [clothing, headgear, shoes, weapons] = mappingCache;
 
         const getImg = (list, id, folder) => {
-            const fallback = "/assets/weapons/NotFound^w.png";
+            const fallback = "/assets/weapons/NotFound^t.bflim.png";
             if (id === undefined || id === null) return fallback;
             const item = list.find(i => String(i.id) === String(id));
             if (item && item.image) return `../assets/${folder}/${item.image}`;
@@ -245,19 +245,19 @@ window.loadHeader(async function(headerContainer) {
                 <div class="rank-gear-row">
                     <div class="gear-wrapper main">
                         <img src="/assets/en/ui/gearbigbg.png" class="gear-bg">
-                        <img src="${weaponImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                        <img src="${weaponImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^t.bflim.png"'>
                     </div>
                     <div class="gear-wrapper sub">
                         <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
-                        <img src="${headImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                        <img src="${headImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^t.bflim.png"'>
                     </div>
                     <div class="gear-wrapper sub">
                         <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
-                        <img src="${clothesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                        <img src="${clothesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^t.bflim.png"'>
                     </div>
                     <div class="gear-wrapper sub">
                         <img src="/assets/en/ui/gearsmallbg.png" class="gear-bg">
-                        <img src="${shoesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^w.png"'>
+                        <img src="${shoesImg}" class="gear-icon" onerror='this.src="/assets/weapons/NotFound^t.bflim.png"'>
                     </div>
                 </div>
             `;
