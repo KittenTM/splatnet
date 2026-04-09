@@ -189,7 +189,7 @@ window.loadHeader(async function(headerContainer) {
                 preloadImage(shoesImg)
             ]);
 
-            const rankLevel = equipped.Rank !== undefined ? equipped.Rank : (finalData.Rank || "--");
+            const rankLevel = (equipped.Rank !== undefined ? equipped.Rank : finalData.Rank ?? 0) + 1;
             const udemaeKey = equipped.Udemae !== undefined ? String(equipped.Udemae) : String(finalData.Udemae || "");
             const rankGrade = udemaeMap[udemaeKey] || (udemaeKey !== "undefined" && udemaeKey !== "" ? udemaeKey : "--");
 
