@@ -220,7 +220,7 @@ window.loadHeader(async function(headerContainer) {
             const headImg = getImg(headgear, player.headgear, 'headgear');
             const clothesImg = getImg(clothing, player.clothes, 'clothing');
             const shoesImg = getImg(shoes, player.shoes, 'shoes');
-            let miiImgUrl = `https://mii.spfn.net/${player.PId}/main.png`;
+            let miiImgUrl = `https://mii-server.cubexmine.dev/${player.PId}/main.png`;
             if (String(player.PId) === "1582814308") {
                 miiImgUrl = "/assets/faceimg.png"
             }
