@@ -222,8 +222,10 @@ window.loadHeader(async function(headerContainer) {
             const shoesImg = getImg(shoes, player.shoes, 'shoes');
             let miiImgUrl = `https://mii-server.cubexmine.dev/${player.PId}/main.png`;
             if (String(player.PId) === "1582814308") {
-                miiImgUrl = "/assets/faceimg.png"
-            }
+                miiImgUrl = "/assets/faceimg.png";
+            } else if (String(player.PId) === "1446014666") {
+                miiImgUrl = "/assets/weapons/Wot_PCFan^q.bflim.png"; 
+            }            
             const fallbackMii = `/assets/weapons/ParameterIcon^q.png`;
 
             const card = document.createElement('div');
