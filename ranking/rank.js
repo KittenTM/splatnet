@@ -310,16 +310,17 @@ window.loadHeader(async function(headerContainer) {
     const updateSplatfestNames = (fesData) => {
         if (!fesData || !fesData.splatfestivalSplatfest) return;
         const fes = fesData.splatfestivalSplatfest;
-        const teams = fes.teams;
+        const teams = fes.teams; // this is a fucking array u bitch u wrote the code how did you forget that
         if (teams && teams.length >= 2) {
             const teamLeft = document.querySelector('.team-left-label');
             const teamRight = document.querySelector('.team-right-label');
-            if (teamLeft) teamLeft.textContent = teams.USen || "Yaoi";
-            if (teamRight) teamRight.textContent = teams.USen || "Yuri";
             const subtitle = document.querySelector('.splatfest-subtitle');
+            const name1 = teams[0].USen || "Loading..";
+            const name2 = teams[1].USen || "Loading..";
+
+            if (teamLeft) teamLeft.textContent = name1;
+            if (teamRight) teamRight.textContent = name2;
             if (subtitle) {
-                const name1 = teams.USen || "Yaoi";
-                const name2 = teams.USen || "Yuri";
                 subtitle.textContent = `${name1} VS ${name2}`;
             }
         }
