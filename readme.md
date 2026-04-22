@@ -35,15 +35,14 @@ This project operates on a frontend - backend basis. The backend is not optional
   - [ ] Support for fetching friends [Push this!](https://discord.com/channels/460820022777085983/835181904880730142/1470216180030771433)
   - [ ] Posting to twitter
 
-- [ ] Stage Info
+- [x] Stage Info
     - [x] Basic Stage Fetching
       - [x] Ditch Splatcord API to allow use for other networks other than pretendo
     - [x] Show stage pngs
     - [x] Show all stage times
     - [x] Show Ranked Mode
-    - [ ] Support fest stages
-    - [ ] Show fest information
-      - [ ] Parsing PanelTexture.bfres
+    - [x] Support fest stages
+    - [x] Show fest information
 
 - [x] Main Page
   - [x] HTML
@@ -65,7 +64,19 @@ This project operates on a frontend - backend basis. The backend is not optional
 
 - [ ] Proper mobile support
   - [ ] Mobile formatting
+- [ ] Japanese localization (see japanese branch)
 
-- [ ] WiiU browser support (DO NOT PRIORITIZE)
-
-- [ ] Japanese localization (maybe?)
+### Judd
+- [x] Recieve & store telemetry
+- [x] Port to Postgres
+- [ ] Validation
+  - [x] Check for Test Tees
+  - [ ] Check for MSN weps
+  - [x] Check for Invalid Rule
+  - [ ] Track Splatfest Rank & validate
+  - [ ] Track Splatfest Power & Validate
+  - [ ] Blacklisting from leaderboards
+  - [ ] Compare public games maps to rotation
+  - [ ] Compare public game rules to rotation
+  - [ ] Track whether Fest ID is correct
+  - [ ] Store & log fest matches that have been played
