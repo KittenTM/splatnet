@@ -116,6 +116,10 @@ window.initDropdown = function() {
     var $toggle = $('#dropdownToggle');
     var $optionsList = $('#dropdownOptions');
     var $selectedImg = $('#selected-img');
+    var savedLangSrc = localStorage.getItem('selected_lang_src');
+    if (savedLangSrc && $selectedImg.length) {
+        $selectedImg.attr('src', savedLangSrc);
+    }
 
     if ($toggle.length) {
         $toggle.off('click').on('click', function(e) {
@@ -125,8 +129,11 @@ window.initDropdown = function() {
 
         $optionsList.off('click').on('click', 'li', function() {
             var newSrc = $(this).attr('data-src');
+            var langValue = $(this).attr('data-value'); // en or jp
             $selectedImg.attr('src', newSrc);
             $optionsList.removeClass('show');
+            localStorage.setItem('selected_lang_src', newSrc);
+            localStorage.setItem('selected_lang_value', langValue);
         });
 
         $(document).off('click.dropdown').on('click.dropdown', function() {
