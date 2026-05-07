@@ -106,7 +106,7 @@ window.loadHeader(function(headerContainer) {
         }
 
         if (imgEl && miiBlob) {
-            imgEl.src = `https://mii-unsecure.ariankordi.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
+            imgEl.src = `https://mii-renderer.spfn.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
             imgEl.style.display = 'block';
         }
 

@@ -124,7 +124,7 @@ window.loadHeader(async function(headerContainer) {
         const parsedName = miiBlob ? extractMiiName(miiBlob) : null;
         const name = parsedName || (finalData.mii && finalData.mii.name) || finalData.nickname || finalData.user_id || finalData.mii_name || "User";
         
-        const miiImgUrl = miiBlob ? `https://mii-unsecure.ariankordi.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270` : "";
+        const miiImgUrl = miiBlob ? `https://mii-renderer.spfn.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270` : "";
 
         const sidebarName = document.getElementById('mii-name');
         const sidebarImg = document.getElementById('mii-img');
