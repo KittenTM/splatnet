@@ -9,7 +9,7 @@ jobs:
   lint-debian:
     runs-on: ${{ vars.RUNNER_LABEL }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install Linters
         run: npm install -g htmlhint stylelint stylelint-config-standard eslint
       - name: HTML
