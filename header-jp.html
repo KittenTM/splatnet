@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>mewo</title>
+</head>
+<body>
+
+<div class="splatnet-sidebar">
+    <div class="icon-header-logo"></div>
+
+    <a href="/friend_list/" class="menu-link">
+        <div class="menu-item icon-navi-friend friend">
+            <div class="bg default"></div>
+            <div class="bg hover-state"></div>
+            <img class="icon default" src="../assets/ja/svg/ui/ico_friendlist-320cb666486606280b494d4d4427451b2de2c9ad01f3332c286433c6f536db0a.svg">
+            <img class="icon hover-state" src="../assets/ja/svg/ui/ico_friendlist_wht-032a1f27d7f1529f75f86f8976877a12ce0ec18496e84fcb249a510129aa337c.svg">
+            <img class="label default" src="../assets/ja/svg/text/menu/tx_friendlist-d2382077212ef7b23a05676fbe497250929629d5f7b09c4d036189b4e44c435d.svg">
+            <img class="label hover-state" src="../assets/ja/svg/text/menu/tx_friendlist_wht-47d1c392e4568ded71da84eb878d8b4043ca7b8ec64e1921bcec9f4ff2611287.svg">
+        </div>
+    </a>
+
+    <a href="/ranking/" class="menu-link">
+        <div class="menu-item icon-navi-ranking rank">
+            <div class="bg default"></div>
+            <div class="bg hover-state"></div>
+            <img class="icon default" src="../assets/ja/svg/ui/ico_ranking-c89e570ab4d08a764d285e453423188b1976895b3feacf031e3f231b1506b441.svg">
+            <img class="icon hover-state" src="../assets/ja/svg/ui/ico_ranking_wht-526d8e4da303f0c9e77ee41ea8422d265f41280e2ffc6ffa763b35d96f8e51f1.svg">
+            <img class="label default" src="../assets/ja/svg/text/menu/tx_ranking-f6b2ae1325607d6f67862aeddbd515ffbc8f66faf86780b2388753f9233c5cbf.svg">
+            <img class="label hover-state" src="../assets/ja/svg/text/menu/tx_ranking_wht-d3d8620fc74b57e40fbd14223047afefa14c1ace51eb200d1c83b62a0ca9a781.svg">
+        </div>
+    </a>
+
+    <a href="/equipment/" class="menu-link">
+        <div class="menu-item icon-navi-equipment equipment">
+            <div class="bg default"></div>
+            <div class="bg hover-state"></div>
+            <img class="icon default" src="../assets/ja/svg/ui/ico_equipment-40943361040a3d62c745a21d1a1fa95794c851f378e11334f2dc6c1cc81b4984.svg">
+            <img class="icon hover-state" src="../assets/ja/svg/ui/ico_equipment_wht-a9d551da5fa6a6792cb2bf8aca2938a107a983a13aef9f4fd020493e6412435e.svg">
+            <img class="label default" src="../assets/ja/svg/text/menu/tx_equipment-c61f5a99835ec025e2bd60b6cdc7d9b5273965c1524dd23d4383442dde496bae.svg">
+            <img class="label hover-state" src="../assets/ja/svg/text/menu/tx_equipment_wht-1900a03af3da968b36b478474c70d827cc542320333951a3759fa3565ee37208.svg">
+        </div>
+    </a>
+
+    <a href="/stages/" class="menu-link">
+        <div class="menu-item icon-navi-stage stage">
+            <div class="bg default"></div>
+            <div class="bg hover-state"></div>
+            <img class="icon default" src="../assets/ja/svg/ui/ico_stage-8dbc9e30d2dd9f99f4d1678fe53c4aaada7f7ff43929880a0c9f4e49f148f540.svg">
+            <img class="icon hover-state" src="../assets/ja/svg/ui/ico_stage_wht-0093ccdcb4a0985c929e77571e4baf690f39def2f97b84a4cb4109e4a4ae10b4.svg">
+            <img class="label default" src="../assets/ja/svg/text/menu/tx_stageinfo-130eba123801fc3338e2c62901769092769a641f4adfee82f39f465fcc9211fc.svg">
+            <img class="label hover-state" src="../assets/ja/svg/text/menu/tx_stageinfo_wht-5c34dd3efd684bd47b7998c432a4525ba31e057bafce33204e5a9bad49537843.svg">
+        </div>
+    </a>
+
+    <div class="twitterbgbox">
+        <div class="mii-icon-container">
+            <img id="mii-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="display:none; width:100%; border-radius:50%;">
+        </div>
+        <span id="mii-name" class="profile-name-label">Loading...</span>
+
+        <div class="button-container">
+            <button id="twitter-link-btn" class="box-btn twitter-btn">
+                <img src="../assets/ja/svg/ui/ico_twitter-e7c60d7a77d2adc6a5ca9338e1c74d4a2378804fc979929a4fc9cad1127945f0.svg" alt="" class="btn-icon">
+                <img id="twitter-label-img" src="../assets/ja/svg/text/menu/tx_twitter-7ebad9b4bb92285a3c3d725eb10313412ca9283a104f31ff30ba6c1093980878.svg" class="btn-label-img" alt="Twitter">
+            </button>
+
+            <form id="logout-form" method="POST" style="display: contents;" accept-charset="UTF-8">
+                <input type="hidden" name="frontend_origin" id="logout_frontend_origin">
+                <button type="submit" class="box-btn">
+                    <img src="../assets/ja/svg/text/menu/tx_logout-dbc513d49f0147ff28e76d7506ce8f45968c667c0eddd2b2b6e0778f44753a69.svg" class="btn-label-img" alt="ログアウト">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="lang-options">
+        <div class="image-dropdown-toggle" id="dropdownToggle">
+            <img id="selected-img" src="../assets/ja/svg/text/menu/tx_Japanese-2ffb0b4509759532318fba9d93b7befb8d6d4b3aa5434afe159d7656c60bedea.svg" alt="日本語">
+            <img class="dropdown-arrow-icon" src="../assets/ja/svg/ui/ico_pulldown-daeb8f6ce24ca8e2faedddd342929c54d3d323ff25116ea0877be93efba2a347.svg">
+        </div>
+        
+        <ul class="image-dropdown-options" id="dropdownOptions">
+            <li data-value="en" data-src="../assets/ja/svg/text/menu/tx_English-11762e5c1d4ff09f310bcf46f3dbfbfbe8c8ef2ee8a12b7e793c784d44442d4f.svg">
+                <img src="../assets/ja/svg/text/menu/tx_English-11762e5c1d4ff09f310bcf46f3dbfbfbe8c8ef2ee8a12b7e793c784d44442d4f.svg">
+            </li>
+            <li data-value="jp" data-src="../assets/ja/svg/text/menu/tx_Japanese-2ffb0b4509759532318fba9d93b7befb8d6d4b3aa5434afe159d7656c60bedea.svg">
+                <img src="../assets/ja/svg/text/menu/tx_Japanese-2ffb0b4509759532318fba9d93b7befb8d6d4b3aa5434afe159d7656c60bedea.svg">
+            </li>
+        </ul>
+    </div>
+
+    <div class="websiteredirect-link-container">
+        <a href="https://www.nintendo.co.jp/wiiu/agmj/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/ja/svg/text/menu/tx_officialpage-7cdf3f325eae9a47459033bee3502cb0b6c921d33ebc931d884babd9e3b75eb8.svg" alt="公式サイト">
+        </a>
+        
+        <div class="nintylogo-static">
+            <img src="../assets/ja/svg/text/menu/tx_nintendo-8cad05eb543ca2c254e282cdf62fc0b3a027aed70e77a11a8cd45f0631f0acd7.svg" alt="Nintendo">
+        </div>
+    </div>
+
+    <div class="corner-patch"></div>
+
+</div> 
+</body>
+</html>
