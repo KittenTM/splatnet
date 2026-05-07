@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint-debian:
-    runs-on: debian-trixie
+    runs-on: [debian-trixie, debian-bookworm]
     steps:
       - uses: actions/checkout@v4
       - name: Install Linters
