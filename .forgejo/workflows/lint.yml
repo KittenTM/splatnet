@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint-debian:
-    runs-on: debian-latest
+    runs-on: debian-trixie
     steps:
       - uses: actions/checkout@v4
       - name: Install Linters
