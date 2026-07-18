@@ -90,7 +90,7 @@ window.loadHeader(async function(headerContainer) {
     };
 
     const getMiiRenderUrl = (data) => {
-        return `https://mii-renderer.spfn.net/miis/image.png?data=${encodeURIComponent(data)}&type=face&width=270&resourceType=very_high`;
+        return `https://mii-renderer.bloxerhd.co.uk/miis/image.png?data=${encodeURIComponent(data)}&type=face&width=270&resourceType=very_high`;
     };
 
     const renderData = (data) => {

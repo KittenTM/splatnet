@@ -109,7 +109,7 @@ window.loadHeader(async function(headerContainer) {
         }
         
         if (imgEl && miiBlob) {
-            imgEl.src = `https://mii-renderer.spfn.net/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
+            imgEl.src = `https://mii-renderer.bloxerhd.co.uk/miis/image.png?data=${encodeURIComponent(miiBlob)}&type=face&width=270`;
             imgEl.style.display = 'block';
         }
         updateTwitterUI();
